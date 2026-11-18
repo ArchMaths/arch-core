@@ -1877,6 +1877,56 @@
             }
 
             .custom-slider-container > canvas { display: block; max-width: 100%; }
+            .style-parameter-list {
+                display: grid;
+                gap: 0;
+                margin: 0 0 8px;
+                font-size: .9em;
+            }
+            .style-parameter-list[hidden] { display: none; }
+            .style-parameter-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 12px;
+                width: 100%;
+                min-height: 32px;
+                padding: 4px 6px;
+                border: 0;
+                border-bottom: 1px solid var(--sidebar-border-color);
+                border-radius: 0;
+                background: transparent;
+                color: var(--text-color-subtle);
+                font: inherit;
+                text-align: start;
+                cursor: pointer;
+                touch-action: manipulation;
+            }
+            .style-parameter-row:last-child { border-bottom: 0; }
+            .style-parameter-row:hover, .style-parameter-row:focus-visible {
+                background: var(--entry-item-bg-color);
+            }
+            .style-parameter-result {
+                display: inline-flex;
+                align-items: baseline;
+                justify-content: flex-end;
+                min-width: 0;
+                margin-inline-start: auto;
+                gap: .25em;
+                text-align: right;
+            }
+            .style-parameter-expression, .style-parameter-equals {
+                color: var(--text-color-subtle);
+                font-weight: normal;
+            }
+            .style-parameter-expression { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+            .style-parameter-result > :empty { display: none; }
+            .style-parameter-number {
+                flex: none;
+                color: var(--text-color-accent);
+                font-weight: 600;
+                font-variant-numeric: tabular-nums;
+            }
             .object-point-parameter-locked { pointer-events: none; opacity: .55; }
             .object-point-parameter-readonly :is(.slider-min-value, .slider-max-value, .slider-step-value, .play-mode-value) {
                 cursor: default !important;
@@ -6099,7 +6149,7 @@
                 position: relative;
                 user-select: none;
                 cursor: pointer;
-                width: 80px;
+                width: 124px;
                 flex-shrink: 0;
                 box-sizing: border-box;
             }
@@ -6127,7 +6177,7 @@
                 position: absolute;
                 top: 2px;
                 left: 2px;
-                width: 38px;
+                width: calc((100% - 4px) / 3);
                 height: 20px;
                 background-color: var(--text-color-accent);
                 border-radius: 10px;
@@ -6135,8 +6185,11 @@
                 transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             }
 
-            .color-mode-segmented-control[data-mode="palette"] .cmsc-knob {
-                transform: translateX(var(--knob-x, 38px));
+            .color-mode-segmented-control[data-mode="sliders"] .cmsc-knob {
+                transform: translateX(var(--knob-x, 100%));
+            }
+            .color-mode-segmented-control[data-mode="params"] .cmsc-knob {
+                transform: translateX(var(--knob-x, 200%));
             }
 
             .label-mode-segmented-control {
@@ -13772,7 +13825,7 @@ globalThis.__archAsyncStart = async function () {
             for (const name of ['requestDraw','updateEntryList','updateStatisticsValues','updateZViewControls',
                 'calculateAuxiliary3D','updateGeometryMeasurementDisplay','updateGlobalPlayState',
                 'updateHistoryButtons','showTopPrompt','updateEntryVariableValuesDisplay',
-                'updatePrecisionLabels','updateParametricRangeLabels','updateCategoryButtonIcon',
+                'updatePrecisionLabels','updateParametricRangeLabels','updateCategoryButtonIcon','syncStyleParameterDisplay',
                 'updateGlowFallback','restoreOriginalPrecisions','init']) target[name] = () => {};
             // The full graph pass must complete before any tessellation.
             target.recalculate3D = () => {};
@@ -13886,7 +13939,7 @@ globalThis.__archAsyncStart = async function () {
             return segments.length ? {segments,sampleView:{x:center[0],y:center[1],z:center[2],scale:1}} : null;
         }
         function curveRecord(entry,cache) {
-            const thickness=engine.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3),thick=thickness>1.5;
+            const thickness=engine.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3),thick=thickness>1.5;
             const style=JSON.stringify([entry.color,thickness]);
             if(cache.record && cache.wireThick===thick) {
                 cache.record.vbo.data=cache.vertices;
@@ -13950,7 +14003,7 @@ globalThis.__archAsyncStart = async function () {
                 entry.dependencies,entry.objectDependencies,entry.variableDependencies,entry.parametricParameters]);
         }
         function styleKey(entry) {
-            return JSON.stringify([entry.color,entry.visible,entry.thickness,entry.displayFrame,entry.extendTo3D,
+            return JSON.stringify([entry.visible,entry.displayFrame,entry.extendTo3D,
                 entry.sliceAxis,entry.sliceVal,entry.isSelected,entry.lineDash,entry.isLocked,entry.dragEnabled,
                 entry.locked,entry.playState]);
         }
@@ -13976,7 +14029,16 @@ globalThis.__archAsyncStart = async function () {
                     const controls=['expr','originalExprWithPoints','min','max','step','playState','playMode',
                         'playDirection','color','visible','thickness','displayFrame','extendTo3D','sliceAxis',
                         'sliceVal','isSelected','lineDash','isLocked','locked','dragEnabled'];
-                    for (const field of controls) if (field in input) entry[field]=input[field];
+                    for (const field of controls) {
+                        if (field === 'thickness') {
+                            if (!input.styleExpressions?.thickness && input.thickness !== undefined)
+                                engine.applyStyleValue(entry, field, input.thickness);
+                            continue;
+                        }
+                        if (field in input) entry[field]=input[field];
+                    }
+                    if (input.styleExpressions) entry.styleExpressions=input.styleExpressions;
+                    else if (entry.styleExpressions) delete entry.styleExpressions;
                     if (entry.type==='variable' && entry.isEditableIndependent) entry.value=input.value;
                     for (const field of Object.keys(input)) if (field.endsWith('_expr')) entry[field]=input[field];
                 }
@@ -14072,6 +14134,8 @@ globalThis.__archAsyncStart = async function () {
             engine.statistics ||= StatisticsEngine.createDefault();
             engine.statisticsRuntime ||= {values:[],errors:[],regressions:new Map()};
             engine.annotations ||= [];
+            engine._styledAnnotations = null;
+            for (const annotation of engine.annotations) if (annotation.styleExpressions) (engine._styledAnnotations ||= new Set()).add(annotation);
             engine.traceState = {active:false};
             engine.selectionState ||= {selectedEntries:[],selectedAnnotations:[]};
             // Structured snapshots copy these references independently of entries.
@@ -14274,6 +14338,7 @@ globalThis.__archAsyncStart = async function () {
             for (const packet of packets2D) delete packet.bufferId;
             const result={type:'result',id:message.id,scene:message.scene,precisionKey:message.precisionKey,
                 evaluationReusable:true,reusedEvaluation:evaluated.size===0,work:currentWork,
+                styleResults:engine._activeStyleOwners?.map(owner=>({id:identifier(owner) ?? 0,expressions:owner.styleExpressions,color:owner.color,thickness:owner.thickness})),
                 timings:{compile:compileElapsed,calculate:performance.now()-calculateStarted},
                 entries:[...pendingEvaluated].filter(entry=>engine.entries.includes(entry)).map(entry=>plain(entry)),variables:[...engine.variables],
                 statisticsRuntime:plain(engine.statisticsRuntime),statisticsDataKey:engine.getStatisticsDataKey(),packets2D,meshes3D,lines3D,
@@ -17209,22 +17274,23 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                             if (!entry.color)
                                 fail('此对象不支持颜色');
                             keys(args.color, ['h', 's', 'b', 'a']);
-                            Object.entries(args.color).forEach( ([k,v]) => num(v, 'color.' + k, 0, 100));
+                            for (const [channel, value] of Object.entries(args.color)) {
+                                if (entry.statisticsRegressionId) num(value, 'color.' + channel, 0, 100);
+                                else if (typeof value !== 'string') num(value, 'color.' + channel);
+                            }
                         }
                         if (args.visible !== undefined)
                             bool(args.visible);
-                        if (args.thickness !== undefined)
-                            num(args.thickness, 'thickness', 1, 20);
-                        if (args.color)
-                            entry.color = {
-                                ...entry.color,
-                                ...args.color
-                            };
+                        if (args.thickness !== undefined && (typeof args.thickness !== 'string' || entry.statisticsRegressionId))
+                            num(args.thickness, 'thickness');
+                        if (args.color) {
+                            this.engine.setStyleParameters(entry, args.color);
+                        }
                         if (args.visible !== undefined)
                             entry.visible = args.visible;
                         if (args.thickness !== undefined)
-                            entry.thickness = args.thickness;
-                        entry.webglVertices = entry.webglFillVertices = null;
+                            this.engine.setStyleParameter(entry, 'thickness', args.thickness);
+                        if (args.visible !== undefined) entry.webglVertices = entry.webglFillVertices = null;
                         this.refresh();
                         return this.describe(entry);
                     }
@@ -20519,7 +20585,7 @@ window.ArchWelcomeIntro = (() => {
                         </div>
                         <div class="about-text-container">
                             <p class="text-bold-black-xlarge">Arch图形计算器</p>
-                            <p class="text-bold-italic-gray">版本 2.0.04 (2612)</p>
+                            <p class="text-bold-italic-gray">版本 2.0.05 (2612)</p>
                             <p class="text-bold-italic-gray" id="about-bdfz-credit" style="display:none;align-items:center;gap:0.4em;">
                                 <img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNDguNzEyNTMiIGhlaWdodD0iNTYuNTY5MDYiIHZpZXdCb3g9IjAsMCwxNDguNzEyNTMsNTYuNTY5MDYiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNjQuNTE4NzMsLTE1Mi4zMDY2OSkiPjxnIHN0cm9rZS1taXRlcmxpbWl0PSIxMCI+PHBhdGggZD0iTTIwNS4wNDQwOSwxNTUuNjA5MjNjMC4wODcxMywtMC4wMDE0IDAuMTc0MzYsLTAuMDAxODggMC4yNjE4MywtMC4wMDE1NGM3LjExNjc1LDAuMDMwOTQgMTIuODYxNDgsNS45MjM3MiAxMi44MzExNywxMy4xNjE5NWMtMC4wMDAyNCwwLjA1NzM1IC0wLjAwMDgyLDAuMTE0NiAtMC4wMDE4MywwLjE3MThsMC4xMDUwMSwyNC41NzQ5OWMwLDAuMDg4NTggLTAuMDAwOTYsMC4xNzczIC0wLjAwMjY1LDAuMjY2MjFjLTAuMTQyODQsNy4yMzY4OSAtNi4wMjY4NSwxMi45ODU3NyAtMTMuMTQyMzQsMTIuODQwNDJjLTAuMDU2MzgsLTAuMDAxMTYgLTAuMTEyNjIsLTAuMDAyNjUgLTAuMTY4ODYsLTAuMDA0NTNsLTI1LjIxNywwLjAwNDE0Yy0wLjA4NzEzLDAuMDAwMzQgLTAuMTc0MzYsLTAuMDAwMTkgLTAuMjYxODMsLTAuMDAxNjRjLTcuMTE1OTMsLTAuMTE2NTggLTEyLjc5MTcsLTYuMDc4MDMgLTEyLjY3NzE1LC0xMy4zMTU0OWMwLjAwMDk2LC0wLjA1NzMgMC4wMDIxNywtMC4xMTQ1NSAwLjAwMzgxLC0wLjE3MTc1bDAuMTgxMDEsLTI0LjU3NDZjMC4wMDEwNiwtMC4wODg1OCAwLjAwMjk0LC0wLjE3NzMgMC4wMDU3OCwtMC4yNjYyMWMwLjIyNjk4LC03LjIzNDY3IDYuMTc3NTQsLTEyLjkxMjMyIDEzLjI5MDgyLC0xMi42ODEzOWMwLjA1NjM4LDAuMDAxODMgMC4xMTI2MiwwLjAwNDA1IDAuMTY4ODIsMC4wMDY2eiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiLz48cGF0aCBkPSJNMTc0Ljc1Mjg3LDIwNi40MzIxYzAuMDAyOTQsMC4wMDEwNCAwLjAwNTg4LDAuMDAyMDcgMC4wMDg4MywwLjAwMzEyYy0wLjAwMDg3LDAuMDAwOTggLTAuMDAxNywwLjAwMTk5IC0wLjAwMjU0LDAuMDAzMDNjLTAuMDAyMDYsLTAuMDAyMDYgLTAuMDA0MTYsLTAuMDA0MSAtMC4wMDYyOSwtMC4wMDYxNXoiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIwIiBzdHJva2UtbGluZWNhcD0iYnV0dCIvPjxwYXRoIGQ9Ik0xNzguMjA4MjMsMTk1LjAxMDc3bDMwLjc3NTU2LC0wLjAyNjc5IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTE3Ny43MzQzMywxOTQuMTc0NWwxNC41ODU2NywtMzAuMjczMjciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMTY3Ljk5MzczLDE2NC41MDc4N2MyMC4xNTczMywzLjQ3NTA1IDM1LjY0MDQ5LDIwLjU0MDE1IDM2LjcyMjc0LDQxLjM4ODU4IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiLz48cGF0aCBkPSJNMjMzLjI1Njk4LDE3NC43NjkyMmwxMy4yMzI4LDEyLjc3NjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSI0LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0yNDUuOTAxMjEsMTc0Ljk4NzIybC0xMi40MjYyMiwxMi4yMDgyMSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGltYWdlIHg9IjY2MS4wNjExNCIgeT0iMzkwLjQ4MzMyIiB0cmFuc2Zvcm09InNjYWxlKDAuMzkwMDUsMC4zOTAwNSkiIHdpZHRoPSIxNDIiIGhlaWdodD0iMTQyIiB4bGluazpocmVmPSJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUk0QUFBQ09DQVlBQUFEbi9UQUlBQUFRQUVsRVFWUjRBZXlkQjV4dFIxM0g3OE9BQmFtS2dsUkJwWVBTRVFLQ1NJbUdHa0RRQUZKRlVBUUNoQ0FrVkFtZDBBazloQjZRM2xzQ1NDY0pFSnFCVUNWMGtONmUzKzh2NTVlM2Q5L3UyN3Y3dHI1MzlqUGZPM09tblhOblorYk8vT2MvYzg0dzJVUC90bS9mZnI2QnY4V1doMkRMNjdEbHM5aHlNclo4SGx0K2pDMVlNZC9uVXd3VDQ0cHA1WVdFeTJIWWNrMXNPUmYydWZiUTRwM3NzUlZuVC8ySGJaYnZ0ZVVyRHExNnY0R2pzZVdIMkQra2dMODg4RHBzZVNDMm5CTmJ6b1F0SDhPV3AyUExnN0hsN3RqeWFHeDVPN2E4QTFzK2d5Mi9oeTJIWXN1N3NPVWIyTi9nV2I0MThBUnMyUmQ3WDhLMnRObnlGV2RMbC80V2Z2Z3RVM0ZvcFg4MmNDUzJZRzNmVHRtL2Z1RFcyUEpXYkxrMnRsd1NXeTZOTFgrRi9WZmJ0bTI3ME1BQjJBZmcxM3orR0xkY0ZQdWloRDFzNEU3WXAwT1k5NUJqY1V2aTQvNkxnUWRoUy9POUs5ZGkzR041K0o4UFBBcGJNaVlqenBZd1c2YmliSW5TM0lzZWN0TldIRnJoWHcrOEQvdDkvRThjVDhnZGNjc2pzT1hjMk9lbU42aTVDWTZiNEhkVndYMlM0SFk4SXovRExWaVRDWGxmVXJqNHhNQm5zZVVQc2YrUXNGTUhMb0F0SjJDZlFOaXRCdEtENFg2MWNLL2pCeDZLL1ZEOG5qTndXMnc1RUZ2OFRuSWZyaVZqTXZKKy9vRDN1Z0JobTlLc2U4WFpsS1V3UHRTeVMyRFRWQnhhMlVVRzNvMzlicjdKMndZNlpqaVk2NE5weFRHNFh6eHdmK3o3aythZUF4MHJQQnovaCtQM2JNSDk1QUdzS1hObHJnUnJNaUh6eHczY0V2dVdrOG5rRHdZT3dwYkxZRitHc0tzT1hBLzdldmhkVExqWGpRVjNqVE1zdVJ3ZWx5UHVDd2NjWjlsYlhSQi9jVVludCtGYXZvajlSZko2N3NEdlkvOCtmcHZDYkpxS3N5bEtZM3lJbVV0Z3d5c09yY2daeGFONDR2OFp1QWEyWEIvNytyVE8zeDQ0SFB0dzR0OVpDRlAySWhmQ0xlbVppUE1Wd2MveGc5d090N3dFVzdBeXRyazUrZHljaTFjTy9BRDdCL2dwQlpaUDRmNFVmaG03WUhlc2dqUHByMHU0M0FyYjhVNzgrZmh2d1M5ak5OdzE2Umw3VVp0bi9kTEFYYkdkZFoyZE1Ea01XM3gyK1NiWDN5VGZmbjh1Tjg1c2VNWFp1SzgrM25sM1NtRGRLdzR0NWs4Ry9QMzJkOXdaaGFSRjArcGkrRksvSmNSOWhlQ3VlUUFPZVF2Mlc0aDhZOEg5TUNIdUZRWDNpUVB2d1g0UGNZNFEzUGNjU0RoKzN4UDhMakZ3UG14NUwvWjdDVXYrMkprdDRiZmZ3TDJ3NVM3WWNuWHNxeFB2Vk1IOXFnR3NpV09uWCtIL3E4a1NmOFQ1dmhDdFk3TDBwRncvZitBWjJNL2dPNzV6NEt6WVo4VnZYYzI2VjV4MS9YYmp6ZGFzQk5hdDR0QXFiaU44azg4Tm5BMWJsTzVlbTFaMkJ5SE92WVN3dHJpL3hQMlgrTjFhY0x0K0pHbjUrTjFiOEZmR0k4bytMa0JlcDQwWkpwTkRDRHVFT1BzTDdnOFAvQzIycStiM3dQOGV1UDl4NExYWTR2akdjWTdqS25rYThaNUcyUGtIbFBXSTYyRHlFL3gvUXB5dWl0K2JhM0dtOUhUOFB6ZndJR3dseWdUdk1QanRNMUM1VlhwS1lqeG00Q0hZY2tOc2NVWW1IZnRjZ2ZSWElHeGR6THBWbkhYNU51Tk4xcTBFMXJ6aTBBb09FcjVSZjZPZmlQdUo5QWhuSDNnbjlqdnhxMUhxSzkvQlE0N0NscWIvT2RkeUkyeHhIVXFld0xYOEVmWWZjYy9EQkxldFVzeFRJZy9DMzVtUU9HT1JQOE5Qcm9ndHpyakVHWnVjRVgvcEdPbFB1WlliWUl1OWlEeVdhemtIdG53YVc0N0dGbGZXaGNzcFkrOGtycWRkbWpLNXVCRERYbFJPeG4weWZxOFYzUG1lMkJtTFlYOUkrTTYzRk54cmF0YTg0cXpwMDQrWmIxZ0pyRm5Gb2RhL1JQaG02ckxJN1hGTDVTVi9UL2pmNHpmZnVGSXRsZXRrTFlwSUhSdXBheU1md1U4K2lpM1JmOEdkMlEzMmxRYitIRnVVamNpRnVaYm1HMGt3Zmo2YktDMFdwY2x5QzhMa0R0aGlXb21rR0wvekRMaFNMNy9KdFdSc2hqc1NZK3hmREZ3WFcvblA5Zm4reXFxNGpQay9QdVZIMkQ4aXJKTGl2K05hWG9BdFdESDIwbEk1aytNK1VWWmwyWGRNbU1pci9iRm1GV2UxSDNUTWIzT1Z3S3BYSEZyS3k0U3ZhYXVWL1hIdnorL3ljd1gzYnc5a3JZbTRGeFA4WW9oVE9jaEw4WkMyMU1oNThNdHNDdHZ4akxSbnFUNk1lcjZ5TDNIRTNrc2MzOGpGOFJkbE5XSVpDTjR6R1ZmWXhYR1BtSmZjbU5SaTd5U1pMZUxuczBoN0p1OHBkeVpNS1hCV3czRi9ZU0J5R3R4dkhPalk1cmFVelcwcHF5OExZZDhlVUtZbFgrTmEvZ1ZiSEUrcEVma1B4UDhIL0ZiVkxLZkFWdlhHZTI1bWU4YzNXN1dLUTYyMmRsdkxuWW1JTXhtNUprV3Axbi9sSmQvaVdoeW5TT1VsVS9vbnRLNlhDWEdWbFVoWHFaM0ppRG8xMHJHRXVpNXlMZExJNzJJTDFvYVlzM0JYY2NZbGQrTmFyb0l0MzhjVy93ZGlyeUM2eFY1UzdVUmxYTmVtZk5VYVZIdlEza3ErUkhxcHZNdVo1MUdVMmRPRXNIOGVlQ0cyYTIrTGpTa0pYcjd4QVplZmFreXgxNWZBYmxjY1dzS2hRa21xN3l2Mk11cWF2SnVhcjE1TmY0c2RqNGdqLzdzVGRoWWgzVE1Idm9mOVBmSzY4c0Nic04rRW56TWljY1lpblFYWk91VWl4QkdzTFdFY0Q0bXlJMUVHSlNmeDlOTFpubVhscm9qYlV3N085ckkyUnh4N1VlbHNUWm1XcUtzalJKbTROdllNeXRmeGtqTmE2Wml5RXZUSjd2enRkc1hablp1UGFiZHVDYXk0NHRBS09scFhaMFF5ZTZJb3pQTU1oSDlVcVBXUEZQeWQ0WWkvejJycFJWT09zTHNJNGM1NDVFbTRwWEtjWDNJdDk4V1d6cDY0akhra24vSm1iRW5QaFh1cm1LNStSMk9SaDg2YUYvYnhBeDJybk1MMUtaVFZqd2JjZ1dGWlBCNy94K1AzVTZITXp6YndLMnhYNDkzekpTOGlucndHK3pXRW5WdHdyOGo0VDE1UndqSFIzbDBDeTY0NDFGSjdDM3VOak5ZcFBuOUhSVzA3VWJvcFNuUHRkUnkzMkF0MFZWa1poMFFTVEg1M0ZQSnhsNlU0TGhLbHF1S09BQ0hLZ3VZSWZOVzFVVnZRK0MvaldyQVdOSTZUWk1IQVRlRDVyenlEdUFJdTloS1NOVGJLeWhtU1pVKzBpV09abjlIVC9Bei95OHBrTXJHc0plVXltVXljMmNsWGNjc0hzS1c3T3JoY3ZsbDJ4Vm4rTGNZVWUySUpyS1RpSEVkQlNINkxxZTMvTFBqOTE0RGpuY1B3dTZQZzkrTUJXODJMOEh1NTRGZEpxbHAwVWtscFY1K2RLUWxSZDJtaXlVZHIrdzBocHExUmNNYTRzaXoyV3VKNFNSSzRoaDlmSjIvNUpMYTRRaTVacThOdktkTlpVOFl3UkZZdlc1eFIvUzdmOVFqQnYrWjVPRVRwc2JndUoxMUZ2eHJoVjZQc3J5SzRIZmY4SG5sVWNvM1g3R1lsRldmMjNNZVllMndKekZ4eHFKblZYSE45Umk1UHFRaFdqRnB3OGl5dW5rWDhTb3IzNFZveTY4SS9wMHZnWit1UjdwOXlkNmI4Qm1HQ05aTlJkaUd2SVBZcmFFM0hDZTZhKytHUXlrSFVxUkc4MTlTNEErTmpQTXVsQnFKZmcvdHN3cDE5SnNFNWs3RTNrZlRjcEZCM3lQMzByNlZNMVZpTUJKMjh6eXVFUjY4SE96MEx0dXRaRHlEdWhZWHJPdzI0aDB2dHpHdmc3KzRTdkpjMk0xZWNwYk1hWSt4TkpiQmt4YUVXUmk1QW9YaG1qQ2lGZkRTMStsTkNlSGRlZG4rU0s3UHluNlFSdGVLa28vakQ4UmRIOXRLYW4xME5oSzNVdURLdGJPaThQTk41eVVSZEduRW1JUi9IVDdEV3hiZytkUU9lNVliU08rSSt1M0N0OUZod3hueWVUNG1HSk81cTl1R00yY2FudE1kUkYwZWkzME9ZZTdJRTU4VFoxaFg0LzZpRDdQOUNuTEZLVnRzbmswbjBkckNWZllrbmJ3aGVTNXNsSzg3U1dZd3g5cllTOFB2T1VuR2VTMFRCbWxpVDcwdE5Wb0k3R2Y2aXNZWTdjaGxzOHp3RGNYNW40T25ZYXZwM2R0Q3hoaXZac3JzOURiZWNNdG05d0QwL0tJUlVudEhWZGJ6V3hXUnRpRHU1ZDh3OVpFK2twN0UzK1M1K29yNnp0T1ZuYllwbi9uY2hUbnNHNDRyYWp1TDRUK3o5NVdEaWlyM0pBN25IcFFhdWpxMDJaSDhKTGtVOHNWY1IveWVpRnFhY2lmQXprYVk2NGx3dWJ2d25MeDQ2aG93bHNFZ0pMRnB4cUhtZURlTVpNYTRmeVFIa2NRRCtGeHc0Q2R2VlhIOVhSUjBUNlQ2bXl4RXVYVDFYQjBmVW41VnFBcEx0cWhoMWUrUVljaE9zbUdvSTVvS1BhaFRpWEJQam1UaVNIb1E3S01XV2Y4TXRXU3ZDSGYwWmJNZGprcDZSTW92Qlg2MUJVUm91a1p2aFg2TmVzeWlia2lNSmtHb2JWSDdqT0VqYTQ3dVNMczZNNWN5a2t6NXZ4ckE4aE91Tmk5YVBSUVBJYkRSakNTeGFBcnVxT0s0M1NSTHp1M3ZNd0JleC9kMnVqbXhXYllua25xQjdFMVk1Z3IrbjRncXUyS29rOGdmaXI1YUpCaUdaS1dVV1p4NkNWNHpyWHBJTFBteVZVdDFsVHhLVlh4TW1XQ3N5ZmtkWHJCOUVHVGlMYk11M2pNVVZmUEhaUkptVnFERWdwM0pYZVNyMlU4bGpQOEh0M2pGeFo0WDRqRUpRVEZmWE80WlRxMUE4eDFBaVR5S21NamR4bjdzYUNlNXpkd3hVeVg3a1BNU3JtWDlkLzloK29UakdqN0VFbGxNQ08xVWNmdHZPS1dSUytVQjZFdnpPTTZDVVVXbWo2eTdpeUY3VS9WQUhSRTE4WjB1ZU1pWHVGWkxJTmNoM3RVejBkV2lWbHhBeXRmWEtCM0VMVnN6OE1jMU44YjBwYWQ0NGNCM3M2K0RuTXdyT21jeFBpU1ZxQ3B5UFBENHJsTkZuaExCcTh0bXF4Uk1sSkJKMHd1ZWI5Z1IzSTUrN2tjZmRoVWhabThKMkJpU09Ud1N2S1dPWlM4N25JY1J4cENpN0VzOUxsUFNNNU4xWm5yMnRPSjZWN2lZNWxEd0VhMmV6VThYWk9jcnErWXc1N1RrbHNGREZ5YXlvWDVIYW56UHh1TTRwRU5qZHcrMkt0cmpUUUoyUVd4Rlh1WVMvcTNKWjRvcS8zOExsYnBucUxpdkwrQWozK2xPaDVWeGN5TGthZExhZXQrTzNUZkR2L2lhY01la0pDUHZPd01leGJaR2VuQ0dKTk1OSDlJMkk1MHpPMDl5L1JqNnVTbGZ2eUJtbXVPTkNzcFpFL0l4aHNHdlVaVkkvK05WOG4xZVRoOC91ZDFBTFVweUppU2RWeUZKeUwzc1o4ZGRBM0FjdmpwL0U5UzR4VCtrWXFmbFdPMEZaa1JvSFU1THZQdlJDRmFkaG96Mld3S0lsc0ZERjhhd1l5ZWtIVFVscitJQndiYXNVdGRSRVRmM2IwVktVV2lxOU5FOVI1MFZjanhHUzdwWlJldnBkbmlGck1OenZIRUtPeXBLa2EyRSt1emlURWxmQ2hhaFR4cE1reEptZnVHNG1qeU9XVks2aG42aGJJd1RIdEFkUjIwNnFYMVI1aWRwN1VnbHl3OVhORWNjclN0V2p6OFIzc2JkeEgvajhIakkzVzhhSHZZdDAxcHZ6bmtuZjFmTDJNTjFyWHoyb1N2VFY0Wkd1QlB3SGFRVnJoL0Vmdk9OcWRJMGxNR01KbkY1eHFQSFZXVlYzUnZ3OWxhbXNhUEUvR0hneXRpaTdjS1N1YkVMY1pTbnVoWktwOUx0eDhTZWs5ZnhBM3pXbDNvKzdHS1ZyWmY1ZWkrdEI0cmhLU0JiVE1WSTBGUEZwUzFRMklvN1hSRm1MdUxJditvbmpGWEhGV1p5aENGbE5tWTRSZlFacG9ETVd5U3lWc3N1SllaUjc5WnpzbmFUeGQ5ZU90Z0NaT0s0Um4xMWNCWkRJMzNpT3lvdDZJcG5TZmFrY3l0NUx5R3FIT2IzaTdQQWFYV01KTEYwQ2N5dk9QeEZkc0NhdWdyK08ybWpMbnZoSHk1amEyNjJmNEg5R3daM1ZWZXl1UWRrTENWNnJhckw2VFk2VmJ5aExFZldNUlZtT1RDWkV3dGhyU2lYVzdnNFZ6N3FSTnhCSHF2L1MzMzVicWRRL0dvYkVkVis4dEVYNjdpdFJ4MGlJc3FCUjcva3psT2xGaERLN2p4QlRHWmpnWEZWakx5RjVSd1E1S3pXVzlqUlg1am5VVnlJb3BoSjRUeGlSeW9NU3lMUDJYT2hjejYwNDhSZy94aEtZcFFUbVZweWMxMElpcGE2Q2MrTGJWWEtlTGhlcHFkUzhyb3JqRmRQVloyY200a3hGRXJnT0g5V3A3V3F3TXpucHVjVTl6YUh5cC9melRCS0pMMjVuWU9MNmp1QTFaWHBlc2ZyQllseEplUkRUY1pCMGJVY3BzYmgzUzRnU1UrMkNTdGJWdDVZRXJ1Rkg1VytSeTNBZlY4TFB6UC94THdhK2plMzRyejJUcXdLM29UZnlqR2Q3MjByZU0zc21mY3pjaWhPUDhXTXNnVmxLUUowTDkrZzRYdWpZcENlVTl3eTV3VkdZR2dBQUVBQkpSRUZVM3lFamNTZUJwQVpTUzU4bmhLa3pJdll5NG94RENGcFhZeThqcmdlSnJWMDZabEdhS24yb1EzRWNTc3Z5ZEhabEdEMVhHTzhwa3pmY0VlOGRRb2pqSThFWmt6VW1YSjZRS2twcnBUMWhKT3VFcXlNa1NtMEZyM1V4ZjgxZHBLdmc2dmFJbllaRS80WTR2Z0ZIMUNZOG1QL3RSUVYvdjZ0TXlaZE1TTmhveGhKWVhnbFljYnBqc0NuVlJ4WFhuYVJqaGE1dWQ3UmQvK3FCMk5yRjNrbWEzM3JaYXJOSlowK2RKU3gyZjJVcTB2RE9DbnRkMjE1VWVxM1VYSHBkMjE1T2xJRkkxckFJZEdZamZTNjgxdFg0S3lISzJLUnJhY3JBSkd0M1BKSGpOM0g4SjhxdVJOMGx5Vm9XdlpEam96TmJjVWd6bXRVcGdiMG5GeXVPMGtUSnQrWjNQT2VzY0pHVHM3QzdadVBlSEtrY3Bkcno5aTVpYlJhU3JNZzRIcEhsSnM3NU1UejNWNFhFUFZjRzU1Unh2VWtTbnhCbFZJSnpsMlorVDFUTlFkZHZ4SFV5bVo5SjE5WSt6bk81K3A0eDFmeEk2M2dkZlNudVY5M2xTcGFySWFoV3AvaXNQck5hZ283Zm9vMUF1cHFzZFZseDZqSGFZd25NWEFKV0hLVzdrbjA4L0lhZFJjakJHWWdvbzVDL3dVL1VMUkZibWJqZldEeURSWWkyUytQNFNhTFZQeWRtVDNIb20rU1VCc3VjS0ZQT3RtaDFXWHgvMHdkNGJudVVSbXBMY2IxcVgxcDlUbW5BVG53aXplOUo3QzJGb0NtamZxL1UwM1c4ZmNqbjRRT1h4UFlNdjhnL2lLUk9qbFJlOGdLZTZ3WEVlWWdRN25jU25Dc3luYVV0TjNGbmVSM1ROQjlubEdMdkl2SG5tZDhnM0VUWm5LaDFLTTZZcjJERklXdzBZd2tzcndTc09EbUhtR1MyRW5GbUlxN2pTUFZKMmhQa1ZGSGlHMGNpMStHNm8zV2N1elFaRzlINjdpSEVWRG9wemxROHlhRm5CcnBDTFVSWjBOZzY3a0tyNkk3RlNyQ1Z4ajZLdktPM2crM2I4ZDVEdlBzT25JcnRHbFFseWd0bVBzY3pMWERPZFh2bWs4bEhib1I5SSs3akdjUFNYUjdLUHNROVR3Y1NwM3Z3M1FVcmM3S2N5ZWtiYWNTVEtXU21SSE1pVlIrbzhoeG5pdUlPQ25HZFQ2cUhwUzZUV0NkRTZiTDRxM0lXSzg2Y3ZFZm5XQUt6bFlBVlIrMDRxY1pYSmNoZDI4aHZPdG5sdHcxYnFhTzRoMG1xQ2Flc1FJaXlTK05iNW56YjNKVm9oZllTYXR0SkV1SDNVT0ZpTVVtdU15L3hkMW1pczB2OG5MTkR5Nytma01lRkJuekxuVElkVjY2bGNxZStLWStrTVoxdDVHTE9SMXRvdlJ4SGlUbzhrcFBJdU5jcnBaRjRoaHNJMSsyUnEydmNIWndFeldUU3M1TFhRVUtLcmozaG5DeUhyczFWRXpCeU9mSlVDMUZ0UkZmb3BUMnM0OUMzRXY0SjRVYnVHcFZJa0swNCtJMW1MSUhsbFlBVnAvUDc2SXVRdkxxcXpwakVuUXBpTHlOZklZNzQreTJlUFNQdG9RaWVNczNQbVptb3l5S1JyRktiWHltazZGaXJjcGpLRndpYU1pZHdKUmtUNGE0RTI5N09kenc5bUpadnkrbDkrMTZwbmdxUkZzTTlPN3NpaXhqMWJDVVhjejdVWnBSNGtlNkd3b1VucDRyak0xR3I3aWJjTzdzZHNIMFBxTnFBbHJHNERpUnQwVXB0aGF4MmFlelZMMEorN3hkaTJrdUxLL25pZXk2RW9GMGFwZHFTTXhPSm1WOFk4cnlFY0YzL2ptSHRWWjJwOW8xN1BxdWszUDFDcEJuTldBTExLd0VyVHNjd2FyR0pLOTJTL1RXMExuY3BDczZZbnQraXpFTmNDWmI1ZDNZY0lxNEVQNCtVaHd4NFRwK2N4TFU5V3RMaFBuWWdlOVR4Vkg5WWNFNFplem5wYjNZRDFXOFc5MjJMdmFKa0xZNjhzKzhMTys4QXBaWGRiT0FWMkdyM1JkNURadTVZRUhjMGlPczE5eUxPa3daOGs0dHZkTW5wcWVUWFBkaHF6VWxuTDkzbjFaN1lzcFhPUHJ2bXh5MTNhWnlCaWRwNjBwN1V2VmZpZXg3RU1oSDMrNHRTYmJrWnVZdTl0RlJIdTdPbm5vaG1YdUk5UkMxS3FTNXkweW5MK2JrVmgzeEhNNWJBOGtyQWl1TTZremp6RUtYQWt2MDJ0TEswTU95ckRad2YyMVpqYnlMT3lHVCtuZTJOeE5hdkp2OFhTQ2ZPcUNUbjV1QVh5U3IyY1FQZnduWjFlYkcxblVpTXVablBJRGluVEU0OXBTYzQvNEFuZjM2TVBIUFNGUFpYaFJUMk1tSnJGTHhpN0xXa3MwVy9nM1R0emxicGJzdFBrSTlrRE1DOStuNHR4MG5pdUVlU0tSL21JWjI5K2U0cElTaEc2YlRvSjVtdEVYS2ZBYVg0NG5oTG5DRWV6bjJycVpjOThjUlY1MGVxdWRqWnFjOGtuVFVydzVIZXg3ekZYa25zeFVTWmx6aU9Fdi9YWjdUaWNLL1JqQ1V3V3drMGxoWEhkUlBwYjNGV1I0bGdxeE5QcEpSMzRTZVJoT0x1YjYyOWp1QzFvR20rU3BtbHE5UGQzOVQ4MU5PVnJxa3NtQm1lcWZIWXloUUVaMHcwMldpQmR4SjZnNXpuaS8xSklVYkNzYXViakhQS3FFdjBTOUwyL0o5cURrNUZtblBoK3BSa3RzWTlYaStrLy81QXh6NmVoaVZOMmg2bll6VEhoK0ozK1UzU1huUGdKdGpPMU56ZEtWbVZKaE43QWJGMytEdnUrVXpCdi9uWkM0dTdSY1hlUWp3NVJGd0JsNVp6WjFQZVEzd2ZoemhUbHE0cDJzdEpadUZXSE80NW1yRUVsbGNDVnB5TWtrblcyVlhsS1pFYzRwKzFDV3IvR1FjZWdlME94dFI0d3BVcGlML1BndGVVK1hldXhMZm5TWGRUdU10UmJJM2krb3U0TGlJa1c5QlVFbXN2S1luRU0rVTBWRnBmMzhQa2VFMHE1MG04T1I4OWl5KzdEL0R2YW5aT3VTQy92QmNLLzN4LzdNYkxHSWZyK1NaNk90eS9rdXFFazQ4ek1HVkh1ZVlqY2hsc1pXUGkrWUFTZjlKMzl0YXhudU1LOFZ4QmlVNDQ2VTBqblJWRmdzNzluaUtFTzU2UjlCQmMxL2pySUZrbEo2Nzc4ZVhHdU9VTzJISnJiRGtSMjE1Sm5TMUpQYkhpTk1QUkhrdGc1aEtZVzNHNmJ5YXpLWExvR2trMEFta0o3dHVXdmhuUEVia284eEh6RXBMR3FPUGp2dkluVW1QdFdYcWVURTU4d3EveUlGZG14ZmRyaXVNZ2FjL1gzOWhreWtmbExiWUN3V3ZpL3E4WDg0eXU1RHNqa1BuNk5yMi92ZU9WdUw4cjJoSzVFZGMvSDlpT1RWYmJQZlAzVExoL09OQjRQY0ZMblNTeFY1TThCeCtSVkpQQit3YTZobVh2S0ZsZEoxN1h6S3AxNERoSE9udnJHSVNvVTZicDdKM0ZVOFRFWjdrVzkzeXprS0pqdWM1QzhZcnBiTEh5cG5qTzhCRkpQL0dVY1gxdjdqOGF2OUdNSlRCYkNWaHhPa3ZKcWl1dEszSVA3QzhJdFZlWml5dmFXZHNnMi93MlltYzFHdHNSdVBpN0tmWXVZcS9oQ3ZXdnljT3hqNjFKTW52QlR4MFpaUXh0V1VwcHBYdXluUW1JSTNuaFZqRTltN0JyUHY3K2k2ZURTMXRrSXZQeGJPRzdYSDdnUTlnZjR2NTV1eTYyc2hqQkdiTVBuLzZPdXk1M2ZkeDVmdXpqQi9KR1AvSjQxMERQSU16c2ludlY5RFFNWjBiaWpFWGFBemdqazVaLzA4MXFwM3lKM0RFWXpwaVdqMUo1YWZsYTl1TGVMMUczUnBKb2hnLy90K0wvN0QxV25CblM3SDZVTVljOXF3U3NPTy9nSzRtL3Z6K2xWWjF2QUd1N05heHlGMXYvcWJTeXh3cHBsTzVLSlpIV1puRUZXSlQ5aU5KU0ljbVVVV29ycmllSks4M1NzWmF0Vk5SNWtTYnUyTVU5VVhJb0FZSTFaVnkzZVJQUDJqZjFKWkF2MWZjN3BTZkMwMVl2T0dNaVQ4RmxMeVkrdXpnREV2Y1lIVWsrTHhMaXhYQ2ZySVZ4NFo0a3dUbGxvcG1JVDN1aWxodGVhMnA4ZHZrbWQ1SE9vdjJmdjRQdmNQa0J6ekdVbjNBdEoyRExOYkVkYjdyYlY4WXhEZ1U1bWhXV2dEMk92NE1TT2NLY2ZMcldVWGxPZ3FoOUp3b1h0bmFwM2t3bHJabFZFTDZZY2J3ajlpNlNHa3prdGtSUDJoUm5URkk1VEZzS1VXTThiL0NCdFBTWFNIeE8rNGpjQXI5cTRNV1haNDVrbDR2S24zREdWQk13ejAyNnlHK3dQeTNFcUg2S1pTUjR4YmpMOVZia2U3VEU1N1NQemxwT3U1cE1JaWttcjQ4S25tbzdDczUxTlVxQnBlVm83eUU5czdDL0xORU01TW02UzZSaktYc3Q4U1NURDFweGlET2FzUVNXVndKV25NbzNtbExaekRsb0haNCtMdGZGN1VqZGRRNTVEQkhGMzB2cC9ENTdpd2xieW5oUGFROFRpUzJKSGpEZ3FXRGlDUXVTMVhYQ3JPMkNNNmFTV3Q5TDZiNXNkNWxLMThZU2lkNmdKOEVuZmp4UCs4Z3BwWHkzS3c1NFdwYW5vaitPTkhJWXRtOHpmamZoYXZ0ZmhtUlNPUXlYTVVyRFBka2o4aTNpUmc2VWtOTSswbU9SMTFVRUwvZVJDODUxTlpuTmNzZit2NXdKaTk5SlBGMWVvbmZEOTdpOUVOOWZCM0dtS2Y0S25PZy9rTERSakNXd3ZCS3c0a1MzZEU2eXZKK2ExcEUxSDJ4Ym43L0pYYU5SRzAwNnBsRktLeGxia0U5L1EzR3V5UGk3SzlHOEl3ZG5UTEtZdk1QZXdGN2hhYlFRNVUwNWVXczdENjRoZmE2eGEvcWMzVHNkZitKK1dMaUk1aU8yOTFSbktQSW04djZWNEsrK3ROZ0tCYThZOXlTOWtEeGk4RWsrcE9tYit0eVJJUVN0cTBrUHdoMDdpMHM1OGx6SEMvN3FYa2w3L294aCtCTGRiV0p2Sk1tSE5EbDExb3BEMnRHTUpiQzhFdkRkbWFsQkpNdm9IOXZmT1ZFWFJ5cFh5ZHRhQ1BjRVQzSGNJNDQ3cFBvNUhZMFRkVjFNSk5tMGtKY0lMZUoyd3AxdDNZSnp5cmd6UUoyWms0bm5Uc3o5U09mNHh4TTVaU295RisyQlhRZTZGbWtpV2NmZkZYekJPV1dxbWZjRTRqNkJ2Q054SnNaOENTOWU2MkxVUEJBN0NjbVlsdWU2cC9BRTFURHNXTkwzY0Voblcrb2RTeVRHeEk4eG96akdqN0VFbGxNQ2N5dU9iL29WOVc5dlJtdFI2aXJueEMxcHliaXJXMXRKNk5Sdkl6ZnZXZ3pPZFRYdU1GRC85L20wcE9mem5OY1RucUQ2S2poajNHbmdPN21pSVloUGUxU2N1elNSYzVCMzl5RlY0NjVyWmxuYjRwNEhDL0hjaytUNFVXbXo3REx6TlF4VTIwOGNOOHBUdUpma2JFUGNTdVZGR1pWa1Z3cis3c0VTZFhva1dnMzR4OHl0T1BFWVA4WVNtS1VFNWxhY3FScEZpK2theFZRKytQYzB5cTVDdTNJdDZyZEtOZlNVOGNoVStuVzR5RGsxUEdjMThaUlZpTzhEbGY2V08vNFJaMGl5MUtNcDVaYWppU2lSWE9OV3YxY2M3N2lMMDNlTTI4S2o5MFA0UmhsM1hVcDJYdklRdXNWeHF6aFRsdTdnZGQxUTFHa1NUeW9Sa3NZWUpybVlXM0hpTVg2c3RBVDJyblNuVnh4K2wzM3JuRE9peWptaWlVYkx6VDRxN0o2b0hza2h4ZFJSZDNzcWRXbEViVGlwM0llb0cyS3k5c1NkN1FVbDUvZHkzVFU0dFExRmZXQlJsMGZVajU3TC9xU1J6SzV3Mnp0SmRaWnR0ZEp5aVY0VDhUYmF2SlFIRUh0WmNWd2pQWDJqWnprcXBaZm9FMUVQdXFjK2I3a2hqOHpDOFArMWNCMXplc1hKMWZneGxzQ01KYkJReFZGN1Q5UURscTZhZDYrenVpdmk3NkNvOXlwZHhlNmU1SzZKYk5Rc2EzNFIrRFkvNmI2eG5zamxlcGhZRnFLTzBWd3FmN0hYa1p3b1J1Wkt5NlY3cS9IYUZFYmRKbkZHSks2SVM4YzZtZjN4cE8wWlBVRkVQT1A0ZnZ5eS9JMFFYa216SjM4SVhqdU1CYlhqYW5TTkpUQmpDU3hVY2R3ekpWblRJQjluRE83RGRxK05vK3hvd09IZkhpajdlYmp1MkNGckhWeWJ0OWdiQ1Y2Ynl2U0VzYTdLdjRpbms2dzU0YTZ0bjNTTTFCT3RpTElwVGY4LzJXWENFMGFTalIySk9iWjdzOFNacGtSM25QR0xPeitjQ1hhMm1MRXUvcThSMGswWi83RlRIdVBGV0FLemxNQk9GWWZhOVcwaHNUSU9VUnZQM1lYVi91OXVCM1ZLSkdNRzByanZXcjZDMjk5WVoxalMxWEwxY0lXc1I3TUtKVEEvQzN0MVVTdFR1cHFkTS96NG4yU05EVHVHeE5VYXNEZFZmL3JTakczc1RidHZyZWY3RUhWbnMxUEYyVG5LNkRPV3dNNGxzS3VLYzF1aVMwZmpycGhMMTZpVWVVaDJmRkpibzdlRC9TNGhiY2M4MlQzQmRWZFgyd1BodFNyR1hremNZU0ZMWmVwZUl1bHBHZmFLc2xTNnlqOGMvMGwyQ1N5VmlQQzBmT3lXbTcyeDRMVXFwdVhiNTZtT3NES2JwL0MvVUFOQTNvWmJubzN0RG8vb1d0UDluRnQ0a2tyVWNjWjBqM291NW4vc3F1TE1qenRlanlWd2Vna3NXbkdvaFY4WFlsWnUwVDNsMWZ6ejkxQXE1NG5HRy9GdDllNFErRERwcmRYV2J2R2tBMUZHSkVSZGtlbGFXTVplM09PcVFrN09FQVRuZ2liUFJVZ2xwdk43QXB3d01EQUFBQW54U1VSQlZOZHhoQ2hUcHZJb1pVRFN3T29uTmJ6K3RlM0ZKR3RuZVBaZEZaWDd1SjRsQkszSXFIMG8xYWVwRmtBa3ZwVEpHNFdjWGZrVzkvZUw2NHBTYllMZm9nZFNYN3luY2FUbkllMHZoUFFMbWtVcnpvS3hSOCt4QklZU21LWGllUHFUREVrbWFvUEpRWGhJSlpEZFR4UmRYY0ppcUxYVmJjM1pmSGdxZFphTTVybGVydWt1aHV5U29MVmNWY2lrUFJIT0JVMTduTzREUzhza1p0ZlVQS2xUOEpveURlK1lyVm9CbmhBaGZaNnBSRnk0N2lmVnJPeVl3UjBaNHVsbVF0UVZtZlM0cEZRTFU3TFd4SFh2aHpPbXV0WDVQL0gvdU1aQWQ1NHEvWmFVSDJFUGxhVGN4Y2NzRldjWHljZWd2YWtFNW43WEpTc090VS85WEtXTzdtd1EzMkFpemt6RWNZc1lSM3d2d05QcEJiS2ZDZnNJNGFhdVVFdkhTbWtCK0x1Q0t6aG5NajZ6VlBMYmMxNjZ2clJZSnQzQjJaN1BrejJsWXcrMTQyUisrbzdwY25JN2dUM2RVK21yTkQrQ3BveDYySktXUENja0VsbXUvUTZDYzFuR25SemlERmZzMWFROTBDbmtkZ3BsN296SzA3bGV6Zi9RVXpLcUwzUTd3aVE2MU1TMTl4UDMrd3RlUzV1VlBQalN1WTR4OXZnU21MbmlVR3NmTFpSSU5jYXlKb1hmS1lLLzJtR1NHczkxSlpQVjZjMXVCUHdkUjRpdFJCenBTMytqaWJJc1U1MWZ6MnFXeFJMYitxVnlEMmMwVWoyYnpESVdTT3lKR2FMZXNIUXR5Qk1jeEowUk1qOXBUblRIczJ0K25YVzIvTlFCRXFMTVpMcWE3Nm5ub242d1ZCL0s4WkwwZTdpcjlWL29YWTRWN3RBZTJsNVdLdmRKdWZNL3pJbnp4SnZKekZ4eFpzcHRqTFRYbE1CS0trN1hNakpHb1RZL1hpZ3hXNk5VZXk2LzVkVGtzd3JoSFdONDJyaW5nZmNNd0s2eTIxdkkxS3lNZEV1WnRrUzEyR1N4K0ozOXFHOHJ2YTVFdDJPbCtlazd0dW43cG5vK1R6VWdPNXVjbjY0OXJQckpFaTBESXFuREpHcmxDVjRMbW82TldwN0tZcVJ5bzd1U1NpcEg2OXBTTlIvZHNTTDlmM25Xa1RnK2tzeSsrTjkwZGtWMnM1dVZWSnpaY3g5ajdyRWxzT3lLUXczOXBsQWlhdnhMVzBUbEJhM2h5bXFFcURIcTkwcE93NlNYY2wrMnZZc3pMZkVkNE5MZlltZHU0amhJa3NrQ0gxMmJjZStQTEJCbHlzc1ZmZW5lOUR6UFZJeUZMeHlIU2NjcXRuNVpPUFlPMzV6K3dXWHYxNTRIcndYTmNmaUtNemJwR0xHNnZ6bDVuVGhxNVVueTVYK1N0OW5nWDRsNE5UTDlydEwzeHl2ekVkL3NLeVJadmxsMnhWbitMU2FUTWMyZVZ3SXJyamh6YW5nMTZEemxXMUxqQ2U5NU0vZW5kL0VzMzg1bVdvcGRuYzQ3Q29oL3BCRG8yVHZpK29sRTN3Zi9ua2JxK296Z3RVZVlqbVdxcVpmWkt0L005MXBJMW82NGRzYWs1c0VCbEtmclNpL0hUOVNEM2grL3V3dGwyRE1hMjhQWTYwdTBHRWpqcjhRdGlQZDU0WHBGWnNVVlowVjNHeFB0TVNXdzJ4V0hXdHQzTzBRZVFNbmt0NWphZjBuaDJoVnI2ZXdrTFFmLzlqUjVCd1BYTmE3L2lPc240djVyc1pjUlp5alN0YTdWMXUvcGM2eVYzWjYzOHFETzZqSkw1YWFlZWlXZEpTbXJrZXg1Sjl4ZVJxb0QzVEZYSmNkRWllbnVrdTRGejVtRi9MODZGa3FrbFg3c2RzVlo2WTNIZEZ1N0JGYXQ0bENUS3cvb0tuTE8yS040ZXFwREpLakU4eVFNNmFvNVVhYU0rckpTL1pKcTNqbnpra3FtTTVZaXBlc3dVZ25xL0RQNmlMS2hwcExpck9IeEpPMEIrcjNzWGFXblJ6UzhzOVgwVEpSYmU0cEloTW5IbVpGMEZxcFc0aVBvNVI4dWhPZWNaK3pvQTVGKy91bXNCSzNjckZyRldma2pqQ20zWWdtc2VzV2habnRTcVN2STFSenMvcVRLZVJZc0oxcEpOZEU4SFV2Nm05MDFMOGM3b3RSVEhPOUlXN1M3RmVXRXlXUml2R080a2JoVFF6bzdNNDRRdkNwR3JVSHhudEtldzNVN3lSbUYzTWw3U3M4VCtsLzh4Tk95WENjNm1ySno3RlpKZWlYVWFoRituZko1bHBDbVk4bnVYVmQvV1RyV080UTQwcDdtS1BJOUNyOVZOYXRlY1ZiMTZjYk1ObTBKckZuRm9aWTdqdkYwci9ZY3pnUmVUcXM1UmhZb0VmY0VpZU1iZVNSeEpQdTR5Tzg0d2M5eGppZzFmVEIrbnE3dTdrUFhmYVE5MEplSks4N29wR2NVcGdVVHBzeEpqc2N0dVE5dWV5bHB5emF0bUplNG8wSTZobkNGWGFMdlF2ck9adXhkUkIwZmNhYTBEODk3bTRIRHNaWGRPR1AwOUs0N1VDN3VsTzBzcXhMblBxOWhrclVwMHZhZG5lb1BTK1ZpT1hlWjhEWHBhZmgrTVd0V2NaTDcrTEhIbHNDYVZ4eHEvcjhKSlZqSnBlT2ZtOUs2UEwxS0xvYmJGVjE3RytsYVR0ZVFzaXVCT0FjSytiUWxadlVkdjc1TElUckkzT3NRSVY1Ym9PdEowcDdvRFlTSnZZUzRFME02TmxGWFNOcWpPRDZTdnRPaXMwWFRpT01ZcVZ3cHN5RHVVWjFtZXl0UmIxc0ltakx0MmJMYXpyTWZLc1J3M0NTVjcxU3U0M3JadWZqZVB4RGlWZXZBZGFkTGtmYkZndithbWpXdk9HdjY5R1BtRzFZQzYxWnhhQVhQRkw2cE9qdmlPcFI0ZXBjb3k1Q01YWWpuNzdsVWJtTXZJTlZaYmd2UGJ6cnhxeStETThiVHdDV3pDM3hjYVhjZDUwRThoMFJpalR2dktjZStweEN2OGhYSFVaL0V6M0dVNUxRT3JodS9ZNnYya0gyZjE3SEVrWjdFbmxrVCtTWWV2Y1Mrd25XTmU3VWs1L0FRMXJNWFhSa1hlMFdwUE16ZVVoeVhpV2ZncVBQa3Mvck16WGRON1hXck9HdjZMVFk4ODczdkFkYTk0dEFhVHh6dzdHVFhYNDZnMktXUzM4N0NmRHVkT0dPUWpnSDJJNzF5bnU2VEl2bGtndCtUWmJManJ6c200ME9ZYi9lelY4ajEvQTlhK3NHQ2Y4Y3luUVgyUEdTQ0ZqVFZsN0UzbEtsSTNQY2t3ZFBlUWZMOXVOZHpCSDluWE9LNWdtSXZMUGFXVWdtNisvZ2xaek9TWi9kSC9ReTNldGRrdFg1bTNTdk8rbjIxOFU1cldRSWJYbkZvTGZjUXZtUlBrSW91TE5kcXdVbTE4ZHNURUJUVDJVMW1UN1RlN0JQQ1BrcUljZWNCVjVhRnk1ME5jYmNKSWY4eGdCVlR6Y0syK0hndThQRjUvQ1E2eHVUVnRTSzhKeE91UFZmUDgvVXlHOEt6dXM3OW50VjF0cGNScGJ5aVhySW9VNUpvRjFCVzdwWHlKQXF5MmppejRSVm40Nzc2ZU9mZEtZRk5VM0ZvU1o4ZHVDeTJzeTVYZnFVN0taMUp2SUVXSE1PWGRxZUNkRTJzMnYvZklVd3FING1HSFltT0craTdHSWcyY1d6VU45bzVmcEJLYW50dWNUVVBKM1AveUt1N096dzNUeXBQY2JmcmZRbS9oWkNtYjZhemx4QlArQlNDWXBUeGlMMk1kRzFMMmRPRktZdC9HdWhKYVVtMDBSK2JwdUpzZEVHTTkxOWVDV3phaWtNcmUrdkFaYkNkWGJoYlVseGZra3FpMnpOVTh1c01Reklyb2ppcUUrMTRRWHF1RFVFN0RQYzRadUE4MkpLZUQvY1haRWZNMDEwOXRlSkFmQTRrenVzRnQ3MldWQnVnT3pyZEF5V3VnSXR1cVc2dzd6dTlJSG5jZkdDeCszS0x5WWF6YVN2T2hwZk0rQUM3TElFdFUzRm9oUjhkdUNXMllHMXpMN2ludjB0V21mbTJudGtqemtURTlTK3BqcTZ5Rk45YTkwSEdJSElrdGp3U1d3N0NsdXpPd0oxWkV2YWpCbDZGclpaak5lL1M4K0VYdy8zdFRTUTZ2bHpmWUtDelEwK1l1TTYyYmR0OE82RkVZczMxbDRTNFc4SnNtWXF6SlVwekwzcklMVjl4YUtVNStSdDcvd0Zic2QrcmNxRktkcnUyMWRtWFVtdnhQUTZpckVVZXpmOWZvc09MVzIwNjZWbDdubnNvanFQRS9kamllMHBGSFNUSjJoTFBGQWs1ZHQ4dytIYmNudkpGMWx2WFdNQmI5K25ISjkrd0V2aC9BQUFBLy85OGdDRFFBQUFBQmtsRVFWUURBSG0rdjVkaW8rUHlBQUFBQUVsRlRrU3VRbUNDIiBmaWxsPSJub25lIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtbGluZWNhcD0iYnV0dCIvPjwvZz48L2c+PC9zdmc+PCEtLXJvdGF0aW9uQ2VudGVyOjc1LjQ4MTI2Njc0MTgzNjA0OjI3LjY5MzMwODU1MDE4NTg2LS0+" alt="Arch×BDFZ">此版本的Arch专为北京大学附属中学设计
                             
@@ -20701,6 +20767,7 @@ window.ArchWelcomeIntro = (() => {
                         <label>透明度</label>
                         <div id="pen-color-slider-a" class="custom-slider-container"></div>
                     </div>
+                    <div class="style-parameter-list" id="annotation-style-parameters" hidden></div>
                     <div class="swatches-grid" id="anno-swatches-grid" style="display: none;"></div>
                     <div class="slider-group" id="pen-thickness-group">
                         <label>粗细</label>
@@ -20713,8 +20780,9 @@ window.ArchWelcomeIntro = (() => {
                     <div class="slider-group" id="anno-color-mode-group" style="margin-top: 5px; display: flex; justify-content: flex-end; align-items: center;">
                         <div class="color-mode-segmented-control" id="anno-color-mode-control" data-mode="palette">
                             <div class="cmsc-knob"></div>
-                            <div class="cmsc-item" data-val="params">参数</div>
                             <div class="cmsc-item active" data-val="palette">色卡</div>
+                            <div class="cmsc-item" data-val="sliders">滑块</div>
+                            <div class="cmsc-item" data-val="params">参数</div>
                         </div>
                     </div>
                 </div>
@@ -23651,7 +23719,7 @@ AAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAADAAAAQHMQAAAAAAAAAAAAAAAAAAIAAAAAAAAA/////wAA
                             return false;
 
                         const mcRes = Math.max(10, Math.min(200, Math.floor(250 / engine.implicitPrecisionStep)));
-                        const entryThickness = engine.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3);
+                        const entryThickness = engine.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3);
                         const useThickLines = entryThickness > 1.5;
 
                         const ex = ArchCore.exports;
@@ -23671,6 +23739,7 @@ AAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAADAAAAQHMQAAAAAAAAAAAAAAAAAAIAAAAAAAAA/////wAA
                             gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
                             gl.bufferData(gl.ARRAY_BUFFER, verts, gl.STATIC_DRAW);
                             engine.cache3D.lines.set(index, {
+                                centers: !useThickLines && !vbo.data ? verts.slice() : null,
                                 vbo,
                                 count,
                                 color: entry.color,
@@ -23694,7 +23763,7 @@ AAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAADAAAAQHMQAAAAAAAAAAAAAAAAAAIAAAAAAAAA/////wAA
                             return false;
 
                         const mcRes = Math.max(10, Math.min(200, Math.floor(250 / engine.implicitPrecisionStep)));
-                        const entryThickness = engine.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3);
+                        const entryThickness = engine.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3);
                         const useThickLines = entryThickness > 1.5;
                         const effectiveSign = entry.sign || '=';
                         const sCode = signCode(effectiveSign);
@@ -23721,6 +23790,7 @@ AAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAADAAAAQHMQAAAAAAAAAAAAAAAAAAIAAAAAAAAA/////wAA
                             gl.bufferData(gl.ARRAY_BUFFER, verts, gl.STATIC_DRAW);
                             const stride = useThickLines ? 7 : 3;
                             engine.cache3D.lines.set(index, {
+                                centers: !useThickLines && !vbo.data ? verts.slice() : null,
                                 vbo,
                                 count: lineLen / stride,
                                 color: entry.color,
@@ -23758,7 +23828,7 @@ AAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAADAAAAQHMQAAAAAAAAAAAAAAAAAAIAAAAAAAAA/////wAA
                         if (!ArchCore.active)
                             return false;
                         const plotType = entry.plotType;
-                        const entryThickness = engine.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3);
+                        const entryThickness = engine.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3);
                         const useThickLines = entryThickness > 1.5;
                         const ex = ArchCore.exports;
                         let floatLen;
@@ -23808,6 +23878,7 @@ AAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAADAAAAQHMQAAAAAAAAAAAAAAAAAAIAAAAAAAAA/////wAA
                             gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
                             gl.bufferData(gl.ARRAY_BUFFER, verts, gl.STATIC_DRAW);
                             engine.cache3D.lines.set(index, {
+                                centers: !useThickLines && !vbo.data ? verts.slice() : null,
                                 vbo,
                                 count,
                                 color: entry.color,
@@ -26694,7 +26765,7 @@ return anstemp;
                         this.redoStack = [];
                         this.maxStackSize = 10;
                         this.filename = "Arch Graph 1";
-                        this.appVersion = 20004;
+                        this.appVersion = 20005;
                         this.entryAutoNumberCounters = {
                             func: 0,
                             eq: 0,
@@ -28318,6 +28389,7 @@ return anstemp;
                                 return;
                             if ('color' in source)
                                 target.color = source.color;
+                            if (source.styleExpressions) target.styleExpressions = source.styleExpressions;
                             if ('visible' in source)
                                 target.visible = source.visible;
                             if ('expanded' in source)
@@ -29164,7 +29236,7 @@ return anstemp;
                     }
 
                     plotPointListGL(entry, cssWidth, cssHeight) {
-                        if (this.is3DMode)
+                        if (this.is3DMode || entry.thickness === 0)
                             return;
                         const isVisible = this.getEffectiveVisibility(entry);
                         if (!isVisible && !this.showHiddenMath)
@@ -29943,7 +30015,7 @@ return anstemp;
                             value: this.annotationState.pen.color.h,
                             type: 'hue',
                             onInput: e => {
-                                this.annotationState.pen.color.h = e.target.options.value;
+                                this.setStyleParameter(this.annotationState.pen, 'h', e.target.options.value);
                                 Object.values(this.penColorSliders).forEach(s => {
                                     s.options.context = this.annotationState.pen.color;
                                     s.draw();
@@ -29959,7 +30031,7 @@ return anstemp;
                             type: 'saturation',
                             context: this.annotationState.pen.color,
                             onInput: e => {
-                                this.annotationState.pen.color.s = e.target.options.value;
+                                this.setStyleParameter(this.annotationState.pen, 's', e.target.options.value);
                             }
                         });
                         this.penColorSliders.b = new CustomSlider('pen-color-slider-b',{
@@ -29970,7 +30042,7 @@ return anstemp;
                             type: 'brightness',
                             context: this.annotationState.pen.color,
                             onInput: e => {
-                                this.annotationState.pen.color.b = e.target.options.value;
+                                this.setStyleParameter(this.annotationState.pen, 'b', e.target.options.value);
                             }
                         });
                         this.penColorSliders.a = new CustomSlider('pen-color-slider-a',{
@@ -29981,7 +30053,7 @@ return anstemp;
                             type: 'alpha',
                             context: this.annotationState.pen.color,
                             onInput: e => {
-                                this.annotationState.pen.color.a = e.target.options.value;
+                                this.setStyleParameter(this.annotationState.pen, 'a', e.target.options.value);
                             }
                         });
 
@@ -29997,7 +30069,7 @@ return anstemp;
                             value: 0.05,
                             type: 'default',
                             onInput: e => {
-                                this.annotationState.pen.thickness = e.target.options.value;
+                                this.setStyleParameter(this.annotationState.pen, 'thickness', e.target.options.value);
                                 this.requestDraw();
                             }
                         });
@@ -31309,6 +31381,14 @@ return anstemp;
                         }
                         );
 
+                        this.annotationMenu.addEventListener('click', event => {
+                            const input = event.target.closest('[data-style-parameter]');
+                            const owner = this.currentUIMode === 'annotation' ? this.annotationState.pen : this.annotations[this.selectedAnnotationIndex];
+                            if (input && owner) {
+                                event.stopPropagation();
+                                this.editStyleParameter(owner, input.dataset.styleParameter);
+                            }
+                        });
                         const annoSwatchesGrid = document.getElementById('anno-swatches-grid');
                         if (annoSwatchesGrid) {
                             annoSwatchesGrid.addEventListener('click', (e) => {
@@ -31321,17 +31401,14 @@ return anstemp;
 
                                 if (isEditing) {
                                     const annotation = this.annotations[this.selectedAnnotationIndex];
-                                    annotation.color = {
-                                        ...swatch
-                                    };
+                                    if (annotation.styleExpressions) this.pushSnapshot();
+                                    this.setStyleParameters(annotation, swatch);
                                     if (annotation.type === 'pen')
                                         this.requestAnnotationDraw(true);
                                     else
                                         this.requestDraw();
                                 } else {
-                                    this.annotationState.pen.color = {
-                                        ...swatch
-                                    };
+                                    this.setStyleParameters(this.annotationState.pen, swatch);
                                     this.requestDraw();
                                 }
                                 this.updateAnnotationEditMenu();
@@ -31433,7 +31510,7 @@ return anstemp;
                             slider.options.context = this.annotationState.pen.color;
                             slider.setValue(this.annotationState.pen.color[prop]);
                             slider.options.onInput = (e) => {
-                                this.annotationState.pen.color[prop] = e.target.options.value;
+                                this.setStyleParameter(this.annotationState.pen, prop, e.target.options.value);
                                 Object.values(this.penColorSliders).forEach(s => {
                                     s.options.context = this.annotationState.pen.color;
                                     s.draw();
@@ -31461,7 +31538,7 @@ return anstemp;
                             this.penThicknessSlider.options.step = 0.01 * factor;
                             this.penThicknessSlider.setValue(this.annotationState.pen.thickness);
                             this.penThicknessSlider.options.onInput = (e) => {
-                                this.annotationState.pen.thickness = e.target.options.value;
+                                this.setStyleParameter(this.annotationState.pen, 'thickness', e.target.options.value);
                                 this.requestDraw();
                             }
                             ;
@@ -32521,7 +32598,7 @@ return anstemp;
                     }
 
                     getPlotEntryThickness(entry) {
-                        const baseThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3);
+                        const baseThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3);
                         return (this.plotHoverObject === entry || this.plotTapHighlightObject === entry) ? this.getHighlightedThickness(baseThickness) : baseThickness;
                     }
 
@@ -34167,7 +34244,7 @@ return anstemp;
                             const outcome = this.addEntry(operation.expression,{batch:true,conflictAction:'overwrite'});
                             result.processed++;
                             if (operation.color) for (const entry of outcome?.entries || []) if (entry.color) {
-                                entry.color = {...operation.color};
+                                this.setStyleParameters(entry, operation.color);
                                 if (this.is2DInequality(entry) && entry.color.a < 20) entry.color.a = 50;
                                 colored = true;
                             }
@@ -34186,7 +34263,7 @@ return anstemp;
                     replaceEntryInput(index, entry) {
                         const previous = this.entries[index];
                         entry.creationOrder = previous.creationOrder;
-                        for (const field of ['color','thickness','visible','lineDash','labelMode','labelText','displayFrame','expanded',
+                        for (const field of ['color','styleExpressions','thickness','visible','lineDash','labelMode','labelText','displayFrame','expanded',
                             'showOnPlot','cardX','cardY','cardW','cardH']) if (previous[field] !== undefined) entry[field] = previous[field];
                         if (entry.type === 'variable' && entry.isEditableIndependent && previous.type === 'variable' && previous.isEditableIndependent) {
                             if (Number.isFinite(previous.min) && Number.isFinite(previous.max) && previous.min < previous.max) {
@@ -34442,9 +34519,8 @@ return anstemp;
                             const swatchIdx = parseInt(swatchItem.dataset.swatchIdx, 10);
                             if (this.entries[entryIdx]) {
                                 const swatch = PRESET_SWATCHES[swatchIdx];
-                                this.entries[entryIdx].color = {
-                                    ...swatch
-                                };
+                                if (this.entries[entryIdx].styleExpressions) this.pushSnapshot();
+                                this.setStyleParameters(this.entries[entryIdx], swatch);
                                 this.updateEntryColorDisplay(entryIdx);
                                 this.updateEntryList();
                                 this.requestDraw();
@@ -34528,6 +34604,12 @@ return anstemp;
                             return;
                         const entry = this.entries[index];
 
+                        const valueButton = e.target.closest('.style-parameter-row');
+                        if (valueButton) {
+                            e.stopPropagation();
+                            this.editStyleParameter(entry, valueButton.dataset.styleParameter);
+                            return;
+                        }
                         const colorToggleBtn = e.target.closest('.color-toggle-btn');
                         const settingsToggleBtn = e.target.closest('.settings-toggle-btn');
                         const visibilityToggleBtn = e.target.closest('.visibility-toggle-btn');
@@ -38007,8 +38089,8 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                 if (depsMeaningful && entry.objectDependencies) {
                                     for (const depName of entry.objectDependencies) {
                                         const depObj = objectMap.get(depName);
-                                        const plotObject = depObj ? null : this.findPlotObjectByReference(depName);
-                                        if ((!depObj || !depObj.isMeaningful) && (!plotObject || plotObject.compilationError)) {
+                                        const plotObject = depObj ? null : (this._dependencyIndex?.objectSymbols.get(depName) || this.findPlotObjectByReference(depName));
+                                        if (depObj ? !depObj.isMeaningful : !plotObject || plotObject.compilationError || plotObject.parameterRangeError) {
                                             depsMeaningful = false;
                                             break;
                                         }
@@ -39350,7 +39432,8 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                         }
 
                                     }
-                                    entry.isMeaningful = newMeaningful;
+                                    entry.isMeaningful = newMeaningful && (!this.isGeometryPointMarker(entry) ||
+                                        (Number.isFinite(entry.x_val) && Number.isFinite(entry.y_val)));
                                 } catch (e) {
                                     entry.isMeaningful = false;
                                     entry.compilationError = e.message;
@@ -39605,6 +39688,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                         return expression.replace(/\[\s*([^,\]\s]+)\s*,\s*(x|y)\s*\]/gi, (match, pointName, coord) => {
                             const point = this._evaluationObjectMap?.get(pointName.trim().toLowerCase()) || this.entries.find(e => e.type === 'geometry' && ['point', 'midpoint', 'intersect', 'rotate', 'reflect', 'translate'].includes(e.geometryType) && e.name && String(e.name).trim().toLowerCase() === pointName.trim().toLowerCase());
                             if (point) {
+                                if (point.isMeaningful === false) return '(0/0)';
                                 const val = coord.toLowerCase() === 'x' ? point.x_val : point.y_val;
                                 return `(${Number.isFinite(val) ? val : 0})`;
                             }
@@ -40824,8 +40908,8 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                             const objectNames = new Set((entry.objectDependencies || []).map(n => String(n).toLowerCase()));
                             const sourceText = entry.originalExprWithPoints || entry.expr || '';
                             for (const match of sourceText.matchAll(/\[\s*([^,\]\s]+)\s*,\s*[xy]\s*\]/gi)) objectNames.add(match[1].toLowerCase());
-                            const variableNames = new Set((entry.variableDependencies || []).map(n => String(n).toLowerCase()));
-                            const names = new Set((entry.type === 'geometry' ? [] : entry.dependencies || []).map(n => String(n).toLowerCase()).filter(n => !shadows.has(n) && !objectNames.has(n)));
+                            const names = new Set(entry.type === 'geometry' ? entry.variableDependencies || [] :
+                                (entry.dependencies || []).map(n => String(n).toLowerCase()).filter(n => !shadows.has(n) && !objectNames.has(n)));
                             // Parametric dependency extraction already replaced local parameters with
                             // private aliases. Remaining names may be free globals from expanded functions.
                             if (entry.parametricParameters)
@@ -40848,6 +40932,18 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                 source = source.slice(source.indexOf('=') + 1);
                             }
                             collectSourceNames(source, shadows, names, objectNames);
+                            if (entry.type === 'geometry') {
+                                // Older archives stored only a flat list. Use the argument roles for
+                                // both evaluation order and validity, without reparsing the construction.
+                                entry.objectDependencies = [...objectNames];
+                                if (!entry.variableDependencies) {
+                                    for (const dep of entry.dependencies || []) {
+                                        const name = String(dep).toLowerCase();
+                                        if (!objectNames.has(name)) names.add(name);
+                                    }
+                                    entry.variableDependencies = [...names].filter(name => valueSymbols.get(name)?.type === 'variable');
+                                }
+                            }
                             if (entry.statisticsRegressionId) {
                                 for (const name of statisticsNames)
                                     names.add(name);
@@ -40877,6 +40973,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                         const cycles = new Set(this.entries.filter(e => pending.get(e) > 0));
                         this._dependencyIndex = {
                             symbols,
+                            valueSymbols,
                             objectSymbols,
                             positions,
                             dependencies,
@@ -40985,6 +41082,271 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                         }
                     }
 
+                    // Appearance is evaluated after the entire construction. A style reference
+                    // never becomes a construction edge, a cascade target, or a sampling input.
+                    colorStyleInput(owner) {
+                        if (!owner.styleExpressions) return owner.color;
+                        return ['h', 's', 'b', 'a'].map(channel => owner.styleExpressions[channel]?.expr ?? owner.color[channel]);
+                    }
+
+                    getStyleParameter(owner, key) {
+                        return key.length === 1 ? owner.color[key] : owner[key];
+                    }
+
+                    applyStyleValue(owner, key, value) {
+                        const target = key.length === 1 ? owner.color : owner;
+                        if (target[key] === value) return false;
+                        if (key === 'thickness') {
+                            const explicit = owner.type === 'function' && (owner.plotType === 'x' || owner.plotType === 'y');
+                            const oldWidth = explicit ? this.getPlotEntryThickness(owner) : 0;
+                            target[key] = value;
+                            if (explicit) this.rebuildExplicitStroke(owner, oldWidth, this.getPlotEntryThickness(owner));
+                            else owner.webglVertices = null;
+                        } else target[key] = value;
+                        if (owner.type === 'pen') this.annotationBatchesDirty = this.annotationLayerDirty = true;
+                        return true;
+                    }
+
+                    rebuildExplicitStroke(entry, oldWidth, width) {
+                        const vertices = entry.webglVertices;
+                        if (!vertices?.length || oldWidth === width || (oldWidth <= 1.5 && width <= 1.5)) return;
+                        // Retain segment endpoints (including discontinuities) from the last sample.
+                        let cache = entry._styleStroke;
+                        if (!cache || cache.vertices !== vertices) {
+                            const centers = oldWidth > 1.5 ? this.readStrokeCenters(vertices) : vertices;
+                            cache = entry._styleStroke = {centers};
+                        }
+                        if (width > 1.5) {
+                            cache.quads ||= new Float32Array(cache.centers.length * 3);
+                            this.writeStrokeQuads(cache.centers, cache.quads, width);
+                            entry.webglVertices = cache.quads;
+                        } else {
+                            cache.lines ||= cache.centers instanceof Float32Array ? cache.centers : new Float32Array(cache.centers);
+                            entry.webglVertices = cache.lines;
+                        }
+                        cache.vertices = entry.webglVertices;
+                    }
+
+                    readStrokeCenters(vertices) {
+                        const centers = new Float64Array(vertices.length / 3);
+                        for (let i = 0, j = 0; i < vertices.length; i += 12, j += 4) {
+                            centers[j] = (vertices[i] + vertices[i+2]) / 2;
+                            centers[j+1] = (vertices[i+1] + vertices[i+3]) / 2;
+                            centers[j+2] = (vertices[i+4] + vertices[i+8]) / 2;
+                            centers[j+3] = (vertices[i+5] + vertices[i+9]) / 2;
+                        }
+                        return centers;
+                    }
+
+                    writeStrokeQuads(centers, output, width) {
+                        const sx = this.scaleX, sy = this.scaleY, half = width / 2;
+                        for (let i = 0, j = 0; i < centers.length; i += 4, j += 12) {
+                            const x1 = centers[i], y1 = centers[i+1], x2 = centers[i+2], y2 = centers[i+3];
+                            const dx = (x2-x1)*sx, dy = (y2-y1)*sy, length = Math.hypot(dx,dy);
+                            const ox = length ? -dy/length*half/sx : 0, oy = length ? dx/length*half/sy : 0;
+                            output[j]=x1-ox; output[j+1]=y1-oy; output[j+2]=x1+ox; output[j+3]=y1+oy;
+                            output[j+4]=x2-ox; output[j+5]=y2-oy; output[j+6]=x1+ox; output[j+7]=y1+oy;
+                            output[j+8]=x2+ox; output[j+9]=y2+oy; output[j+10]=x2-ox; output[j+11]=y2-oy;
+                        }
+                    }
+                    setStyleParameter(owner, key, value) {
+                        if (typeof value === 'string' && value.trim() && !owner.statisticsRegressionId) {
+                            (owner.styleExpressions ||= {})[key] = {expr: value.trim()};
+                        } else {
+                            if (owner.styleExpressions) {
+                                delete owner.styleExpressions[key];
+                                if (!Object.keys(owner.styleExpressions).length) delete owner.styleExpressions;
+                            }
+                            if (typeof value === 'number') this.applyStyleValue(owner, key, this.limitStyleValue(key, value));
+                        }
+                    }
+                    setStyleParameters(owner, values) {
+                        for (const [channel, value] of Object.entries(values)) {
+                            if (value !== undefined) this.setStyleParameter(owner, channel, value);
+                        }
+                    }
+
+                    compileStyleExpression(spec, graph, context) {
+                        const u = this.calcJSUtils;
+                        const program = {tokens: [], source: spec.expr.toLowerCase(), variables: [], points: [], functions: [], names: spec.names, value: NaN};
+                        try {
+                            const source = program.source = this.normalizeMathInput(spec.expr).toLowerCase();
+                            const symbols = new Set(context.symbols ||= this.getMathSymbolNames());
+                            // Keep a deleted named operand such as "ab" from becoming a*b.
+                            for (const name of spec.names || []) {
+                                if (!graph.valueSymbols.has(name)) return program;
+                                symbols.add(name);
+                            }
+                            let serial = 0;
+                            const withSlots = source.replace(/\[\s*([^,\]\s]+)\s*,\s*([xy])\s*\]/gi, (_, name, axis) => {
+                                let slot;
+                                do { slot = '__arch_color_point_' + serial++; } while (symbols.has(slot) || source.includes(slot));
+                                const point = graph.objectSymbols.get(name) || (name === 'o' ? this.builtinOriginEntry : null);
+                                program.points.push({slot, name, point, axis: axis + '_val'});
+                                symbols.add(slot);
+                                return '(' + slot + ')';
+                            });
+                            const tokens = program.tokens = this.improvedTokenize(withSlots, symbols);
+                            const names = new Set(spec.names), functions = new Set();
+                            for (let i = 0; i < tokens.length; i++) {
+                                const entry = graph.valueSymbols.get(tokens[i]);
+                                if (tokens[i + 1] === '(' && entry && /function_definition$/.test(entry.type)) {
+                                    functions.add(entry);
+                                    names.add(tokens[i]);
+                                }
+                            }
+                            for (const entry of functions) {
+                                program.functions.push({entry, tokens: u.customFunctions[entry.name.toLowerCase()]?.bodyTokens});
+                                for (const dep of graph.dependencies.get(entry) || []) {
+                                    if (/function_definition$/.test(dep.type)) functions.add(dep);
+                                }
+                            }
+                            const expanded = u.expandCustomFunctions(tokens, u.customFunctions, u.calc3, u.advancedCustomFunctions, u.advancedCustomFunctionNames);
+                            const flat = u.expandDiffOperations(expanded, u.customFunctions, u.calc3, u.constants, u.calc1, u.advancedCustomFunctions, u.advancedCustomFunctionNames);
+                            const free = this._extractDependenciesFromTokensWithLargeOps(flat, [], u.customFunctions, u.calc3, u.constants, u.calc1, this.allowedVariableKeys, u.advancedCustomFunctions, u.advancedCustomFunctionNames);
+                            for (const name of free) {
+                                if (program.points.some(ref => ref.slot === name)) continue;
+                                const entry = graph.valueSymbols.get(name);
+                                program.variables.push({name, entry});
+                                if (entry && name.length > 1 && tokens.includes(name)) names.add(name);
+                            }
+                            program.names = names.size ? [...names] : undefined;
+                            program.usesIntegral = flat.includes('int');
+                            program.usesRoot = flat.includes('root');
+                            program.evaluate = u.compileScopedMathTokens(flat, [], free);
+                        } catch (_) {
+                            // Retain an invalid source so it can be edited or resolve after a definition is added.
+                        }
+                        return program;
+                    }
+
+                    evaluateStyleProgram(program, context) {
+                        if (!program.evaluate || program.functions.some(ref => ref.entry.compilationError)) return NaN;
+                        const scope = Object.create(null);
+                        for (const {name, value} of program.variables) {
+                            if (!Number.isFinite(value)) return NaN;
+                            scope[name] = value;
+                        }
+                        for (const {slot, value} of program.points) {
+                            if (!Number.isFinite(value)) return NaN;
+                            scope[slot] = value;
+                        }
+                        try {
+                            return program.evaluate(scope, this, context.advanced ||= this.calcJSUtils.getAdvancedFuncsMap());
+                        } catch (_) {
+                            return NaN;
+                        }
+                    }
+
+                    styleFunctionBodyChanged(ref) {
+                        const tokens = this.calcJSUtils.customFunctions[ref.entry.name.toLowerCase()]?.bodyTokens;
+                        if (tokens === ref.tokens) return false;
+                        if (!tokens || !ref.tokens || tokens.length !== ref.tokens.length || tokens.some((token,i) => token !== ref.tokens[i])) return true;
+                        ref.tokens = tokens;
+                        return false;
+                    }
+
+                    limitStyleValue(key, value) {
+                        if (!Number.isFinite(value)) return key === 'thickness' ? 1 : 0;
+                        if (key === 'thickness') return Math.min(20, Math.abs(value));
+                        if (key === 'a') return Math.max(0, Math.min(100, value));
+                        const absolute = Math.abs(value);
+                        return absolute <= 100 ? absolute : (absolute % 100 || 100);
+                    }
+
+                    styleTokensMayChange(program, changes) {
+                        for (const name of changes) {
+                            if (program.names?.includes(name) || program.tokens.includes(name)) return true;
+                            // A newly registered long name can join implicit factors. A longer
+                            // token already matched by the lexer shields the characters inside it.
+                            if (name.length > 1 && program.source.includes(name) &&
+                                program.tokens.map(t => t.length > name.length ? '|' : t).join('').includes(name)) return true;
+                        }
+                        return false;
+                    }
+
+                    updateStyleExpressions(owners, graph, affected) {
+                        this._activeStyleOwners = owners;
+                        if (!owners) {
+                            this._styleProgramGraph = this._styleProgramCache = null;
+                            return;
+                        }
+                        const previous = this._styleProgramCache, oldGraph = this._styleProgramGraph;
+                        const rebind = oldGraph !== graph;
+                        const changes = new Set();
+                        if (oldGraph && rebind) {
+                            for (const [name, entry] of graph.valueSymbols) {
+                                if (entry.type !== oldGraph.valueSymbols.get(name)?.type) changes.add(name);
+                            }
+                            for (const name of oldGraph.valueSymbols.keys()) if (!graph.valueSymbols.has(name)) changes.add(name);
+                        }
+                        const next = new Map(), context = {};
+                        for (const owner of owners) {
+                            let changed = false;
+                            for (const [key, spec] of Object.entries(owner.styleExpressions)) {
+                                const cacheKey = JSON.stringify([spec.expr, spec.names]);
+                                let program = next.get(cacheKey);
+                                if (!program) {
+                                    program = previous?.get(cacheKey);
+                                    const compile = !program || (changes.size && this.styleTokensMayChange(program, changes)) ||
+                                        program.functions.some(ref => (rebind && graph.valueSymbols.get(ref.entry.name.toLowerCase()) !== ref.entry) ||
+                                            ((rebind || affected.has(ref.entry)) && this.styleFunctionBodyChanged(ref)));
+                                    if (compile) program = this.compileStyleExpression(spec, graph, context);
+                                    let dirty = !!compile;
+                                    for (const ref of program.variables) {
+                                        if (rebind) ref.entry = graph.valueSymbols.get(ref.name);
+                                        const value = ref.entry?.type === 'constant' ? ref.entry.value : this.variables.get(ref.name);
+                                        if (!Object.is(ref.value, value)) { ref.value = value; dirty = true; }
+                                    }
+                                    for (const ref of program.points) {
+                                        if (rebind) ref.point = graph.objectSymbols.get(ref.name) || (ref.name === 'o' ? this.builtinOriginEntry : null);
+                                        const value = ref.point?.isMeaningful ? ref.point[ref.axis] : NaN;
+                                        if (!Object.is(ref.value, value)) { ref.value = value; dirty = true; }
+                                    }
+                                    for (const ref of program.functions) {
+                                        const error = ref.entry.compilationError;
+                                        const operator = this.calcJSUtils.advancedCustomFunctions[ref.entry.name.toLowerCase()]?.compiledFunc;
+                                        if (ref.error !== error || ref.operator !== operator) {
+                                            ref.error = error; ref.operator = operator; dirty = true;
+                                        }
+                                    }
+                                    if (program.usesIntegral && program.steps !== this.integralNumSteps) { program.steps = this.integralNumSteps; dirty = true; }
+                                    if (program.usesRoot && program.iterations !== this.solveIntegralIterations) { program.iterations = this.solveIntegralIterations; dirty = true; }
+                                    if (dirty) program.value = this.evaluateStyleProgram(program, context);
+                                    next.set(cacheKey, program);
+                                    if (program.names && program.names !== spec.names) next.set(JSON.stringify([spec.expr, program.names]), program);
+                                }
+                                if (program.names) spec.names = program.names;
+                                if (this.applyStyleValue(owner, key, this.limitStyleValue(key, program.value))) changed = true;
+                            }
+                            if (changed) this.syncStyleParameterDisplay(owner);
+                        }
+                        this._styleProgramCache = next;
+                        this._styleProgramGraph = graph;
+                    }
+                    normalizeStyleExpressions(owner) {
+                        if (owner.colorExpressions) {
+                            owner.styleExpressions ||= owner.colorExpressions;
+                            delete owner.colorExpressions;
+                        }
+                        if (!owner.styleExpressions) return;
+                        const expressions = {};
+                        if (owner.color && !owner.statisticsRegressionId) {
+                            for (const channel of ['h', 's', 'b', 'a', 'thickness']) {
+                                const spec = owner.styleExpressions[channel];
+                                const expr = typeof spec === 'string' ? spec : spec?.expr;
+                                if (typeof expr !== 'string' || !expr.trim()) continue;
+                                expressions[channel] = {expr: expr.trim()};
+                                if (Array.isArray(spec.names)) expressions[channel].names = spec.names.filter(name => typeof name === 'string');
+                            }
+                        }
+                        if (Object.keys(expressions).length) {
+                            owner.styleExpressions = expressions;
+                            owner.color = {...owner.color};
+                        }
+                        else delete owner.styleExpressions;
+                    }
+
                     /* [08.24] 全量与动画重算调度
                      * 协调变量、几何、统计和函数计算，衔接动画与三维视图更新。
                      */
@@ -41002,12 +41364,14 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                         const previousSources = this._dependencySources || new Map();
                         const previousRelations = this._dependencyRelations || new Map();
                         const roots = new Set(options.roots || []);
+                        let styleOwners = null;
                         let structureChanged = statisticsChanged || !previousGraph || previousSources.size !== this.entries.length;
                         if (statisticsChanged)
                             for (const entry of this.entries)
                                 if (entry.statisticsRegressionId)
                                     roots.add(entry);
                         for (const entry of this.entries) {
+                            if (entry.styleExpressions && !entry.statisticsRegressionId) (styleOwners ||= []).push(entry);
                             const source = this.dependencySourceKey(entry);
                             if (previousSources.get(entry) !== source) {
                                 roots.add(entry);
@@ -41090,6 +41454,15 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                             this._dependencyEvaluation = false;
                         }
                         calculateStatistics();
+                        if (this.annotationState?.pen?.styleExpressions) (styleOwners ||= []).push(this.annotationState.pen);
+                        if (this._styledAnnotations?.size) {
+                            const live = new Set(this.annotations);
+                            for (const annotation of this._styledAnnotations) {
+                                if (annotation.styleExpressions && live.has(annotation)) (styleOwners ||= []).push(annotation);
+                                else this._styledAnnotations.delete(annotation);
+                            }
+                        }
+                        this.updateStyleExpressions(styleOwners, graph, affected);
                         this._statisticsSourceKey = statisticsSourceKey;
                         if (this.frameExpr && isNaN(Number(this.frameExpr))) {
                             const val = this.evaluateExpressionWithCalcJS(this.frameExpr, Object.fromEntries(this.variables));
@@ -41100,8 +41473,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                             this.clearPlotData();
                         else if (affected.size || structureChanged)
                             this.invalidateEntryPlots(affected, previousGraph);
-                        if (this.is3DMode)
-                            this.recalculate3D(full ? null : affected);
+                        if (this.is3DMode) this.recalculate3D(full ? null : affected);
                         if (this.traceState.active && this.traceState.targetName) {
                             const target = this.entries.find(e => e.name === this.traceState.targetName);
                             if (target?.isMeaningful) {
@@ -41776,7 +42148,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                             }
                         } else {
                             if(!cache.curve) return;
-                            const thickness=this.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3),thick=thickness>1.5;
+                            const thickness=this.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3),thick=thickness>1.5;
                             if(!cache.vertices || cache.thick!==thick) {
                                 if(cache.record) this.release3DBuffers(cache.record);
                                 cache.record=null;
@@ -41791,7 +42163,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                             if(!cache.record || !validBuffer) {
                                 cache.gl=this.gl;
                                 cache.record={vbo:this.createBuffer(cache.vertices),count:cache.vertices.length/(thick?7:3),
-                                    mode:thick?this.gl.TRIANGLES:this.gl.LINES,isThick:thick,sampleView:cache.curve.sampleView};
+                                    centers:thick ? null : cache.vertices, mode:thick?this.gl.TRIANGLES:this.gl.LINES,isThick:thick,sampleView:cache.curve.sampleView};
                             }
                             cache.record.thickness=thickness;
                         }
@@ -41956,7 +42328,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                         s2_z = k_screen - offsetZ;
                                     }
 
-                                    const entryThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3);
+                                    const entryThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3);
                                     const useThickLines = entryThickness > 1.5;
 
                                     if (!useThickLines) {
@@ -42051,13 +42423,15 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                     }
                                 }
 
-                                const entryThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3);
+                                const entryThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3);
                                 const useThickLines = entryThickness > 1.5;
                                 const count = lineVerts.length / (useThickLines ? 7 : 3);
 
                                 if (count > 0) {
+                                    const vertices = new Float32Array(lineVerts);
                                     this.cache3D.lines.set(index, {
-                                        vbo: this.createBuffer(lineVerts),
+                                        centers: useThickLines ? null : vertices,
+                                        vbo: this.createBuffer(vertices),
                                         count: count,
                                         color: entry.color,
                                         mode: useThickLines ? this.gl.TRIANGLES : this.gl.LINES,
@@ -42679,7 +43053,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
 
                                 } else {
 
-                                    const entryThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3);
+                                    const entryThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3);
                                     const useThickLines = entryThickness > 1.5;
                                     const lineVerts = [];
 
@@ -42997,8 +43371,10 @@ const expressionFunc = new Function(...funcArgs,funcBody);
 
                                     const count = lineVerts.length / (useThickLines ? 7 : 3);
 
+                                    const vertices = new Float32Array(lineVerts);
                                     this.cache3D.lines.set(index, {
-                                        vbo: this.createBuffer(lineVerts),
+                                        centers: useThickLines ? null : vertices,
+                                        vbo: this.createBuffer(vertices),
                                         count: count,
                                         color: entry.color,
                                         mode: useThickLines ? this.gl.TRIANGLES : this.gl.LINES,
@@ -43022,10 +43398,31 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                     /* [08.26] 三维绘制与标签
                      * 创建 GPU 缓冲、提交三维场景并绘制坐标和对象标签。
                      */
+                    expand3DStroke(line) {
+                        // Expand the already sampled segments once. The same VBO also supports
+                        // native thin lines; subsequent width changes only select a shader/uniform.
+                        const centers = line.centers, vertices = new Float32Array(centers.length * 7);
+                        const sides = [1, 1, -1, -1, 1, -1];
+                        for (let i = 0, j = 0; i < centers.length; i += 6) {
+                            for (let vertex = 0; vertex < 6; vertex++) {
+                                const reverse = vertex === 1 || vertex === 3 || vertex === 4;
+                                const p = reverse ? i+3 : i, q = reverse ? i : i+3;
+                                vertices[j++] = centers[p]; vertices[j++] = centers[p+1]; vertices[j++] = centers[p+2];
+                                vertices[j++] = centers[q]; vertices[j++] = centers[q+1]; vertices[j++] = centers[q+2];
+                                vertices[j++] = sides[vertex];
+                            }
+                        }
+                        this.gl.bindBuffer(this.gl.ARRAY_BUFFER, line.vbo);
+                        this.gl.bufferData(this.gl.ARRAY_BUFFER, vertices, this.gl.STATIC_DRAW);
+                        line.isThick = true;
+                        line.count = vertices.length / 7;
+                        line.centers = null;
+                    }
+
                     createBuffer(data) {
                         const buf = this.gl.createBuffer();
                         this.gl.bindBuffer(this.gl.ARRAY_BUFFER, buf);
-                        this.gl.bufferData(this.gl.ARRAY_BUFFER, new Float32Array(data), this.gl.STATIC_DRAW);
+                        this.gl.bufferData(this.gl.ARRAY_BUFFER, data instanceof Float32Array ? data : new Float32Array(data), this.gl.STATIC_DRAW);
                         return buf;
                     }
 
@@ -43140,7 +43537,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                             gl.vertexAttribPointer(this.attribLoc3D.normal, 3, gl.FLOAT, false, 0, 0);
                             gl.enableVertexAttribArray(this.attribLoc3D.normal);
 
-                            const col = this.hsbToRgbaArray(mesh.color.h, mesh.color.s, mesh.color.b, mesh.color.a);
+                            const col = this.hsbToRgbaArray(entry.color.h, entry.color.s, entry.color.b, entry.color.a);
                             gl.uniform4fv(this.uniformLoc3D.color, col);
 
                             gl.drawArrays(gl.TRIANGLES, 0, mesh.count);
@@ -43227,13 +43624,16 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                             if (!entry || !entry.visible)
                                 return;
 
-                            if (line.isThick) {
+                            if (entry.thickness === 0) return;
+                            const width = this.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3);
+                            if (width !== 1 && !line.isThick && line.centers?.length) this.expand3DStroke(line);
+                            if (width !== 1 && line.isThick) {
                                 objectProgram(this.shaderProgram3DThick);
                                 gl.uniformMatrix4fv(this.uniformLoc3D.thickMvp, false, mvp);
                                 gl.uniform4fv(this.uniformLoc3D.thickCacheTransform, objectTransform(line,this.uniformLoc3D.thickCacheScale));
                                 gl.uniform1f(this.uniformLoc3D.thickBounds, this.bounds3D);
                                 gl.uniform2f(this.uniformLoc3D.thickViewport, viewW, viewH);
-                                gl.uniform1f(this.uniformLoc3D.thickThickness, line.thickness * dpr);
+                                gl.uniform1f(this.uniformLoc3D.thickThickness, width * dpr);
 
                                 gl.bindBuffer(gl.ARRAY_BUFFER, line.vbo);
 
@@ -43247,7 +43647,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                 gl.vertexAttribPointer(this.attribLoc3D.thickSide, 1, gl.FLOAT, false, stride, 24);
                                 gl.enableVertexAttribArray(this.attribLoc3D.thickSide);
 
-                                const col = this.hsbToRgbaArray(line.color.h, line.color.s, line.color.b, line.color.a);
+                                const col = this.hsbToRgbaArray(entry.color.h, entry.color.s, entry.color.b, entry.color.a);
                                 gl.uniform4fv(this.uniformLoc3D.thickColor, col);
 
                                 gl.drawArrays(gl.TRIANGLES, 0, line.count);
@@ -43259,13 +43659,14 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                 gl.uniform1f(this.uniformLoc3D.lineBounds, this.bounds3D);
 
                                 gl.bindBuffer(gl.ARRAY_BUFFER, line.vbo);
-                                gl.vertexAttribPointer(this.attribLoc3D.linePos, 3, gl.FLOAT, false, 0, 0);
+                                // In a wide segment, vertices 0 and 3 hold the original endpoints.
+                                gl.vertexAttribPointer(this.attribLoc3D.linePos, 3, gl.FLOAT, false, line.isThick ? 84 : 0, 0);
                                 gl.enableVertexAttribArray(this.attribLoc3D.linePos);
 
-                                const col = this.hsbToRgbaArray(line.color.h, line.color.s, line.color.b, line.color.a);
+                                const col = this.hsbToRgbaArray(entry.color.h, entry.color.s, entry.color.b, entry.color.a);
                                 gl.uniform4fv(this.uniformLoc3D.lineColor, col);
 
-                                gl.drawArrays(gl.LINES, 0, line.count);
+                                gl.drawArrays(gl.LINES, 0, line.isThick ? line.count / 3 : line.count);
                             }
                         };
 
@@ -43622,6 +44023,8 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                     }
 
                     clearAllEntries() {
+                        this._styledAnnotations = null;
+                        delete this.annotationState.pen.styleExpressions;
                         this.resetEntrySidebarScroll();
                         this.clearHistory();
                         this.entries = [];
@@ -43874,13 +44277,13 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                             choices: ['2d', '3d']
                         });
                         define('colorMode', '颜色选择模式', 'enum', () => engine.globalColorMode, value => {
-                            choose(value, ['params', 'palette']);
+                            choose(value, ['palette', 'sliders', 'params']);
                             engine.globalColorMode = value;
                             engine.updateEntryList();
                             engine.updateAnnotationEditMenu();
                         }
                         , {
-                            choices: ['params', 'palette']
+                            choices: ['palette', 'sliders', 'params']
                         });
                         define('statisticsSortLinked', '表格排序联动其他列', 'boolean', () => engine.statisticsSortLinked, value => {
                             engine.statisticsSortLinked = boolean(value);
@@ -44373,10 +44776,11 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                         /* [08.28.03] 脚本对象与表格接口
                          * 校验颜色与对象修改，支持表格导入导出和统计操作。
                          */
-                        const colorValue = (value, base) => {
+                        const colorValue = (value, base, allowExpressions=false) => {
                             keys(value, ['h', 's', 'b', 'a']);
                             for (const [key,v] of Object.entries(value))
-                                number(v, `color.${key}`, 0, 100);
+                                if (!allowExpressions) number(v, `color.${key}`, 0, 100);
+                                else if (typeof v !== 'string') number(v, `color.${key}`);
                             return {
                                 ...base,
                                 ...value
@@ -44401,14 +44805,14 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                 keys(values, ['color', 'visible', 'thickness']);
                                 if (values.color !== undefined && !item.color)
                                     fail('此对象没有颜色属性');
-                                const color = values.color === undefined ? null : colorValue(values.color, item.color);
+                                const color = values.color === undefined ? null : colorValue(values.color, item.color, !item.statisticsRegressionId);
                                 if (values.visible !== undefined)
                                     boolean(values.visible);
-                                if (values.thickness !== undefined)
-                                    number(values.thickness, 'thickness', 1, 10);
+                                if (values.thickness !== undefined && (typeof values.thickness !== 'string' || item.statisticsRegressionId))
+                                    number(values.thickness, 'thickness');
                                 engine.pushSnapshot();
                                 if (color) {
-                                    Object.assign(item.color, color);
+                                    engine.setStyleParameters(item, values.color);
                                     if (item.statisticsRegressionId) {
                                         const regression = engine.statistics.regressions.find(r => r.id === item.statisticsRegressionId);
                                         const column = engine.statistics.columns.find(c => c.id === regression?.yColumnId);
@@ -44423,9 +44827,8 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                 if (values.visible !== undefined)
                                     item.visible = values.visible;
                                 if (values.thickness !== undefined)
-                                    item.thickness = values.thickness;
-                                engine.invalidatePlotEntryHighlight(item);
-                                item.webglFillVertices = null;
+                                    engine.setStyleParameter(item, 'thickness', values.thickness);
+                                if (values.visible !== undefined) engine.invalidatePlotEntryHighlight(item);
                                 refresh();
                                 return describeObject(item);
                             }
@@ -44875,14 +45278,9 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                     this.addEntry(expr, {conflictAction:'overwrite'});
 
                                     const setProps = (entry) => {
-                                        entry.color = {
-                                            h: h !== undefined ? h : 0,
-                                            s: s !== undefined ? s : 100,
-                                            b: b !== undefined ? b : 85,
-                                            a: a !== undefined ? a : 0
-                                        };
+                                        this.setStyleParameters(entry, {h: h ?? 0, s: s ?? 100, b: b ?? 85, a: a ?? 0});
                                         entry.visible = (visible === 1);
-                                        entry.thickness = (typeof thickness === 'number' && thickness >= 1 && thickness <= 20) ? thickness : 3;
+                                        this.setStyleParameter(entry, 'thickness', typeof thickness === 'string' || Number.isFinite(thickness) ? thickness : 3);
                                     }
                                     ;
 
@@ -44920,14 +45318,9 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                     this.addEntry(expr, {conflictAction:'overwrite'});
 
                                     const setProps = (entry) => {
-                                        entry.color = {
-                                            h: h !== undefined ? h : 0,
-                                            s: s !== undefined ? s : 0,
-                                            b: b !== undefined ? b : (this.isDarkModeActive ? 100 : 0),
-                                            a: a !== undefined ? a : 0
-                                        };
+                                        this.setStyleParameters(entry, {h: h ?? 0, s: s ?? 0, b: b ?? (this.isDarkModeActive ? 100 : 0), a: a ?? 0});
                                         entry.visible = (visible === 1);
-                                        entry.thickness = (typeof thickness === 'number' && thickness >= 1 && thickness <= 20) ? thickness : 3;
+                                        this.setStyleParameter(entry, 'thickness', typeof thickness === 'string' || Number.isFinite(thickness) ? thickness : 3);
                                     }
                                     ;
 
@@ -44969,15 +45362,10 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                         width: Math.abs(x2 - x1),
                                         height: Math.abs(y2 - y1),
                                         fontSize: fontSize || 1,
-                                        color: {
-                                            h: h !== undefined ? h : 0,
-                                            s: s !== undefined ? s : 0,
-                                            b: b !== undefined ? b : 0,
-                                            a: a !== undefined ? a : 0
-                                        }
+                                        color: {h:0, s:0, b:0, a:0}
                                     };
-                                    this.annotations.push(textAnnotation);
-                                    this.requestDraw();
+                                    this.setStyleParameters(textAnnotation, {h, s, b, a});
+                                    this.addStyledAnnotation(textAnnotation);
                                 }
                                 , 0);
                             }
@@ -45144,18 +45532,11 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                 trackedSetTimeout( () => {
                                     const entry = this.entries.find(e => e.type === 'geometry' && e.name === name);
                                     if (entry) {
-                                        if (h !== undefined)
-                                            entry.color.h = h;
-                                        if (s !== undefined)
-                                            entry.color.s = s;
-                                        if (b !== undefined)
-                                            entry.color.b = b;
-                                        if (a !== undefined)
-                                            entry.color.a = a;
+                                        this.setStyleParameters(entry, {h, s, b, a});
                                         if (visible !== undefined)
                                             entry.visible = (visible === 1);
-                                        if (typeof thickness === 'number')
-                                            entry.thickness = Math.max(1, Math.min(20, thickness));
+                                        if (typeof thickness === 'string' || Number.isFinite(thickness))
+                                            this.setStyleParameter(entry, 'thickness', thickness);
                                         this.recalculateAll();
                                     }
                                 }
@@ -45168,14 +45549,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                     if (anno) {
                                         if (newContent !== undefined)
                                             anno.content = String(newContent);
-                                        if (h !== undefined)
-                                            anno.color.h = h;
-                                        if (s !== undefined)
-                                            anno.color.s = s;
-                                        if (b !== undefined)
-                                            anno.color.b = b;
-                                        if (a !== undefined)
-                                            anno.color.a = a;
+                                        this.setStyleParameters(anno, {h, s, b, a});
                                         if (fontSize !== undefined)
                                             anno.fontSize = fontSize;
                                         if (x1 !== undefined)
@@ -45186,7 +45560,10 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                                             anno.width = Math.abs(x2 - x1);
                                         if (y2 !== undefined && y1 !== undefined)
                                             anno.height = Math.abs(y2 - y1);
-                                        this.requestDraw();
+                                        if (anno.styleExpressions) {
+                                            (this._styledAnnotations ||= new Set()).add(anno);
+                                            this.recalculateAll({updateSidebar: false});
+                                        } else this.requestDraw();
                                     }
                                 }
                                 , 0);
@@ -46046,7 +46423,7 @@ const expressionFunc = new Function(...funcArgs,funcBody);
                             } else {
                                 style = `--variable-indicator-color: var(--variable-indicator-dependent-color);`;
                             }
-                        } else if (['function', 'geometry', 'text'].includes(entry.type)) {
+                        } else if (['function', 'geometry', 'text', 'point_list'].includes(entry.type)) {
                             if (entry.type === 'text')
                                 classes.push('text-item');
                             if (entry.type === 'geometry')
@@ -46143,12 +46520,15 @@ const expressionFunc = new Function(...funcArgs,funcBody);
 
                                 const colorMode = this.globalColorMode;
                                 let colorControlsHtml = '';
+                                const labels = {h:'颜色', s:'饱和度', b:'亮度', a:'透明度'};
+                                if (entry.type !== 'text') labels.thickness = '粗细';
                                 if (colorMode === 'params') {
-                                    colorControlsHtml = `
-                        <div class="slider-group"><label>颜色:</label><div id="color-slider-h-${index}" class="custom-slider-container"></div></div>
-                        <div class="slider-group"><label>饱和度:</label><div id="color-slider-s-${index}" class="custom-slider-container"></div></div>
-                        <div class="slider-group"><label>亮度:</label><div id="color-slider-b-${index}" class="custom-slider-container"></div></div>
-                        <div class="slider-group"><label>透明度:</label><div id="color-slider-a-${index}" class="custom-slider-container"></div></div>`;
+                                    colorControlsHtml = `<div class="style-parameter-list">${this.styleParameterRows(entry, labels)}</div>`;
+                                } else if (colorMode === 'sliders') {
+                                    colorControlsHtml = Object.entries(labels).map(([key, label]) => {
+                                        const sliderId = key === 'thickness' ? `thickness-slider-${index}` : `color-slider-${key}-${index}`;
+                                        return `<div class="slider-group"><label>${label}</label><div id="${sliderId}" class="custom-slider-container"></div></div>`;
+                                    }).join('');
                                 } else {
                                     colorControlsHtml = `<div class="swatches-grid">`;
                                     PRESET_SWATCHES.forEach( (swatch, sIdx) => {
@@ -46171,14 +46551,15 @@ ${(entry.parametricParameters || []).map((parameter, parameterIndex) => paramete
         <button type="button" class="parametric-range-value" data-parameter="${parameterIndex}" data-bound="maxExpr" title="修改区间上限（支持代数表达式）" style="font:inherit; color:inherit; border:0; background:none; padding:0; text-decoration:underline dotted; cursor:pointer; overflow-wrap:anywhere;">${this.escapeHtml(String(parameter.maxExpr))}</button><span>]</span>
       </div>`).join('')}
                         ${colorControlsHtml}
-                        ${entry.type !== 'text' ? `<div class="slider-group"><label>粗细:</label><div id="thickness-slider-${index}" class="custom-slider-container"></div></div>` : ''}
+
                         
                         <div class="slider-group" style="margin-top: 5px; font-size: 0.9em; color: var(--text-color-subtle); display: flex; justify-content: space-between; align-items: center; width: 100%;">
                             ${entry.type !== 'text' ? `<div>显示帧: <span class="display-frame-value" style="text-decoration: underline dotted; cursor: pointer;">${entry.displayFrame}</span></div>` : ''}
                             <div class="color-mode-segmented-control" style="margin-left:auto;" data-mode="${colorMode}" data-entry-idx="${index}">
                                 <div class="cmsc-knob"></div>
-                                <div class="cmsc-item ${colorMode === 'params' ? 'active' : ''}" data-val="params">参数</div>
                                 <div class="cmsc-item ${colorMode === 'palette' ? 'active' : ''}" data-val="palette">色卡</div>
+                                <div class="cmsc-item ${colorMode === 'sliders' ? 'active' : ''}" data-val="sliders">滑块</div>
+                                <div class="cmsc-item ${colorMode === 'params' ? 'active' : ''}" data-val="params">参数</div>
                             </div>
                         </div>
 ${extra3DControls}
@@ -46424,7 +46805,8 @@ ${(entry.labelMode || 'name') === 'label' ? `
                                             type: type,
                                             context: entry.color,
                                             onInput: (e) => {
-                                                entry.color[prop] = e.target.options.value;
+                                                if (entry.styleExpressions?.[prop]) this.pushSnapshot();
+                                                this.setStyleParameter(entry, prop, e.target.options.value);
                                                 this.updateEntryColorDisplay(index);
 
                                                 Object.values(sliderInstances).forEach(s => {
@@ -46438,15 +46820,13 @@ ${(entry.labelMode || 'name') === 'label' ? `
                                             }
                                             ,
                                             onChange: () => {
-                                                if (entry.type === 'geometry') {
-                                                    entry.webglVertices = null;
-                                                    entry.webglFillVertices = null;
-                                                }
                                                 this.requestDraw();
                                             }
                                         });
                                         this.activeSliders.push(slider);
                                         sliderInstances[prop] = slider;
+                                        slider.container.dataset.styleSlider = prop;
+                                        slider.container.sliderInstance = slider;
                                     }
                                 }
                                 ;
@@ -46458,27 +46838,21 @@ ${(entry.labelMode || 'name') === 'label' ? `
                                 const thicknessContainerId = `thickness-slider-${index}`;
                                 if (document.getElementById(thicknessContainerId)) {
                                     const tSlider = new CustomSlider(thicknessContainerId,{
-                                        min: 1,
+                                        min: 0,
                                         max: 20,
                                         step: 1,
                                         value: entry.thickness,
                                         type: 'default',
                                         onInput: (e) => {
-                                            entry.thickness = e.target.options.value;
-                                            if (entry.type === 'function' && (entry.plotType === 'x' || entry.plotType === 'y' || entry.plotType === 'parametric')) {
-                                                entry.webglVertices = null;
-                                            }
-                                            if (entry.type === 'geometry') {
-                                                entry.webglVertices = null;
-                                            }
+                                            if (entry.styleExpressions?.thickness) this.pushSnapshot();
+                                            this.setStyleParameter(entry, 'thickness', e.target.options.value);
                                             this.requestDraw();
                                         }
                                         ,
-                                        onChange: () => {
-                                            this.invalidatePlotEntryHighlight(entry);
-                                            this.requestDraw();
-                                        }
+                                        onChange: () => this.requestDraw()
                                     });
+                                    tSlider.container.dataset.styleSlider = 'thickness';
+                                    tSlider.container.sliderInstance = tSlider;
                                     this.activeSliders.push(tSlider);
                                 }
                             }
@@ -46514,8 +46888,100 @@ ${(entry.labelMode || 'name') === 'label' ? `
 
                     }
 
-                    updateEntryColorDisplay(index) {
-                        const itemElement = this.entryList.querySelector(`.entry-item[data-index="${index}"]`);
+                    copyStyleExpressions(owner) {
+                        return Object.fromEntries(Object.entries(owner.styleExpressions).map(([key, spec]) =>
+                            [key, spec.names ? {expr:spec.expr, names:[...spec.names]} : {expr:spec.expr}]));
+                    }
+
+                    addStyledAnnotation(annotation, inheritToolStyle=false) {
+                        if (inheritToolStyle && this.annotationState.pen.styleExpressions) {
+                            annotation.styleExpressions = this.copyStyleExpressions(this.annotationState.pen);
+                            if (annotation.type === 'text') delete annotation.styleExpressions.thickness;
+                            if (!Object.keys(annotation.styleExpressions).length) delete annotation.styleExpressions;
+                        }
+                        this.annotations.push(annotation);
+                        if (annotation.styleExpressions) {
+                            (this._styledAnnotations ||= new Set()).add(annotation);
+                            this.recalculateAll({updateSidebar: false});
+                        } else this.requestDraw();
+                    }
+
+                    isStyleLiteral(text) {
+                        return /^[-+]?(?:\d+\.?\d*|\.\d+)(?:e[-+]?\d+)?$/i.test(text);
+                    }
+
+                    styleParameterFormula(owner, key) {
+                        const expr = owner.styleExpressions?.[key]?.expr || '';
+                        return this.isStyleLiteral(expr) ? '' : expr;
+                    }
+
+                    styleParameterRows(owner, labels) {
+                        return Object.entries(labels).map(([key, label]) => {
+                            const value = this.getStyleParameter(owner, key);
+                            const display = Number.isFinite(value) ? String(Number(value.toPrecision(7))) : '—';
+                            const expr = this.styleParameterFormula(owner, key);
+                            return `<button type="button" class="style-parameter-row" data-style-parameter="${key}" aria-label="修改${label}"><span>${label}</span><span class="style-parameter-result"><span class="style-parameter-expression">${this.escapeHtml(expr)}</span><span class="style-parameter-equals">${expr ? '=' : ''}</span><span class="style-parameter-number">${display}</span></span></button>`;
+                        }).join('');
+                    }
+
+                    updateStyleControls(root, owner) {
+                        for (const button of root.querySelectorAll('.style-parameter-row')) {
+                            const key = button.dataset.styleParameter, value = this.getStyleParameter(owner, key);
+                            const display = Number.isFinite(value) ? String(Number(value.toPrecision(7))) : '—';
+                            const number = button.querySelector('.style-parameter-number');
+                            if (number.textContent !== display) number.textContent = display;
+                            const expr = this.styleParameterFormula(owner, key);
+                            const formula = button.querySelector('.style-parameter-expression');
+                            if (formula.textContent !== expr) {
+                                formula.textContent = expr;
+                                button.querySelector('.style-parameter-equals').textContent = expr ? '=' : '';
+                            }
+                            button.title = expr || button.getAttribute('aria-label');
+                        }
+                    }
+
+                    editStyleParameter(owner, key) {
+                        const defaults = this.annotationState.pen, draft = owner === defaults;
+                        const annotation = this.annotations.includes(owner);
+                        const old = owner.styleExpressions?.[key]?.expr;
+                        const initial = old ?? String(this.getStyleParameter(owner, key) ?? '');
+                        window.globalOpenKeyboardForValue(initial, text => {
+                            if (!draft && !(annotation ? this.annotations : this.entries).includes(owner)) return;
+                            const raw = String(text).trim();
+                            if (raw === initial) return;
+                            const literal = this.isStyleLiteral(raw);
+                            if (raw && !literal && (owner.statisticsRegressionId || key === 'fontSize')) return;
+                            if (!draft) this.pushSnapshot();
+                            if (key === 'fontSize') {
+                                if (literal) this.applyStyleValue(owner, key, this.penFontSizeSlider.clampValue(Number(raw)));
+                            } else {
+                                const value = literal ? Number(raw) : raw;
+                                this.setStyleParameter(owner, key, value);
+                                if (annotation && owner.styleExpressions) (this._styledAnnotations ||= new Set()).add(owner);
+                            }
+                            this.recalculateAll({updateSidebar:false});
+                            this.syncStyleParameterDisplay(owner);
+                        });
+                    }
+
+                    syncStyleParameterDisplay(owner) {
+                        const row = this._entryVirtual?.byEntry.get(owner);
+                        if (row) {
+                            row.html = undefined;
+                            if (row.element && this.entries[row.index] === owner) this.updateEntryColorDisplay(row.index, row.element.firstElementChild);
+                        } else if (owner === this.annotations[this.selectedAnnotationIndex] ||
+                                   (owner === this.annotationState.pen && this.currentUIMode === 'annotation')) {
+                            this.updateStyleControls(this.annotationMenu, owner);
+                            if (this.globalColorMode === 'sliders') {
+                                for (const [key, slider] of Object.entries(this.penColorSliders)) {
+                                    slider.options.context = owner.color;
+                                    slider.setValue(owner.color[key]);
+                                }
+                                if (owner.thickness !== undefined) this.penThicknessSlider.setValue(owner.thickness);
+                            }
+                        }
+                    }
+                    updateEntryColorDisplay(index, itemElement=this.entryList.querySelector(`.entry-item[data-index="${index}"]`)) {
                         if (!itemElement)
                             return;
 
@@ -46523,6 +46989,8 @@ ${(entry.labelMode || 'name') === 'label' ? `
                         if (!entry || (entry.type !== 'function' && entry.type !== 'text' && entry.type !== 'geometry' && entry.type !== 'point_list') || !entry.color)
                             return;
 
+                        const row = this._entryVirtual?.byEntry.get(entry);
+                        if (row) row.html = undefined;
                         const entryColor = entry.color;
 
                         if (entry.type === 'function' || entry.type === 'geometry' || entry.type === 'text' || entry.type === 'point_list') {
@@ -46539,14 +47007,17 @@ ${(entry.labelMode || 'name') === 'label' ? `
                             }
                         }
 
-                        const colorSliders = itemElement.querySelectorAll('.color-slider');
-                        colorSliders.forEach(slider => {
-                            const colorProp = slider.dataset.colorProp;
-                            if (colorProp && entryColor[colorProp] !== undefined) {
-                                slider.value = entryColor[colorProp];
+                        this.updateStyleControls(itemElement, entry);
+                        if (this.globalColorMode === 'sliders' && entry.expanded) {
+                            for (const container of itemElement.querySelectorAll('[data-style-slider]')) {
+                                const slider = container.sliderInstance, key = container.dataset.styleSlider;
+                                if (slider && !slider.isDragging) {
+                                    slider.options.context = entryColor;
+                                    slider.options.value = slider.visualValue = this.getStyleParameter(entry, key);
+                                    slider.draw();
+                                }
                             }
                         }
-                        );
                     }
 
                     updateEntryVariableValuesDisplay() {
@@ -47287,13 +47758,13 @@ ${(entry.labelMode || 'name') === 'label' ? `
                         const framed = rendered?.enabled ?? this.showPlaybackControls;
                         ctx.save(); ctx.scale(dpr,dpr);
                         for (const entry of this.entries) {
-                            if (!this.isGeometryPointMarker(entry) || !entry.isMeaningful ||
+                            if (!this.isGeometryPointMarker(entry) || !entry.isMeaningful || entry.thickness === 0 ||
                                 !Number.isFinite(entry.x_val) || !Number.isFinite(entry.y_val) || this.isHiddenByCheckbox(entry)) continue;
                             const visible = this.getEffectiveVisibility(entry);
                             if ((!visible && !this.showHiddenGeo) || (framed && frame && entry.displayFrame && entry.displayFrame !== frame)) continue;
                             const highlighted = [this.highlightedObject,this.geometryHoverObject,this.dragSnapHighlight,this.createdHighlight].includes(entry);
                             const selected = entry.isSelected || this.selectionState.selectedEntries.includes(entry);
-                            let radius = (highlighted ? this.getHighlightedThickness(entry.thickness || 3) : (entry.thickness || 3)) + 2;
+                            let radius = (highlighted ? this.getHighlightedThickness(entry.thickness ?? 3) : (entry.thickness ?? 3)) + 2;
                             if (entry.isSelected && !highlighted) radius *= 1.5;
                             const x = this.offset.x + entry.x_val*this.scaleX, y = this.offset.y - entry.y_val*this.scaleY;
                             if (x+radius<0 || x-radius>cssWidth || y+radius<0 || y-radius>cssHeight) continue;
@@ -47318,6 +47789,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                     }
 
                     plotSingleGeometryGL(entry, cssWidth, cssHeight) {
+                        if (!entry.isMeaningful || entry.thickness === 0) return;
 
                         if (this.isHiddenByCheckbox(entry))
                             return;
@@ -47350,12 +47822,12 @@ ${(entry.labelMode || 'name') === 'label' ? `
                             entry.lastUsedScale = this.scale; entry.lastScaleX = this.scaleX; entry.lastScaleY = this.scaleY;
                             const vertices = [];
                             const fillVertices = [];
-                            const baseThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3);
+                            const baseThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3);
                             const entryThickness = isHighlighted ? this.getHighlightedThickness(baseThickness) : baseThickness;
                             const useQuads = entryThickness > 1.5;
                             let lineThicknessMath = useQuads ? (entryThickness / this.scale) : (1.5 / this.scale);
 
-                            let pointRadiusPixels = isHighlighted ? this.getHighlightedThickness(entry.thickness || 3) + 2 : (entry.thickness || 3) + 2;
+                            let pointRadiusPixels = isHighlighted ? this.getHighlightedThickness(entry.thickness ?? 3) + 2 : (entry.thickness ?? 3) + 2;
                             if (entry.isSelected && !isHighlighted) {
                                 pointRadiusPixels *= 1.5;
                             }
@@ -47851,7 +48323,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                             const drawMode = ['point', 'midpoint', 'intersect', 'rotate', 'reflect', 'translate'].includes(entry.geometryType) ? gl.TRIANGLES : (useQuads ? gl.TRIANGLES : gl.LINES);
                             if (!useQuads && drawMode === gl.LINES)
                                 gl.lineWidth(1.5);
-                            gl._archStrokeWidth = !['point','midpoint','intersect','rotate','reflect','translate'].includes(entry.geometryType) && useQuads ? (isHighlighted ? this.getHighlightedThickness(entry.thickness || 3) : (entry.thickness || 3)) : 0;
+                            gl._archStrokeWidth = !['point','midpoint','intersect','rotate','reflect','translate'].includes(entry.geometryType) && useQuads ? (isHighlighted ? this.getHighlightedThickness(entry.thickness ?? 3) : (entry.thickness ?? 3)) : 0;
                             gl.drawArrays(drawMode, 0, entry.webglVertices.length / 2);
                             gl._archStrokeWidth = 0;
                         }
@@ -48578,7 +49050,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                         const activeHue=this.preferredColorValue===0?58:this.preferredColorValue;
                         const fill=selected?this.hsbToRgbaArray(activeHue,100,100,50):c.a<100?this.hsbToRgbaArray(c.h,c.s,c.b,50+.5*c.a):null;
                         const stroke=highlighted?this.hsbToRgbaArray(this.geometryHighlightHue,100,100,0):selected?this.hsbToRgbaArray(activeHue,100,100,0):this.hsbToRgbaArray(c.h,c.s,c.b,c.a);
-                        const base=this.highPerformancePlottingEnabled?1:(entry.thickness || 3);
+                        const base=this.highPerformancePlottingEnabled?1:(entry.thickness ?? 3);
                         const record=this.getPolygonGLRecord(entry,highlighted?this.getHighlightedThickness(base):base),gl=this.gl;
                         if(!record)return false;
                         gl.uniform2f(this.uniformLocations.viewOffset,this.offset.x+record.x*this.scaleX,this.offset.y-record.y*this.scaleY);
@@ -48729,7 +49201,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                             }
 
                             this.axisCtx.strokeStyle = `rgba(${strokeColArr[0] * 255}, ${strokeColArr[1] * 255}, ${strokeColArr[2] * 255}, ${strokeColArr[3]})`;
-                            const currentThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness || 3);
+                            const currentThickness = this.highPerformancePlottingEnabled ? 1 : (entry.thickness ?? 3);
                             this.axisCtx.lineWidth = isHighlighted ? this.getHighlightedThickness(currentThickness) : currentThickness;
                             const dashPattern = {
                                 'long': [20, 15],
@@ -49197,7 +49669,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                         }
                         gl.uniform2f(this.uniformLocations.viewOffset, this.offset.x + cache.x * this.scaleX, this.offset.y - cache.y * this.scaleY);
                         const drawBatch = (index, batch, mode) => {
-                            if (!batch || (onlyIndex !== null && index !== onlyIndex)) return;
+                            if (!batch || (onlyIndex !== null && index !== onlyIndex) || batch.thickness === 0) return;
                             const entry = this.entries[index];
                             if (!entry?.color || !batch.length || this.isHiddenByCheckbox(entry) || !(this.getEffectiveVisibility(entry) || this.showHiddenMath))
                                 return;
@@ -49467,6 +49939,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                      * 控制连续性判断、自适应顶点构建及显式函数绘制。
                      */
                     plotExplicitFunctionGL(funcEntry, cssWidth, cssHeight) {
+                        if (funcEntry.thickness === 0) return;
                         const ownerKey = this._plotPointOwnerKey ||= Symbol('plotPointOwner');
                         // A style change or on-demand compilation may resample a curve
                         // outside dependency invalidation. Replace its hit-test samples
@@ -50585,6 +51058,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                     }
 
                     plotParametricFunctionGL(funcEntry, cssWidth, cssHeight) {
+                        if (funcEntry.thickness === 0) return;
                         const start = this.plottedFunctionPoints.length;
                         this._plotParametricFunctionGL(funcEntry, cssWidth, cssHeight);
                         const ownerKey = this._plotPointOwnerKey ||= Symbol('plotPointOwner');
@@ -51256,8 +51730,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                                             ...this.annotationState.pen.color
                                         }
                                     };
-                                    this.annotations.push(textAnnotation);
-                                    this.requestDraw();
+                                    this.addStyledAnnotation(textAnnotation, true);
                                 }
                             } else {
                                 this._triggerAnnotationFilePicker(mode, mathCoords);
@@ -51299,7 +51772,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                                 scaleX: 1,
                                 scaleY: 1
                             };
-                            this.annotations.push(penAnnotation);
+                            this.addStyledAnnotation(penAnnotation, true);
                         }
                         this.annotationState.currentDrawingPath = [];
                         this.currentDrawingVertices = [];
@@ -52485,9 +52958,17 @@ ${(entry.labelMode || 'name') === 'label' ? `
                         const isEditing = this.selectedAnnotationIndex !== -1 && this.currentUIMode !== 'annotation';
                         const annotation = isEditing ? this.annotations[this.selectedAnnotationIndex] : null;
                         const currentMode = isEditing ? annotation.type : this.annotationState.mode;
-
                         const colorMode = this.globalColorMode;
-
+                        const values = document.getElementById('annotation-style-parameters');
+                        const hasValues = colorMode === 'params' && ['pen', 'text'].includes(currentMode);
+                        values.hidden = !hasValues;
+                        if (hasValues) {
+                            const owner = annotation || this.annotationState.pen;
+                            const labels = {h:'颜色', s:'饱和度', b:'亮度', a:'透明度'};
+                            if (currentMode === 'pen') labels.thickness = '粗细';
+                            else labels.fontSize = '字号';
+                            values.innerHTML = this.styleParameterRows(owner, labels);
+                        }
                         const annoCtrl = document.getElementById('anno-color-mode-control');
                         if (this.annotationColorModeControl) {
                             this.annotationColorModeControl.update(colorMode);
@@ -52523,12 +53004,13 @@ ${(entry.labelMode || 'name') === 'label' ? `
                             };
 
                             Object.values(groups).forEach(g => g && (g.style.display = 'flex'));
+                            if (hasValues) groups.thickness.style.display = groups.size.style.display = 'none';
 
                             const isPalette = colorMode === 'palette';
                             const isMedia = ['image', 'pdf', 'audio'].includes(type);
                             const isEraserOrCheckbox = ['eraser'].includes(type) || (annotation && annotation.type === 'checkbox');
 
-                            if (isPalette || isMedia || isEraserOrCheckbox) {
+                            if (isPalette || hasValues || isMedia || isEraserOrCheckbox) {
                                 if (groups.h)
                                     groups.h.style.display = 'none';
                                 if (groups.s)
@@ -52537,7 +53019,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                                     groups.b.style.display = 'none';
                             }
 
-                            if ((isPalette && !isMedia) || isEraserOrCheckbox) {
+                            if (((isPalette || hasValues) && !isMedia) || isEraserOrCheckbox) {
                                 if (groups.a)
                                     groups.a.style.display = 'none';
                             }
@@ -52780,7 +53262,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                             this.penThicknessSlider.options.step = 0.01 * factor;
                             this.penThicknessSlider.setValue(annotation.thickness);
                             this.penThicknessSlider.options.onInput = (e) => {
-                                annotation.thickness = e.target.options.value;
+                                this.setStyleParameter(annotation, 'thickness', e.target.options.value);
                                 annotation.webglVertices = null;
                                 this.requestAnnotationDraw(true);
                             }
@@ -52814,7 +53296,9 @@ ${(entry.labelMode || 'name') === 'label' ? `
                         const rebindColorSlider = (slider, prop) => {
                             slider.options.context = annotation.color;
                             slider.options.onInput = (e) => {
-                                annotation.color[prop] = e.target.options.value;
+                                if (annotation.styleExpressions?.[prop]) this.pushSnapshot();
+                                this.setStyleParameter(annotation, prop, e.target.options.value);
+
                                 Object.values(this.penColorSliders).forEach(s => {
                                     s.options.context = annotation.color;
                                     s.draw();
@@ -54299,6 +54783,11 @@ ${(entry.labelMode || 'name') === 'label' ? `
                                 ...anno
                             };
 
+                            if (anno.styleExpressions) {
+                                savedAnno.styleExpressions = this.copyStyleExpressions(anno);
+                                savedAnno.color = {...anno.color};
+                            }
+                            delete savedAnno.__asyncId;
                             delete savedAnno.img;
                             delete savedAnno.audioElem;
                             delete savedAnno.pdfDoc;
@@ -54359,6 +54848,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                                     hasLargeOps: entry.hasLargeOps,
                                     displayFrame: entry.displayFrame || 0,
                                 };
+                                if (entry.styleExpressions) savedEntry.styleExpressions = this.copyStyleExpressions(entry);
                                 if (entry.isAutoCreatedVariable) savedEntry.isAutoCreatedVariable = true;
                                 if (entry.isAutoCreatedPlot) savedEntry.isAutoCreatedPlot = true;
                                 if (this.getEntryAutoNumberKind(entry))
@@ -54593,7 +55083,10 @@ ${(entry.labelMode || 'name') === 'label' ? `
                                 if ((entry.type === 'variable' && entry.isEditableIndependent) ||
                                     (entry.type === 'geometry' && entry.geometryType === 'point' && entry.pointOnObject))
                                     Object.assign(savedEntry, this.getPlaybackCardState(entry));
+                                if (entry.styleExpressions && savedEntry.color) savedEntry.color = {...savedEntry.color};
                                 savedEntry.dependencies = entry.dependencies;
+                                if (entry.objectDependencies?.length) savedEntry.objectDependencies = entry.objectDependencies;
+                                if (entry.variableDependencies?.length) savedEntry.variableDependencies = entry.variableDependencies;
                                 return savedEntry;
                             }
                             ).filter(e => e !== null),
@@ -55084,6 +55577,8 @@ ${(entry.labelMode || 'name') === 'label' ? `
                         this.updateCoordLockUI();
                         this.pen.segments = [];
 
+                        this._styledAnnotations = null;
+                        delete this.annotationState.pen.styleExpressions;
                         this.annotations = (loadedState.annotations || []).map(a => ({
                             ...a
                         }));
@@ -55092,6 +55587,10 @@ ${(entry.labelMode || 'name') === 'label' ? `
                         this.restoreArchiveAnnotationEditing(loadedState);
 
                         this.annotations.forEach(async anno => {
+                            if ((anno.type === 'text' || anno.type === 'pen') && (anno.styleExpressions || anno.colorExpressions)) {
+                                this.normalizeStyleExpressions(anno);
+                                if (anno.styleExpressions) (this._styledAnnotations ||= new Set()).add(anno);
+                            }
                             if ((anno.type === 'image' || anno.type === 'audio') && anno.src) {
                                 void this._restoreMediaAnnotation(anno);
                             } else if (anno.type === 'pdf') {
@@ -55904,7 +56403,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                         entry.webglVertices = null;
                         entry.dependencies = entry.dependencies || [];
                         entry.hasLargeOps = entry.hasLargeOps || false;
-                        entry.thickness = loadedEntry.thickness || 3;
+                        entry.thickness = loadedEntry.thickness ?? 3;
                         entry.displayFrame = loadedEntry.displayFrame || 0;
 
                         if (entry.type === 'function') {
@@ -56053,7 +56552,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                                 a: 0
                             };
                             entry.visible = loadedEntry.visible !== undefined ? loadedEntry.visible : true;
-                            entry.thickness = loadedEntry.thickness || 3;
+                            entry.thickness = loadedEntry.thickness ?? 3;
                             entry.displayFrame = loadedEntry.displayFrame || 0;
                         } else if (entry.type === 'text') {
                             entry.name = entry.name || this.autonameText();
@@ -56066,6 +56565,7 @@ ${(entry.labelMode || 'name') === 'label' ? `
                             };
                             entry.expanded = false;
                         }
+                        this.normalizeStyleExpressions(entry);
                         if ((entry.type === 'variable' && entry.isEditableIndependent) ||
                             (entry.type === 'geometry' && entry.geometryType === 'point' && entry.pointOnObject))
                             Object.assign(entry, this.getPlaybackCardState(loadedEntry));
@@ -59666,22 +60166,23 @@ class ArchAsyncDrawing {
         const sent = this.sentEntryInputs || new Map(), next = new Map();
         state.entries = e.entries.map(entry => {
             const fields=['type','geometryType','name','key','autoNumber','expr','originalExprWithPoints','params',
-                'body','bodyJs','plotType','isEditableIndependent','color','thickness','visible','displayFrame',
+                'body','bodyJs','plotType','isEditableIndependent','visible','displayFrame',
                 'sliceAxis','sliceVal','extendTo3D','isSelected','lineDash','pointOnObject','onObjectName',
                 'onObjectRefKind','isLocked','locked','dragEnabled','playState','playMode','playDirection',
                 'min','max','step','parametricParameters'];
-            const key=JSON.stringify([fields.map(field=>entry[field]),
+            const key=JSON.stringify([fields.map(field=>entry[field]),e.colorStyleInput(entry),entry.styleExpressions?.thickness?.expr ?? entry.thickness,
                 entry.isEditableIndependent ? entry.value : null,
                 Object.keys(entry).filter(field=>field.endsWith('_expr')).sort().map(field=>[field,entry[field]])]);
             next.set(entry.__asyncId,key);
             return sent.get(entry.__asyncId)===key ? {__asyncId:entry.__asyncId,__asyncUnchanged:true} : ArchAsyncDrawing.clone(entry);
         });
         this.nextEntryInputs = next;
-        // Only checkbox annotations influence mathematical visibility. Handwriting,
-        // images and media stay on the UI thread, including during archive loading.
-        state.annotations = e.annotations.filter(annotation => annotation.type === 'checkbox').map(annotation => ({
-            type:'checkbox',checked:annotation.checked,controlledNames:annotation.controlledNames
-        }));
+        // Send only visibility controls and the style inputs for bound text.
+        state.annotations = e.annotations.filter(a => a.type === 'checkbox' || a.styleExpressions).map(a => {
+            if (a.type === 'checkbox') return {type:'checkbox',checked:a.checked,controlledNames:a.controlledNames};
+            a.__asyncId ||= this.nextEntryId++;
+            return {type:a.type,__asyncId:a.__asyncId,styleExpressions:a.styleExpressions,color:a.color,thickness:a.thickness};
+        });
         state.selectionState = {selectedEntries: e.selectionState.selectedEntries.map(entry => ({__asyncId:entry.__asyncId})),selectedAnnotations:[]};
         state.canvasSize = {width:e.canvasContainer.clientWidth,height:e.canvasContainer.clientHeight};
         const precision = this.playbackPrecision();
@@ -59807,7 +60308,7 @@ class ArchAsyncDrawing {
         if(message.timings)e._developerTimes=message.timings;
         const entries = new Map(e.entries.map(entry => [entry.__asyncId,entry]));
         const protectedFields = new Set(['__asyncId','expr','originalExprWithPoints','parameter_expr','pointParamValue','playState','playDirection','min','max','step','value','color','visible','thickness','expanded','displayFrame','isSelected',
-            'name','key','type','geometryType','plotType','sliceAxis','sliceVal','extendTo3D','parametricParameters','lineDash','labelMode','labelText','dragEnabled',
+            'name','key','type','geometryType','plotType','sliceAxis','sliceVal','extendTo3D','parametricParameters','lineDash','labelMode','labelText','dragEnabled','styleExpressions',
             'showOnPlot','cardX','cardY','cardW','cardH','isAutoCreatedVariable','isAutoCreatedPlot']);
         for (const calculated of message.entries || []) {
             const entry = entries.get(calculated.__asyncId);
@@ -59842,6 +60343,23 @@ class ArchAsyncDrawing {
             if (calculated.type !== 'custom_function_definition') continue;
             const entry=entries.get(calculated.__asyncId);
             if (entry) e.defineCalcJSFunction(`${entry.name}(${entry.params.join(',')})=${entry.body}`,true,entry.name);
+        }
+        if (message.styleResults?.length) {
+            const textOwners = new Map();
+            for (const annotation of e._styledAnnotations || []) textOwners.set(annotation.__asyncId, annotation);
+            for (const result of message.styleResults) {
+                const owner = result.id === 0 ? e.annotationState.pen : entries.get(result.id) || textOwners.get(result.id);
+                if (!owner?.styleExpressions) continue;
+                let changed = false;
+                for (const [channel, spec] of Object.entries(result.expressions)) {
+                    const live = owner.styleExpressions[channel];
+                    if (live?.expr !== spec.expr) continue;
+                    if (spec.names) live.names = spec.names;
+                    const value = channel === 'thickness' ? result.thickness : result.color[channel];
+                    if (e.applyStyleValue(owner, channel, value)) changed = true;
+                }
+                if (changed) e.syncStyleParameterDisplay(owner);
+            }
         }
         if (message.plottedFunctionPoints) e.plottedFunctionPoints = message.plottedFunctionPoints;
         if (message.implictplotdata) e.implictplotdata = message.implictplotdata;
@@ -59880,6 +60398,7 @@ class ArchAsyncDrawing {
                     const entry = entries.get(record.entryId);
                     if (!entry) continue;
                     const copy = {...record,vbo:e.createBuffer(record.vertices)};
+                    if (target === lines && !record.isThick) copy.centers = record.vertices;
                     if (record.normals) copy.nbo = e.createBuffer(record.normals);
                     delete copy.vertices; delete copy.normals;
                     const index=e.entries.indexOf(entry);
@@ -59907,7 +60426,7 @@ class ArchAsyncDrawing {
         return JSON.stringify([e.is3DMode,frame,e.showPlaybackControls,e.showHiddenMath,e.showHiddenGeo,e.overlayDrawingEnabled,e.explicitPrecisionStep,e.implicitPrecisionStep,this.precisionKey(),
             e.annotations.filter(a=>a.type==='checkbox').map(a=>[a.checked,a.controlledNames]),
             [e.highlightedObject,e.geometryHoverObject,e.dragSnapHighlight,e.createdHighlight].map(x=>x?.__asyncId),
-            e.entries.map(x=>[x.__asyncId,x.visible,x.color,x.thickness,x.displayFrame,x.sliceAxis,x.sliceVal,x.extendTo3D,x.isSelected])]);
+            e.entries.map(x=>[x.__asyncId,x.visible,e.colorStyleInput(x),x.styleExpressions?.thickness?.expr ?? x.thickness,x.displayFrame,x.sliceAxis,x.sliceVal,x.extendTo3D,x.isSelected])]);
     }
     viewKey() {
         const e = this.engine;
@@ -60005,23 +60524,11 @@ class ArchAsyncDrawing {
         // only the inexpensive screen-width offsets from cached centerlines;
         // mathematical sampling and every fill packet remain unchanged.
         if (!packet.strokeCenters) {
-            const v=packet.vertices, centers=packet.strokeCenters=new Float64Array(v.length/3);
-            for (let i=0,j=0;i<v.length;i+=12,j+=4) {
-                centers[j]=(v[i]+v[i+2])/2; centers[j+1]=(v[i+1]+v[i+3])/2;
-                centers[j+2]=(v[i+4]+v[i+8])/2; centers[j+3]=(v[i+5]+v[i+9])/2;
-            }
-            packet.strokeVertices=new Float32Array(v.length);
+            packet.strokeCenters = e.readStrokeCenters(packet.vertices);
+            packet.strokeVertices = new Float32Array(packet.vertices.length);
         }
-        const c=packet.strokeCenters, v=packet.strokeVertices, half=packet.strokeWidth/2;
-        for(let i=0,j=0;i<c.length;i+=4,j+=12) {
-            const x1=c[i],y1=c[i+1],x2=c[i+2],y2=c[i+3];
-            const dx=(x2-x1)*sx,dy=(y2-y1)*sy,len=Math.hypot(dx,dy);
-            const ox=len ? -dy/len*half/sx : 0, oy=len ? dx/len*half/sy : 0;
-            v[j]=x1-ox;v[j+1]=y1-oy;v[j+2]=x1+ox;v[j+3]=y1+oy;
-            v[j+4]=x2-ox;v[j+5]=y2-oy;v[j+6]=x1+ox;v[j+7]=y1+oy;
-            v[j+8]=x2+ox;v[j+9]=y2+oy;v[j+10]=x2-ox;v[j+11]=y2-oy;
-        }
-        e.gl.bufferData(e.gl.ARRAY_BUFFER,v,e.gl.DYNAMIC_DRAW);
+        e.writeStrokeQuads(packet.strokeCenters, packet.strokeVertices, packet.strokeWidth);
+        e.gl.bufferData(e.gl.ARRAY_BUFFER, packet.strokeVertices, e.gl.DYNAMIC_DRAW);
         packet.strokeScaleX=sx;packet.strokeScaleY=sy;
     }
     waitForIdle() {
@@ -69218,7 +69725,7 @@ function initializeArchDeveloperMetrics(engine) {
         const asyncStatus=info.asyncActive?'开启':this.asyncDrawingEnabled?'已开启，等待初始化':'关闭';
         const lowPrecision=this.lowPrecisionBufferEnabled?'开启':'关闭';
         const lines=[
-            `Arch 2.0.04 (2612) · ${String(this.appVersion).padStart(5,'0')}`,
+            `Arch 2.0.05 (2612) · ${String(this.appVersion).padStart(5,'0')}`,
             `对象数：${this.entries.filter(e=>e.type!=='text').length}　上次编译：${format(times.compile)}　计算：${format(times.calculate)}`,
             `窗口：${window.innerWidth} × ${window.innerHeight} CSS px · DPR ${number(info.dpr)}`,
             `窗口像素：${Math.round(window.innerWidth*info.dpr)} × ${Math.round(window.innerHeight*info.dpr)} px`,
