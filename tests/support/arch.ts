@@ -97,7 +97,23 @@ export class Arch {
     });
 
     await page.goto('/index.html');
-    await page.waitForFunction(() => (window as any).archStartupFinished && (window as any).archInstance, null, { timeout: 60_000 });
+    try {
+      await page.waitForFunction(() => (window as any).archStartupFinished && (window as any).archInstance, null, { timeout: 60_000 });
+    } catch (err) {
+      // 启动失败时给出环境诊断，最常见的原因是浏览器拿不到 WebGL（CI 无 GPU 且没有软件渲染）。
+      const diag = await page.evaluate(() => {
+        const c = document.createElement('canvas');
+        const gl: any = c.getContext('webgl2') || c.getContext('webgl');
+        const dbg = gl?.getExtension('WEBGL_debug_renderer_info');
+        return {
+          archInstance: !!(window as any).archInstance, startupFinished: !!(window as any).archStartupFinished,
+          webgl: !!gl, renderer: gl ? String(gl.getParameter(dbg ? dbg.UNMASKED_RENDERER_WEBGL : gl.RENDERER)) : null,
+          userAgent: navigator.userAgent,
+        };
+      }).catch(e => ({ evaluateFailed: String(e) }));
+      throw new Error(`Arch 未能在 60 秒内启动。环境诊断：${JSON.stringify(diag)}；对话框：${JSON.stringify(this.dialogs)}；页面异常：${JSON.stringify(this.pageErrors.map(e => e.split('\n')[0]))}。` +
+        `如果 webgl=false，说明当前浏览器/系统组合没有可用的 WebGL（Linux CI 上需要用 Xvfb + Mesa 以有界面模式运行 Firefox/WebKit）。\n原始错误：${String(err)}`);
+    }
     // 首次打开会停在“关于”页；进入绘图页（关于页按钮本身在 smoke 测试里单独测）。
     const nav = page.locator('#nav-btn-plot');
     if (await nav.isVisible()) await nav.click();
@@ -315,7 +331,7 @@ export { expect };
  */
 export async function isolatedArch(browserType: BrowserType, browserName: string, testInfo: TestInfo) {
   const use = testInfo.project.use as any;
-  const browser = await browserType.launch({ channel: use.channel });
+  const browser = await browserType.launch({ ...use.launchOptions, channel: use.channel, headless: use.headless });
   const context = await browser.newContext({ baseURL: use.baseURL, viewport: use.viewport, locale: use.locale });
   const page = await context.newPage();
   const arch = new Arch(page, browserName);

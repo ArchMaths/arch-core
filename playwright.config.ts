@@ -20,6 +20,8 @@ export default defineConfig({
   expect: { timeout: 15_000 },
   fullyParallel: true,
   forbidOnly: CI,
+  // 环境出问题（例如浏览器拿不到 WebGL）时所有用例都会失败，累计 25 个失败就提前结束，避免空跑几个小时。
+  maxFailures: CI ? 25 : undefined,
   retries: CI ? 1 : 0,
   workers: CI ? 2 : undefined,
   reporter: CI
@@ -28,6 +30,8 @@ export default defineConfig({
   use: {
     baseURL: `http://127.0.0.1:${PORT}`,
     trace: 'retain-on-failure',
+    // Linux CI 上 Firefox/WebKit 的无头模式没有软件 WebGL，workflow 会设置 HEADED=1 并在 Xvfb 中以有界面模式运行。
+    headless: !process.env.HEADED,
     screenshot: 'only-on-failure',
     video: 'off',
     locale: 'zh-CN',
@@ -45,7 +49,11 @@ export default defineConfig({
     { name: 'chromium', use: { ...devices['Desktop Chrome'], ...desktop } },
     { name: 'chrome', use: { ...devices['Desktop Chrome'], ...desktop, channel: 'chrome' } },
     { name: 'msedge', use: { ...devices['Desktop Edge'], ...desktop, channel: 'msedge' } },
-    { name: 'firefox', use: { ...devices['Desktop Firefox'], ...desktop } },
+    {
+      name: 'firefox',
+      // 无 GPU 的 CI 机器上 Firefox 默认会禁用 WebGL，这里强制启用（走 Mesa / WARP 软件渲染）。
+      use: { ...devices['Desktop Firefox'], ...desktop, launchOptions: { firefoxUserPrefs: { 'webgl.force-enabled': true, 'webgl.disabled': false } } },
+    },
     { name: 'webkit', use: { ...devices['Desktop Safari'], ...desktop } },
   ],
 });

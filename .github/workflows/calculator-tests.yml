@@ -147,9 +147,22 @@ jobs:
               ;;
           esac
 
+      # Linux runner 没有 GPU：Chromium 自带软件渲染，但 Firefox/WebKit 的无头模式拿不到 WebGL，应用无法启动。
+      # 因此在 Xvfb 虚拟显示器里以有界面模式运行它们，由 Mesa（llvmpipe）提供软件 OpenGL。
+      - name: 安装虚拟显示器与软件 OpenGL（Linux / Firefox、WebKit）
+        if: runner.os == 'Linux' && (matrix.browser == 'firefox' || matrix.browser == 'webkit')
+        run: sudo apt-get update -q && sudo apt-get install -y -q xvfb libgl1-mesa-dri libegl1 libegl-mesa0 mesa-utils
+
       - name: 运行测试
         shell: bash
-        run: npx playwright test --project="${{ matrix.browser }}"
+        run: |
+          if [ "$RUNNER_OS" = "Linux" ] && { [ "${{ matrix.browser }}" = "firefox" ] || [ "${{ matrix.browser }}" = "webkit" ]; }; then
+            export HEADED=1 LIBGL_ALWAYS_SOFTWARE=1
+            xvfb-run -a -s "-screen 0 1920x1080x24" glxinfo -B | grep -i "renderer" || true
+            xvfb-run -a -s "-screen 0 1920x1080x24" npx playwright test --project="${{ matrix.browser }}"
+          else
+            npx playwright test --project="${{ matrix.browser }}"
+          fi
 
       - name: 上传测试报告
         if: ${{ !cancelled() }}
