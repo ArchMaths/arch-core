@@ -1,0 +1,55 @@
+{
+ "title": "傅里叶变换",
+ "count": 5,
+ "kinds": {
+  "variable": 1,
+  "function:y": 4
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "variable",
+   "id": "n",
+   "value": 10
+  },
+  {
+   "kind": "function:y",
+   "id": "func1",
+   "samples": [
+    -0.7683902081,
+    0.7779279621,
+    0.7961716916
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func2",
+   "samples": [
+    -0.8800967422,
+    1.141314939,
+    0.5754837116
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func3",
+   "samples": [
+    -0.9635581854,
+    0.6442176872,
+    0.8632093666
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func4",
+   "samples": [
+    -0.9635581854,
+    0.6442176872,
+    0.8632093666
+   ]
+  }
+ ]
+}

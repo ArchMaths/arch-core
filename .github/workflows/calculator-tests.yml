@@ -1,0 +1,124 @@
+# Arch 图形计算器 —— 跨平台 × 跨浏览器回归测试
+#
+# 被测对象：仓库根目录的 index.html（单文件应用）。只测试计算器本身，所有后端请求（登录、云存档、通知、更新、AI）
+# 在测试中都会被拦截。
+#
+# 矩阵：3 个操作系统 × 5 个浏览器 = 15 个 job，互不影响（fail-fast: false）。
+#   Windows 11 —— GitHub 托管的 Windows 11 运行器是 windows-11-arm（Arm64；x64 浏览器在 Prism 仿真层下运行）。
+#                 如果仓库是私有仓库且该运行器不可用，可在仓库 Settings → Variables 里设置
+#                 WINDOWS_RUNNER=windows-2025（Windows Server 2025，与 Win11 24H2 同内核），无需改本文件。
+#   macOS 26   —— macos-26
+#   Ubuntu     —— ubuntu-latest
+# 浏览器：chromium（Playwright 自带）、chrome（正式版 Chrome）、msedge（正式版 Edge）、firefox、webkit（Safari 内核）。
+name: Arch 计算器回归测试
+
+on:
+  push:
+    branches: ['**']
+    paths-ignore: ['**.md']
+  pull_request:
+    paths-ignore: ['**.md']
+  workflow_dispatch:
+    inputs:
+      fuzz_seed:
+        description: '模糊测试随机种子（留空使用默认值）'
+        required: false
+  schedule:
+    - cron: '0 18 * * *' # 每天北京时间 02:00 跑一次，并使用当天日期作为模糊测试种子
+
+concurrency:
+  group: arch-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.os_label }} / ${{ matrix.browser }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        os_label: [Windows 11, macOS 26, Ubuntu]
+        browser: [chromium, chrome, msedge, firefox, webkit]
+        include:
+          - os_label: Windows 11
+            os: ${{ vars.WINDOWS_RUNNER || 'windows-11-arm' }}
+          - os_label: macOS 26
+            os: macos-26
+          - os_label: Ubuntu
+            os: ubuntu-latest
+    env:
+      CI: 'true'
+      FUZZ_SEED: ${{ github.event.inputs.fuzz_seed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 检查被测文件
+        shell: bash
+        run: |
+          test -f index.html || { echo "::error::仓库根目录没有 index.html"; exit 1; }
+          ls -l index.html
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: 安装测试依赖
+        run: npm ci
+
+      - name: 每日定时任务使用日期作为模糊测试种子
+        if: github.event_name == 'schedule'
+        shell: bash
+        run: echo "FUZZ_SEED=$(date -u +%Y%m%d)" >> "$GITHUB_ENV"
+
+      - name: 定时/手动触发时跑完整示例存档（含大型 3D 存档）
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        shell: bash
+        run: echo "ARCH_FULL=1" >> "$GITHUB_ENV"
+
+      - name: 读取 Playwright 版本
+        id: pw
+        shell: bash
+        run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: 缓存 Playwright 浏览器
+        if: matrix.browser == 'chromium' || matrix.browser == 'firefox' || matrix.browser == 'webkit'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/ms-playwright
+            ~/Library/Caches/ms-playwright
+            ~/AppData/Local/ms-playwright
+          key: pw-${{ runner.os }}-${{ runner.arch }}-${{ matrix.browser }}-${{ steps.pw.outputs.version }}
+
+      - name: 安装浏览器
+        shell: bash
+        run: |
+          case "${{ matrix.browser }}" in
+            chrome|msedge)
+              # 运行器镜像通常预装了正式版 Chrome / Edge；没有或无法启动时再安装。
+              node tests/support/ensure-browser.mjs "${{ matrix.browser }}"
+              ;;
+            *)
+              npx playwright install --with-deps "${{ matrix.browser }}"
+              ;;
+          esac
+
+      - name: 运行测试
+        shell: bash
+        run: npx playwright test --project="${{ matrix.browser }}"
+
+      - name: 上传测试报告
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-${{ runner.os }}-${{ runner.arch }}-${{ matrix.browser }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+          if-no-files-found: ignore

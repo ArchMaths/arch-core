@@ -1,0 +1,162 @@
+{
+ "title": "逐帧函数动画",
+ "count": 24,
+ "kinds": {
+  "custom_function_definition": 13,
+  "variable": 1,
+  "function:y": 10
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "custom_function_definition",
+   "id": "f1"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f2"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f3"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f4"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f5"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f6"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f7"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "g"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "s"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f8"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f9"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f10"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f11"
+  },
+  {
+   "kind": "variable",
+   "id": "k",
+   "value": 1
+  },
+  {
+   "kind": "function:y",
+   "id": "func1",
+   "samples": [
+    1.686495135,
+    0.4937676662,
+    4.419287593
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func2",
+   "samples": [
+    0.000673836908,
+    0.004979283994,
+    0.02019190006
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func3",
+   "samples": [
+    -3.151431764e-8,
+    3.241806584e-8,
+    3.923539758e-8
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func4",
+   "samples": [
+    2.455514402e-14,
+    -3.338185037e-14,
+    6.94392523e-14
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func5",
+   "samples": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func6",
+   "samples": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func7",
+   "samples": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func8",
+   "samples": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func9",
+   "samples": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func10",
+   "samples": [
+    0,
+    0,
+    0
+   ]
+  }
+ ]
+}

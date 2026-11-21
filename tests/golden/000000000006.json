@@ -1,0 +1,45 @@
+{
+ "title": "函数舞动",
+ "count": 6,
+ "kinds": {
+  "custom_function_definition": 3,
+  "variable": 2,
+  "function:implicit": 1
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "custom_function_definition",
+   "id": "f1"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "o1"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "o2"
+  },
+  {
+   "kind": "variable",
+   "id": "k",
+   "value": 0
+  },
+  {
+   "kind": "variable",
+   "id": "a",
+   "value": -8.8035
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq1",
+   "samples": [
+    -0.2202923777,
+    0.9017006945
+   ]
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "title": "火焰",
+ "count": 5,
+ "kinds": {
+  "variable": 1,
+  "function:implicit": 4
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "variable",
+   "id": "l",
+   "value": 34.18169
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq1",
+   "samples": [
+    -0.002967277985,
+    162.8441884
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq2",
+   "samples": [
+    0.497032722,
+    163.3441884
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq3",
+   "samples": [
+    0.997032722,
+    163.8441884
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq4",
+   "samples": [
+    1.497032722,
+    164.3441884
+   ]
+  }
+ ]
+}

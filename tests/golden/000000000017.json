@@ -1,0 +1,87 @@
+{
+ "title": "电磁阻尼",
+ "count": 12,
+ "kinds": {
+  "variable": 8,
+  "function:parametric": 3,
+  "function:implicit": 1
+ },
+ "is3D": false,
+ "annotations": 9,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "variable",
+   "id": "k",
+   "value": 0
+  },
+  {
+   "kind": "variable",
+   "id": "m",
+   "value": 1
+  },
+  {
+   "kind": "variable",
+   "id": "r",
+   "value": 9
+  },
+  {
+   "kind": "variable",
+   "id": "d",
+   "value": 3
+  },
+  {
+   "kind": "variable",
+   "id": "b",
+   "value": 1
+  },
+  {
+   "kind": "variable",
+   "id": "v0",
+   "value": 2.5
+  },
+  {
+   "kind": "variable",
+   "id": "l1",
+   "value": 2.5
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para1",
+   "samples": [
+    1.5625,
+    1.5
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para2",
+   "samples": [
+    1.5625,
+    -1.5
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq1",
+   "samples": [
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para3",
+   "samples": [
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "variable",
+   "id": "x0",
+   "value": 0
+  }
+ ]
+}

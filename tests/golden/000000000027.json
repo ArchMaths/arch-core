@@ -1,0 +1,931 @@
+{
+ "title": "鹈鹕",
+ "count": 229,
+ "kinds": {
+  "text": 9,
+  "function:parametricSurface": 216,
+  "function:parametric3d": 4
+ },
+ "is3D": true,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "text",
+   "id": "text1"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para1"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para2"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para3"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para4"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para5"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para6"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para7"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para8"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para9"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para10"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para11"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para12"
+  },
+  {
+   "kind": "text",
+   "id": "text2"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para13"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para14"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para15"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para16"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para17"
+  },
+  {
+   "kind": "text",
+   "id": "text3"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para18"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para19"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para20"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para21"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para22"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para23"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para24"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para25"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para26"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para27"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para28"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para29"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para30"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para31"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para32"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para33"
+  },
+  {
+   "kind": "text",
+   "id": "text4"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para34"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para35"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para36"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para37"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para38"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para39"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para40"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para41"
+  },
+  {
+   "kind": "text",
+   "id": "text5"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para42"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para43"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para44"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para45"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para46"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para47"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para48"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para49"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para50"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para51"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para52"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para53"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para54"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para55"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para56"
+  },
+  {
+   "kind": "text",
+   "id": "text6"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para57"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para58"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para59"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para60"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para61"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para62"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para63"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para64"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para65"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para66"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para67"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para68"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para69"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para70"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para71"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para72"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para73"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para74"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para75"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para76"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para77"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para78"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para79"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para80"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para81"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para82"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para83"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para84"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para85"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para86"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para87"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para88"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para89"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para90"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para91"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para92"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para93"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para94"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para95"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para96"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para97"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para98"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para99"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para100"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para101"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para102"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para103"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para104"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para105"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para106"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para107"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para108"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para109"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para110"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para111"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para112"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para113"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para114"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para115"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para116"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para117"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para118"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para119"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para120"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para121"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para122"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para123"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para124"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para125"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para126"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para127"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para128"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para129"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para130"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para131"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para132"
+  },
+  {
+   "kind": "text",
+   "id": "text7"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para133"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para134"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para135"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para136"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para137"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para138"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para139"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para140"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para141"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para142"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para143"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para144"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para145"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para146"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para147"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para148"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para149"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para150"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para151"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para152"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para153"
+  },
+  {
+   "kind": "text",
+   "id": "text8"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para154"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para155"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para156"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para157"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para158"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para159"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para160"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para161"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para162"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para163"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para164"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para165"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para166"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para167"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para168"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para169"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para170"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para171"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para172"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para173"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para174"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para175"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para176"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para177"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para178"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para179"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para180"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para181"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para182"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para183"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para184"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para185"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para186"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para187"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para188"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para189"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para190"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para191"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para192"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para193"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para194"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para195"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para196"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para197"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para198"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para199"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para200"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para201"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para202"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para203"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para204"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para205"
+  },
+  {
+   "kind": "text",
+   "id": "text9"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para206"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para207"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para208"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para209"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para210"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para211"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para212"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para213"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para214"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para215"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para216"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para217"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para218"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para219"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para220"
+  }
+ ]
+}

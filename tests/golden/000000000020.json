@@ -1,0 +1,2237 @@
+{
+ "title": "3D坦克",
+ "count": 555,
+ "kinds": {
+  "text": 2,
+  "function:z": 1,
+  "function:parametric3d": 543,
+  "function:implicit3d": 5,
+  "custom_function_definition": 4
+ },
+ "is3D": true,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "text",
+   "id": "text1"
+  },
+  {
+   "kind": "text",
+   "id": "text2"
+  },
+  {
+   "kind": "function:z",
+   "id": "func1"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para1"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para2"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para3"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para4"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para5"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para6"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para7"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para8"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para9"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para10"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para11"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para12"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para13"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para14"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para15"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para16"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para17"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para18"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para19"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para20"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para21"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para22"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para23"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para24"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para25"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para26"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para27"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para28"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para29"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para30"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq1"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para31"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para32"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para33"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para34"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para35"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para36"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para37"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para38"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para39"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para40"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para41"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para42"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq2"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para43"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para44"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para45"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para46"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para47"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para48"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para49"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para50"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para51"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para52"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para53"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para54"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para55"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para56"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para57"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para58"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para59"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para60"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para61"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para62"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para63"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq3"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para64"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para65"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para66"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para67"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para68"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para69"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para70"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para71"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para72"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para73"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para74"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para75"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para76"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para77"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para78"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para79"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para80"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para81"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para82"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para83"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para84"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para85"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq4"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para86"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para87"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para88"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para89"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para90"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para91"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para92"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para93"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para94"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para95"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para96"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para97"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para98"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para99"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para100"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para101"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para102"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para103"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para104"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para105"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para106"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para107"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "kax"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "kaz"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "kbx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "kbz"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para108"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para109"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para110"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para111"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para112"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para113"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para114"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para115"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para116"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para117"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para118"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para119"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para120"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para121"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para122"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para123"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para124"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para125"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para126"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para127"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para128"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para129"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para130"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para131"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para132"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para133"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para134"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para135"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para136"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para137"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para138"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para139"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para140"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para141"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para142"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para143"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para144"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para145"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para146"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para147"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para148"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para149"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para150"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para151"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para152"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para153"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para154"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para155"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para156"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para157"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para158"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para159"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para160"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para161"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para162"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para163"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para164"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para165"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para166"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para167"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para168"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para169"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para170"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para171"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para172"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para173"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para174"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para175"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para176"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para177"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para178"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para179"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para180"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para181"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para182"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para183"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para184"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para185"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para186"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para187"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para188"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para189"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para190"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para191"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para192"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para193"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para194"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para195"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para196"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para197"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para198"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para199"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para200"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para201"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para202"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para203"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para204"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para205"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para206"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para207"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para208"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para209"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para210"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para211"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para212"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para213"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para214"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para215"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para216"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para217"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para218"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para219"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para220"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para221"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para222"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para223"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para224"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para225"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para226"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para227"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para228"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para229"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para230"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para231"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para232"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para233"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para234"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para235"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para236"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para237"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para238"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para239"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para240"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para241"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para242"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para243"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para244"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para245"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para246"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para247"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para248"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para249"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para250"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para251"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para252"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para253"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para254"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para255"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para256"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para257"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para258"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para259"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para260"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para261"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para262"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para263"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para264"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para265"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para266"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para267"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para268"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para269"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para270"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para271"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para272"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para273"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para274"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para275"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para276"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para277"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para278"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para279"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para280"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para281"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para282"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para283"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para284"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para285"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para286"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para287"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para288"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para289"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para290"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para291"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para292"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para293"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para294"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para295"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para296"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para297"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para298"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para299"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para300"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para301"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para302"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para303"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para304"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para305"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para306"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para307"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para308"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para309"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para310"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para311"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para312"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para313"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para314"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para315"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para316"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para317"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para318"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para319"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para320"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para321"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para322"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para323"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para324"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para325"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para326"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para327"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para328"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para329"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para330"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para331"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para332"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para333"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para334"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para335"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para336"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para337"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para338"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para339"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para340"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para341"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para342"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para343"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para344"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para345"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para346"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para347"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para348"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para349"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para350"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para351"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq5"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para352"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para353"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para354"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para355"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para356"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para357"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para358"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para359"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para360"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para361"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para362"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para363"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para364"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para365"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para366"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para367"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para368"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para369"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para370"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para371"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para372"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para373"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para374"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para375"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para376"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para377"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para378"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para379"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para380"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para381"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para382"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para383"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para384"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para385"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para386"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para387"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para388"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para389"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para390"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para391"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para392"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para393"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para394"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para395"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para396"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para397"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para398"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para399"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para400"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para401"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para402"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para403"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para404"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para405"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para406"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para407"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para408"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para409"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para410"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para411"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para412"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para413"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para414"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para415"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para416"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para417"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para418"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para419"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para420"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para421"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para422"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para423"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para424"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para425"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para426"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para427"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para428"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para429"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para430"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para431"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para432"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para433"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para434"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para435"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para436"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para437"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para438"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para439"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para440"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para441"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para442"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para443"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para444"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para445"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para446"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para447"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para448"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para449"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para450"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para451"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para452"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para453"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para454"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para455"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para456"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para457"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para458"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para459"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para460"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para461"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para462"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para463"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para464"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para465"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para466"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para467"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para468"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para469"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para470"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para471"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para472"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para473"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para474"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para475"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para476"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para477"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para478"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para479"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para480"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para481"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para482"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para483"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para484"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para485"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para486"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para487"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para488"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para489"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para490"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para491"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para492"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para493"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para494"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para495"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para496"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para497"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para498"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para499"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para500"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para501"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para502"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para503"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para504"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para505"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para506"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para507"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para508"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para509"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para510"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para511"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para512"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para513"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para514"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para515"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para516"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para517"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para518"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para519"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para520"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para521"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para522"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para523"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para524"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para525"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para526"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para527"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para528"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para529"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para530"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para531"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para532"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para533"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para534"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para535"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para536"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para537"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para538"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para539"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para540"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para541"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para542"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para543"
+  }
+ ]
+}

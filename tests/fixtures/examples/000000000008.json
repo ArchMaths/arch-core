@@ -1,0 +1,903 @@
+{
+  "entries": [
+    {
+      "type": "custom_function_definition",
+      "expr": "f1(a)=aa",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f1",
+      "params": [
+        "a"
+      ],
+      "body": "aa",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f2(a)=exp(a)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f2",
+      "params": [
+        "a"
+      ],
+      "body": "exp(a)",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f3(a)=a+1/a",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f3",
+      "params": [
+        "a"
+      ],
+      "body": "a+1/a",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f4(a)=ln(abs(a))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f4",
+      "params": [
+        "a"
+      ],
+      "body": "ln(abs(a))",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f5(a)=a",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f5",
+      "params": [
+        "a"
+      ],
+      "body": "a",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f6(a)=1/(a-2)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f6",
+      "params": [
+        "a"
+      ],
+      "body": "1/(a-2)",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f7(a)=-asinh(a)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f7",
+      "params": [
+        "a"
+      ],
+      "body": "-asinh(a)",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "g(a)=0.5*tanh(6*(0.5-abs(a)))+0.5",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "g",
+      "params": [
+        "a"
+      ],
+      "body": "0.5*tanh(6*(0.5-abs(a)))+0.5",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "s(l,m,n)=g(l-1)*n+g(-l)*m",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "s",
+      "params": [
+        "l",
+        "m",
+        "n"
+      ],
+      "body": "g(l-1)*n+g(-l)*m",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f8(a)=sin(a)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f8",
+      "params": [
+        "a"
+      ],
+      "body": "sin(a)",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f9(a)=sin(cos(tan(a)))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f9",
+      "params": [
+        "a"
+      ],
+      "body": "sin(cos(tan(a)))",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f10(a)=1",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f10",
+      "params": [
+        "a"
+      ],
+      "body": "1",
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f11(a)=exp(-a)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f11",
+      "params": [
+        "a"
+      ],
+      "body": "exp(-a)",
+      "dependencies": []
+    },
+    {
+      "type": "variable",
+      "expr": "k=1",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "value": 1,
+      "min": 1,
+      "max": 11,
+      "step": 0.02,
+      "playState": 0,
+      "playDirection": 1,
+      "playMode": 0,
+      "name": "k",
+      "key": "k",
+      "isEditableIndependent": true,
+      "dependencies": []
+    },
+    {
+      "type": "function",
+      "expr": "y=s(k-1,f1(x),f2(x))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 1,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "((0.5*Math.tanh(6*(0.5-Math.abs(((k-1)-1))))+0.5)*((Math.exp((x))))+(0.5*Math.tanh(6*(0.5-Math.abs((-(k-1)))))+0.5)*(((x)*(x))))",
+      "dependencies": [
+        "k"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "y=s(k-2,f2(x),f3(x))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 2,
+      "color": {
+        "h": 4,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "((0.5*Math.tanh(6*(0.5-Math.abs(((k-2)-1))))+0.5)*(((x)+1/(x)))+(0.5*Math.tanh(6*(0.5-Math.abs((-(k-2)))))+0.5)*((Math.exp((x)))))",
+      "dependencies": [
+        "k"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "y=s(k-3,f3(x),f4(x))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 3,
+      "color": {
+        "h": 12,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "((0.5*Math.tanh(6*(0.5-Math.abs(((k-3)-1))))+0.5)*((Math.log(Math.abs((x)))))+(0.5*Math.tanh(6*(0.5-Math.abs((-(k-3)))))+0.5)*(((x)+1/(x))))",
+      "dependencies": [
+        "k"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "y=s(k-4,f4(x),f5(x))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 4,
+      "color": {
+        "h": 20,
+        "s": 100,
+        "b": 65,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "((0.5*Math.tanh(6*(0.5-Math.abs(((k-4)-1))))+0.5)*(((x)))+(0.5*Math.tanh(6*(0.5-Math.abs((-(k-4)))))+0.5)*((Math.log(Math.abs((x))))))",
+      "dependencies": [
+        "k"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "y=s(k-5,f5(x),f6(x))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 5,
+      "color": {
+        "h": 45,
+        "s": 100,
+        "b": 67,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "((0.5*Math.tanh(6*(0.5-Math.abs(((k-5)-1))))+0.5)*((1/((x)-2)))+(0.5*Math.tanh(6*(0.5-Math.abs((-(k-5)))))+0.5)*(((x))))",
+      "dependencies": [
+        "k"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "y=s(k-6,f6(x),f7(x))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 6,
+      "color": {
+        "h": 52,
+        "s": 100,
+        "b": 62,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "((0.5*Math.tanh(6*(0.5-Math.abs(((k-6)-1))))+0.5)*((-Math.asinh((x))))+(0.5*Math.tanh(6*(0.5-Math.abs((-(k-6)))))+0.5)*((1/((x)-2))))",
+      "dependencies": [
+        "k"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "y=s(k-7,f7(x),f8(x))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 7,
+      "color": {
+        "h": 56,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "((0.5*Math.tanh(6*(0.5-Math.abs(((k-7)-1))))+0.5)*((Math.sin((x))))+(0.5*Math.tanh(6*(0.5-Math.abs((-(k-7)))))+0.5)*((-Math.asinh((x)))))",
+      "dependencies": [
+        "k"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "y=s(k-8,f8(x),f9(x))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 8,
+      "color": {
+        "h": 62,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "((0.5*Math.tanh(6*(0.5-Math.abs(((k-8)-1))))+0.5)*((Math.sin(Math.cos(Math.tan((x))))))+(0.5*Math.tanh(6*(0.5-Math.abs((-(k-8)))))+0.5)*((Math.sin((x)))))",
+      "dependencies": [
+        "k"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "y=s(k-9,f9(x),f10(x))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 9,
+      "color": {
+        "h": 78,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "((0.5*Math.tanh(6*(0.5-Math.abs(((k-9)-1))))+0.5)*((1))+(0.5*Math.tanh(6*(0.5-Math.abs((-(k-9)))))+0.5)*((Math.sin(Math.cos(Math.tan((x)))))))",
+      "dependencies": [
+        "k"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "y=s(k-10,f10(x),f11(x))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 10,
+      "color": {
+        "h": 84,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "((0.5*Math.tanh(6*(0.5-Math.abs(((k-10)-1))))+0.5)*((Math.exp(-(x))))+(0.5*Math.tanh(6*(0.5-Math.abs((-(k-10)))))+0.5)*((1)))",
+      "dependencies": [
+        "k"
+      ]
+    }
+  ],
+  "name": "函数舞动",
+  "version": 11900,
+  "calcJSCustomFunctions": {
+    "f1": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "a",
+        "a"
+      ],
+      "rawBodyString": "aa"
+    },
+    "f2": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "exp",
+        "(",
+        "a",
+        ")"
+      ],
+      "rawBodyString": "exp(a)"
+    },
+    "f3": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "a",
+        "+",
+        "1",
+        "/",
+        "a"
+      ],
+      "rawBodyString": "a+1/a"
+    },
+    "f4": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "ln",
+        "(",
+        "abs",
+        "(",
+        "a",
+        ")",
+        ")"
+      ],
+      "rawBodyString": "ln(abs(a))"
+    },
+    "f5": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "a"
+      ],
+      "rawBodyString": "a"
+    },
+    "f6": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "1",
+        "/",
+        "(",
+        "a",
+        "-",
+        "2",
+        ")"
+      ],
+      "rawBodyString": "1/(a-2)"
+    },
+    "f7": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "-",
+        "asinh",
+        "(",
+        "a",
+        ")"
+      ],
+      "rawBodyString": "-asinh(a)"
+    },
+    "g": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "0.5",
+        "*",
+        "tanh",
+        "(",
+        "6",
+        "*",
+        "(",
+        "0.5",
+        "-",
+        "abs",
+        "(",
+        "a",
+        ")",
+        ")",
+        ")",
+        "+",
+        "0.5"
+      ],
+      "rawBodyString": "0.5*tanh(6*(0.5-abs(a)))+0.5"
+    },
+    "s": {
+      "params": [
+        "l",
+        "m",
+        "n"
+      ],
+      "bodyTokens": [
+        "g",
+        "(",
+        "l",
+        "-",
+        "1",
+        ")",
+        "*",
+        "n",
+        "+",
+        "g",
+        "(",
+        "-",
+        "l",
+        ")",
+        "*",
+        "m"
+      ],
+      "rawBodyString": "g(l-1)*n+g(-l)*m"
+    },
+    "f8": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "sin",
+        "(",
+        "a",
+        ")"
+      ],
+      "rawBodyString": "sin(a)"
+    },
+    "f9": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "sin",
+        "(",
+        "cos",
+        "(",
+        "tan",
+        "(",
+        "a",
+        ")",
+        ")",
+        ")"
+      ],
+      "rawBodyString": "sin(cos(tan(a)))"
+    },
+    "f10": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "1"
+      ],
+      "rawBodyString": "1"
+    },
+    "f11": {
+      "params": [
+        "a"
+      ],
+      "bodyTokens": [
+        "exp",
+        "(",
+        "-",
+        "a",
+        ")"
+      ],
+      "rawBodyString": "exp(-a)"
+    }
+  },
+  "calcJScalc3": [
+    "f10",
+    "f11",
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7",
+    "f8",
+    "f9",
+    "g",
+    "s"
+  ],
+  "customAdvancedFunctions": [],
+  "scale": 61.26965116923282,
+  "offsetX": 730.7950576923364,
+  "offsetY": 401.052896966519,
+  "explicitPrecisionStep": 3,
+  "implicitPrecisionStep": 5,
+  "highPerformancePlottingEnabled": false,
+  "smoothPanningEnabled": true,
+  "tmin": -6.283185307179586,
+  "tmax": 6.283185307179586,
+  "blocks01": [
+    "-11.500000,-5.500000",
+    "-11.500000,-4.500000",
+    "-11.500000,-3.500000",
+    "-11.500000,-2.500000",
+    "-11.500000,-1.500000",
+    "-11.500000,-0.500000",
+    "-11.500000,0.500000",
+    "-11.500000,1.500000",
+    "-11.500000,2.500000",
+    "-11.500000,3.500000",
+    "-11.500000,4.500000",
+    "-11.500000,5.500000",
+    "-11.500000,6.500000",
+    "-10.500000,-5.500000",
+    "-10.500000,-4.500000",
+    "-10.500000,-3.500000",
+    "-10.500000,-2.500000",
+    "-10.500000,-1.500000",
+    "-10.500000,-0.500000",
+    "-10.500000,0.500000",
+    "-10.500000,1.500000",
+    "-10.500000,2.500000",
+    "-10.500000,3.500000",
+    "-10.500000,4.500000",
+    "-10.500000,5.500000",
+    "-10.500000,6.500000",
+    "-9.500000,-5.500000",
+    "-9.500000,-4.500000",
+    "-9.500000,-3.500000",
+    "-9.500000,-2.500000",
+    "-9.500000,-1.500000",
+    "-9.500000,-0.500000",
+    "-9.500000,0.500000",
+    "-9.500000,1.500000",
+    "-9.500000,2.500000",
+    "-9.500000,3.500000",
+    "-9.500000,4.500000",
+    "-9.500000,5.500000",
+    "-9.500000,6.500000",
+    "-8.500000,-5.500000",
+    "-8.500000,-4.500000",
+    "-8.500000,-3.500000",
+    "-8.500000,-2.500000",
+    "-8.500000,-1.500000",
+    "-8.500000,-0.500000",
+    "-8.500000,0.500000",
+    "-8.500000,1.500000",
+    "-8.500000,2.500000",
+    "-8.500000,3.500000",
+    "-8.500000,4.500000",
+    "-8.500000,5.500000",
+    "-8.500000,6.500000",
+    "-7.500000,-5.500000",
+    "-7.500000,-4.500000",
+    "-7.500000,-3.500000",
+    "-7.500000,-2.500000",
+    "-7.500000,-1.500000",
+    "-7.500000,-0.500000",
+    "-7.500000,0.500000",
+    "-7.500000,1.500000",
+    "-7.500000,2.500000",
+    "-7.500000,3.500000",
+    "-7.500000,4.500000",
+    "-7.500000,5.500000",
+    "-7.500000,6.500000",
+    "-6.500000,-5.500000",
+    "-6.500000,-4.500000",
+    "-6.500000,-3.500000",
+    "-6.500000,-2.500000",
+    "-6.500000,-1.500000",
+    "-6.500000,-0.500000",
+    "-6.500000,0.500000",
+    "-6.500000,1.500000",
+    "-6.500000,2.500000",
+    "-6.500000,3.500000",
+    "-6.500000,4.500000",
+    "-6.500000,5.500000",
+    "-6.500000,6.500000",
+    "-5.500000,-5.500000",
+    "-5.500000,-4.500000",
+    "-5.500000,-3.500000",
+    "-5.500000,-2.500000",
+    "-5.500000,-1.500000",
+    "-5.500000,-0.500000",
+    "-5.500000,0.500000",
+    "-5.500000,1.500000",
+    "-5.500000,2.500000",
+    "-5.500000,3.500000",
+    "-5.500000,4.500000",
+    "-5.500000,5.500000",
+    "-5.500000,6.500000",
+    "-4.500000,-5.500000",
+    "-4.500000,-4.500000",
+    "-4.500000,-3.500000",
+    "-4.500000,-2.500000",
+    "-4.500000,-1.500000",
+    "-4.500000,-0.500000",
+    "-4.500000,0.500000",
+    "-4.500000,1.500000",
+    "-4.500000,2.500000",
+    "-4.500000,3.500000",
+    "-4.500000,4.500000",
+    "-4.500000,5.500000",
+    "-4.500000,6.500000",
+    "-3.500000,-5.500000",
+    "-3.500000,-4.500000",
+    "-3.500000,-3.500000",
+    "-3.500000,-2.500000",
+    "-3.500000,-1.500000",
+    "-3.500000,-0.500000",
+    "-3.500000,0.500000",
+    "-3.500000,1.500000",
+    "-3.500000,2.500000",
+    "-3.500000,3.500000",
+    "-3.500000,4.500000",
+    "-3.500000,5.500000",
+    "-3.500000,6.500000",
+    "-2.500000,-5.500000",
+    "-2.500000,-4.500000",
+    "-2.500000,-3.500000",
+    "-2.500000,-2.500000",
+    "-2.500000,-1.500000",
+    "-2.500000,-0.500000",
+    "-2.500000,0.500000",
+    "-2.500000,1.500000",
+    "-2.500000,2.500000",
+    "-2.500000,3.500000",
+    "-2.500000,4.500000",
+    "-2.500000,5.500000",
+    "-2.500000,6.500000",
+    "-1.500000,-5.500000",
+    "-1.500000,-4.500000",
+    "-1.500000,-3.500000",
+    "-1.500000,-2.500000",
+    "-1.500000,-1.500000",
+    "-1.500000,-0.500000",
+    "-1.500000,0.500000",
+    "-1.500000,1.500000",
+    "-1.500000,2.500000",
+    "-1.500000,3.500000",
+    "-1.500000,4.500000",
+    "-1.500000,5.500000",
+    "-1.500000,6.500000",
+    "-0.500000,-5.500000",
+    "-0.500000,-4.500000",
+    "-0.500000,-3.500000",
+    "-0.500000,-2.500000",
+    "-0.500000,-1.500000",
+    "-0.500000,-0.500000",
+    "-0.500000,0.500000",
+    "-0.500000,1.500000",
+    "-0.500000,2.500000",
+    "-0.500000,3.500000",
+    "-0.500000,4.500000",
+    "-0.500000,5.500000",
+    "-0.500000,6.500000",
+    "0.500000,-5.500000",
+    "0.500000,-4.500000",
+    "0.500000,-3.500000",
+    "0.500000,-2.500000",
+    "0.500000,-1.500000",
+    "0.500000,-0.500000",
+    "0.500000,0.500000",
+    "0.500000,1.500000",
+    "0.500000,2.500000",
+    "0.500000,3.500000",
+    "0.500000,4.500000",
+    "0.500000,5.500000",
+    "0.500000,6.500000",
+    "1.500000,-5.500000",
+    "1.500000,-4.500000",
+    "1.500000,-3.500000",
+    "1.500000,-2.500000",
+    "1.500000,-1.500000",
+    "1.500000,-0.500000",
+    "1.500000,0.500000",
+    "1.500000,1.500000",
+    "1.500000,2.500000",
+    "1.500000,3.500000",
+    "1.500000,4.500000",
+    "1.500000,5.500000",
+    "1.500000,6.500000",
+    "2.500000,-5.500000",
+    "2.500000,-4.500000",
+    "2.500000,-3.500000",
+    "2.500000,-2.500000",
+    "2.500000,-1.500000",
+    "2.500000,-0.500000",
+    "2.500000,0.500000",
+    "2.500000,1.500000",
+    "2.500000,2.500000",
+    "2.500000,3.500000",
+    "2.500000,4.500000",
+    "2.500000,5.500000",
+    "2.500000,6.500000",
+    "3.500000,-5.500000",
+    "3.500000,-4.500000",
+    "3.500000,-3.500000",
+    "3.500000,-2.500000",
+    "3.500000,-1.500000",
+    "3.500000,-0.500000",
+    "3.500000,0.500000",
+    "3.500000,1.500000",
+    "3.500000,2.500000",
+    "3.500000,3.500000",
+    "3.500000,4.500000",
+    "3.500000,5.500000",
+    "3.500000,6.500000",
+    "4.500000,-5.500000",
+    "4.500000,-4.500000",
+    "4.500000,-3.500000",
+    "4.500000,-2.500000",
+    "4.500000,-1.500000",
+    "4.500000,-0.500000",
+    "4.500000,0.500000",
+    "4.500000,1.500000",
+    "4.500000,2.500000",
+    "4.500000,3.500000",
+    "4.500000,4.500000",
+    "4.500000,5.500000",
+    "4.500000,6.500000",
+    "5.500000,-5.500000",
+    "5.500000,-4.500000",
+    "5.500000,-3.500000",
+    "5.500000,-2.500000",
+    "5.500000,-1.500000",
+    "5.500000,-0.500000",
+    "5.500000,0.500000",
+    "5.500000,1.500000",
+    "5.500000,2.500000",
+    "5.500000,3.500000",
+    "5.500000,4.500000",
+    "5.500000,5.500000",
+    "5.500000,6.500000",
+    "6.500000,-5.500000",
+    "6.500000,-4.500000",
+    "6.500000,-3.500000",
+    "6.500000,-2.500000",
+    "6.500000,-1.500000",
+    "6.500000,-0.500000",
+    "6.500000,0.500000",
+    "6.500000,1.500000",
+    "6.500000,2.500000",
+    "6.500000,3.500000",
+    "6.500000,4.500000",
+    "6.500000,5.500000",
+    "6.500000,6.500000"
+  ],
+  "geometrySnapEnabled": true,
+  "preferredColorValue": 0,
+  "originalExplicitPrecision": 3,
+  "originalImplicitPrecision": 5,
+  "autoBreakpointDetectionEnabled": true,
+  "annotations": [],
+  "globalScript": "",
+  "showPlaybackControls": true,
+  "currentFrame": 1,
+  "totalFrames": 10,
+  "frameExpr": "k",
+  "playbackFPS": 10
+}

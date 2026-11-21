@@ -1,0 +1,223 @@
+{
+ "title": "荷花",
+ "count": 52,
+ "kinds": {
+  "custom_function_definition": 8,
+  "function:parametricSurface": 31,
+  "function:parametric3d": 13
+ },
+ "is3D": true,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "custom_function_definition",
+   "id": "lr"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lw"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lz"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para1"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "ly"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para2"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para3"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para4"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para5"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para6"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para7"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para8"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para9"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para10"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para11"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para12"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para13"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para14"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para15"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para16"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para17"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para18"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para19"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para20"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para21"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para22"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para23"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para24"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para25"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para26"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para27"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para28"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "leafrad"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "leafheight"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para29"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para30"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para31"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para32"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para33"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para34"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para35"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para36"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para37"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para38"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para39"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para40"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "waterheight"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para41"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para42"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para43"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para44"
+  }
+ ]
+}

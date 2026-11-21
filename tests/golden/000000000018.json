@@ -1,0 +1,60 @@
+{
+ "title": "隐函数偏导",
+ "count": 8,
+ "kinds": {
+  "custom_function_definition": 3,
+  "function:implicit": 2,
+  "geometry:point": 1,
+  "variable": 2
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "custom_function_definition",
+   "id": "f"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "fd1"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "fd2"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq1",
+   "samples": [
+    -0.9874527141,
+    -0.9149999991
+   ]
+  },
+  {
+   "kind": "geometry:point",
+   "id": "A",
+   "x": 3,
+   "y": 3.31631
+  },
+  {
+   "kind": "variable",
+   "id": "j",
+   "value": 0.299992874
+  },
+  {
+   "kind": "variable",
+   "id": "k",
+   "value": 0.33161275
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq2",
+   "samples": [
+    -1.777066339,
+    -1.901846064
+   ]
+  }
+ ]
+}

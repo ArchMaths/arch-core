@@ -1,0 +1,594 @@
+{
+ "title": "黄昏下的灯塔",
+ "count": 95,
+ "kinds": {
+  "function:implicit": 50,
+  "point_list": 45
+ },
+ "is3D": false,
+ "annotations": 1,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "function:implicit",
+   "id": "eq1",
+   "samples": [
+    0.4414319527,
+    -0.8325749566
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array1"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq2",
+   "samples": [
+    6.718342598,
+    5.762600959
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array2"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq3",
+   "samples": [
+    12.5436343,
+    11.61623172
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array3"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq4",
+   "samples": [
+    18.1839457,
+    17.2720124
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array4"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq5",
+   "samples": [
+    23.72730732,
+    22.82457171
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array5"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq6",
+   "samples": [
+    29.20542539,
+    28.3092341
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array6"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq7",
+   "samples": [
+    34.6444625,
+    33.75375383
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array7"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq8",
+   "samples": [
+    35.29855281,
+    34.63792944
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array8"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq9",
+   "samples": [
+    42.5162706,
+    41.75758082
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array9"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq10",
+   "samples": [
+    46.89113737,
+    46.15311191
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array10"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq11",
+   "samples": [
+    51.10263865,
+    50.38316961
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array11"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq12",
+   "samples": [
+    55.16201847,
+    54.45889205
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array12"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq13",
+   "samples": [
+    59.09026271,
+    58.40133878
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array13"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq14",
+   "samples": [
+    62.89555806,
+    62.21878086
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array14"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq15",
+   "samples": [
+    66.59032275,
+    65.92380441
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array15"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq16",
+   "samples": [
+    70.194441,
+    69.53651347
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array16"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq17",
+   "samples": [
+    73.7151084,
+    73.06429115
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array17"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq18",
+   "samples": [
+    36.32422796,
+    35.90175271
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array18"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq19",
+   "samples": [
+    13.03245343,
+    12.67921874
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq20",
+   "samples": [
+    16.91919618,
+    16.59290241
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq21",
+   "samples": [
+    59.96879631,
+    59.50023835
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array19"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq22",
+   "samples": [
+    64.92754888,
+    64.41381927
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array20"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq23",
+   "samples": [
+    94.72927108,
+    93.88825093
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array21"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq24",
+   "samples": [
+    96.97924887,
+    96.1396243
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array22"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq25",
+   "samples": [
+    99.22314927,
+    98.38487585
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array23"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq26",
+   "samples": [
+    55.75523979,
+    55.24829005
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array24"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq27",
+   "samples": [
+    70.46255061,
+    69.84707267
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array25"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq28",
+   "samples": [
+    72.09423945,
+    71.47846965
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array26"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq29",
+   "samples": [
+    73.72642865,
+    73.11044112
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array27"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq30",
+   "samples": [
+    75.35928308,
+    74.74313805
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array28"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq31",
+   "samples": [
+    53.87825273,
+    53.43709968
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array29"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq32",
+   "samples": [
+    52.90134273,
+    52.47043839
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array30"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq33",
+   "samples": [
+    116.9699145,
+    116.1408299
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array31"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq34",
+   "samples": [
+    119.1646255,
+    118.3364906
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array32"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq35",
+   "samples": [
+    121.3545283,
+    120.5273009
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array33"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq36",
+   "samples": [
+    123.2054257,
+    122.3789354
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array34"
+  },
+  {
+   "kind": "point_list",
+   "id": "array35"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq37",
+   "samples": [
+    55.08563605,
+    54.71469951
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array36"
+  },
+  {
+   "kind": "point_list",
+   "id": "array37"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq38",
+   "samples": [
+    120.9967234,
+    120.1912943
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq39",
+   "samples": [
+    86.96032618,
+    86.36394407
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array38"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq40",
+   "samples": [
+    62.16621596,
+    61.76256786
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array39"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq41",
+   "samples": [
+    51.53924381,
+    51.21517506
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array40"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq42",
+   "samples": [
+    130.1399902,
+    129.3111204
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array41"
+  },
+  {
+   "kind": "point_list",
+   "id": "array42"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq43",
+   "samples": [
+    30.5435426,
+    30.34735673
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq44",
+   "samples": [
+    36.95731106,
+    36.72057224
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq45",
+   "samples": [
+    40.26681104,
+    40.00982056
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq46",
+   "samples": [
+    44.62182502,
+    44.33776326
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq47",
+   "samples": [
+    67.0282776,
+    66.60210915
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq48",
+   "samples": [
+    151.0974104,
+    150.2393986
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq49",
+   "samples": [
+    109.2208331,
+    108.3600077
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array43"
+  },
+  {
+   "kind": "point_list",
+   "id": "array44"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq50",
+   "samples": [
+    112.9695244,
+    111.9382086
+   ]
+  },
+  {
+   "kind": "point_list",
+   "id": "array45"
+  }
+ ]
+}

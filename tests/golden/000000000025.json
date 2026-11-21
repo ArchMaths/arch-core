@@ -1,0 +1,631 @@
+{
+ "title": "雷霆大毛毛虫",
+ "count": 149,
+ "kinds": {
+  "variable": 19,
+  "custom_function_definition": 103,
+  "function:parametricSurface": 21,
+  "function:parametric3d": 6
+ },
+ "is3D": true,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "variable",
+   "id": "a",
+   "value": 0.5245
+  },
+  {
+   "kind": "variable",
+   "id": "hyw",
+   "value": 0.2335
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "kt"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "kc"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "kw"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "kn"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "ka"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "kb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "cl"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "tr"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "mxx"
+  },
+  {
+   "kind": "variable",
+   "id": "bk",
+   "value": 1
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "rx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "ry"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lz"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lw"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "bc"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lfx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lfy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lfz"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lgw"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para1"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "vt"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "vs"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "vw"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para2"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para3"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para4"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para5"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "sr"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "mpx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "mpy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "sx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "sy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "sz"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hd"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "tgx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "tgy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "bdx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "bdy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "bdz"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para6"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para7"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "ssz"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "spside"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "spx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "spy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "spz"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para8"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "ftside"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "ftx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "fty"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "ftz"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para9"
+  },
+  {
+   "kind": "variable",
+   "id": "hcx",
+   "value": 1.825309265
+  },
+  {
+   "kind": "variable",
+   "id": "hcy",
+   "value": 1.330367078
+  },
+  {
+   "kind": "variable",
+   "id": "hcz",
+   "value": -0.001103828106
+  },
+  {
+   "kind": "variable",
+   "id": "hyt",
+   "value": 1.018898163
+  },
+  {
+   "kind": "variable",
+   "id": "hpt",
+   "value": 0.2351517635
+  },
+  {
+   "kind": "variable",
+   "id": "hrl",
+   "value": 0.1723334608
+  },
+  {
+   "kind": "variable",
+   "id": "hfx",
+   "value": 0.5098751289
+  },
+  {
+   "kind": "variable",
+   "id": "hfy",
+   "value": 0.8280958549
+  },
+  {
+   "kind": "variable",
+   "id": "hfz",
+   "value": 0.232990575
+  },
+  {
+   "kind": "variable",
+   "id": "hsx",
+   "value": -0.8598652378
+  },
+  {
+   "kind": "variable",
+   "id": "hsy",
+   "value": 0.4825164121
+  },
+  {
+   "kind": "variable",
+   "id": "hsz",
+   "value": 0.1667623605
+  },
+  {
+   "kind": "variable",
+   "id": "hux",
+   "value": 0.02567344318
+  },
+  {
+   "kind": "variable",
+   "id": "huy",
+   "value": -0.2853684762
+  },
+  {
+   "kind": "variable",
+   "id": "huz",
+   "value": 0.958073957
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hwx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hwy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hwz"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para10"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hlx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hly"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hlz"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "eya"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "eyb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "eyc"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para11"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "pua"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "pub"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "puc"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para12"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "gb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "gsd"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hia"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hib"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hic"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para13"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "cha"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "chb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "chc"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para14"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "mb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "smx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "smy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "smz"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para15"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "atx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "aty"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "atz"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "ady"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "adz"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "anr"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "ana"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "anb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "anc"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "aq"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para16"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "tba"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "tbb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "tbc"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para17"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "hdm"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "shw"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "shx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "shy"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para18"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para19"
+  },
+  {
+   "kind": "variable",
+   "id": "lgz",
+   "value": -1.410211
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lbx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lby"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para20"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para21"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lsa"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lsb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lsh"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lsx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lsy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lsz"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para22"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lea"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "leb"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para23"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para24"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para25"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "dpx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "dpy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "dpr"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "gla"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "glb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "glc"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para26"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "dga"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "dgb"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "dgc"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para27"
+  }
+ ]
+}

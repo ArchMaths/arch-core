@@ -1,0 +1,3234 @@
+{
+  "entries": [
+    {
+      "type": "geometry",
+      "expr": "point(A,-0.023157500,-0.035377437)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "A",
+      "color": {
+        "h": 54,
+        "s": 95,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "-0.023157500",
+      "y_expr": "-0.035377437",
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "point(B,2.5145083,3.2218226)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "B",
+      "color": {
+        "h": 56,
+        "s": 97,
+        "b": 97,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "2.5145083",
+      "y_expr": "3.2218226",
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o1,A,B)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o1",
+      "color": {
+        "h": 55,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": false,
+      "centerName": "A",
+      "pointOnCircleName": "B",
+      "dependencies": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "point(C,3.0768556,1.3391107)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "C",
+      "color": {
+        "h": 92,
+        "s": 92,
+        "b": 89,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "3.0768556",
+      "y_expr": "1.3391107",
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l1,A,C)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l1",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A",
+      "p2Name": "C",
+      "dependencies": [
+        "a",
+        "c"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(D,o1,l1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "D",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o1",
+      "obj2Name": "l1",
+      "sign": 1,
+      "dependencies": [
+        "o1",
+        "l1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(D',o1,l1,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "D'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o1",
+      "obj2Name": "l1",
+      "sign": -1,
+      "dependencies": [
+        "o1",
+        "l1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o2,D',D)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o2",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "D'",
+      "pointOnCircleName": "D",
+      "dependencies": [
+        "d'",
+        "d"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o3,D,D')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o3",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "D",
+      "pointOnCircleName": "D'",
+      "dependencies": [
+        "d",
+        "d'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(E,o2,o3,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "E",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o2",
+      "obj2Name": "o3",
+      "sign": -1,
+      "dependencies": [
+        "o2",
+        "o3"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(E',o2,o3,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "E'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o2",
+      "obj2Name": "o3",
+      "sign": 1,
+      "dependencies": [
+        "o2",
+        "o3"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l2,E,E')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l2",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "E",
+      "p2Name": "E'",
+      "dependencies": [
+        "e",
+        "e'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(F,l2,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "F",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l2",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "l2",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(F',l2,o1,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "F'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l2",
+      "obj2Name": "o1",
+      "sign": -1,
+      "dependencies": [
+        "l2",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o4,F',A)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o4",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "F'",
+      "pointOnCircleName": "A",
+      "dependencies": [
+        "f'",
+        "a"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(G,o4,o1,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "G",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o4",
+      "obj2Name": "o1",
+      "sign": -1,
+      "dependencies": [
+        "o4",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(G',o4,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "G'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o4",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o4",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l3,G',G)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l3",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "G'",
+      "p2Name": "G",
+      "dependencies": [
+        "g'",
+        "g"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(H,l3,l2)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "H",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l3",
+      "obj2Name": "l2",
+      "sign": 1,
+      "dependencies": [
+        "l3",
+        "l2"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o5,A,H)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o5",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A",
+      "pointOnCircleName": "H",
+      "dependencies": [
+        "a",
+        "h"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o6,H,A)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o6",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "H",
+      "pointOnCircleName": "A",
+      "dependencies": [
+        "h",
+        "a"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(I,o5,o6,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "I",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o5",
+      "obj2Name": "o6",
+      "sign": -1,
+      "dependencies": [
+        "o5",
+        "o6"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(I',o5,o6,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "I'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o5",
+      "obj2Name": "o6",
+      "sign": 1,
+      "dependencies": [
+        "o5",
+        "o6"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l4,I,I')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l4",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "I",
+      "p2Name": "I'",
+      "dependencies": [
+        "i",
+        "i'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(J,l4,l2)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "J",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l4",
+      "obj2Name": "l2",
+      "sign": 1,
+      "dependencies": [
+        "l4",
+        "l2"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l5,J,D)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l5",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "J",
+      "p2Name": "D",
+      "dependencies": [
+        "j",
+        "d"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "point(K,l5,0.6)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "K",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": true,
+      "onObjectName": "l5",
+      "parameter_expr": "0.6",
+      "dependencies": [
+        "l5"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o7,J,K)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o7",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "J",
+      "pointOnCircleName": "K",
+      "dependencies": [
+        "j",
+        "k"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(L,l2,o7,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "L",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l2",
+      "obj2Name": "o7",
+      "sign": 1,
+      "dependencies": [
+        "l2",
+        "o7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(L',l2,o7,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "L'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l2",
+      "obj2Name": "o7",
+      "sign": -1,
+      "dependencies": [
+        "l2",
+        "o7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o8,L,K)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o8",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "L",
+      "pointOnCircleName": "K",
+      "dependencies": [
+        "l",
+        "k"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o9,K,L)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o9",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "K",
+      "pointOnCircleName": "L",
+      "dependencies": [
+        "k",
+        "l"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(M,o8,o9,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "M",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o8",
+      "obj2Name": "o9",
+      "sign": 1,
+      "dependencies": [
+        "o8",
+        "o9"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(M',o8,o9,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "M'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o8",
+      "obj2Name": "o9",
+      "sign": -1,
+      "dependencies": [
+        "o8",
+        "o9"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l6,J,M)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l6",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "J",
+      "p2Name": "M",
+      "dependencies": [
+        "j",
+        "m"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(N,l6,o7,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "N",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l6",
+      "obj2Name": "o7",
+      "sign": 1,
+      "dependencies": [
+        "l6",
+        "o7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(N',l6,o7,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "N'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l6",
+      "obj2Name": "o7",
+      "sign": -1,
+      "dependencies": [
+        "l6",
+        "o7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(O,l2,o7,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "O",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l2",
+      "obj2Name": "o7",
+      "sign": 1,
+      "dependencies": [
+        "l2",
+        "o7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(O',l2,o7,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "O'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l2",
+      "obj2Name": "o7",
+      "sign": -1,
+      "dependencies": [
+        "l2",
+        "o7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o10,o,n)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o10",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "o",
+      "pointOnCircleName": "n",
+      "dependencies": [
+        "o",
+        "n"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o11,n,o)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o11",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "n",
+      "pointOnCircleName": "o",
+      "dependencies": [
+        "n",
+        "o"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(P,o10,o11,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "P",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o10",
+      "obj2Name": "o11",
+      "sign": 1,
+      "dependencies": [
+        "o10",
+        "o11"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(P',o10,o11,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "P'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o10",
+      "obj2Name": "o11",
+      "sign": -1,
+      "dependencies": [
+        "o10",
+        "o11"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l7,J,P)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l7",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "J",
+      "p2Name": "P",
+      "dependencies": [
+        "j",
+        "p"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(Q,l7,o7,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "Q",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l7",
+      "obj2Name": "o7",
+      "sign": 1,
+      "dependencies": [
+        "l7",
+        "o7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(Q',l7,o7,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "Q'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l7",
+      "obj2Name": "o7",
+      "sign": -1,
+      "dependencies": [
+        "l7",
+        "o7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o12,Q',Q)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o12",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "Q'",
+      "pointOnCircleName": "Q",
+      "dependencies": [
+        "q'",
+        "q"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o13,Q,Q')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o13",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "Q",
+      "pointOnCircleName": "Q'",
+      "dependencies": [
+        "q",
+        "q'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(R',o12,o13,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "R'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o12",
+      "obj2Name": "o13",
+      "sign": 1,
+      "dependencies": [
+        "o12",
+        "o13"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(R,o12,o13,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "R",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o12",
+      "obj2Name": "o13",
+      "sign": -1,
+      "dependencies": [
+        "o12",
+        "o13"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l8,J,R')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l8",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "J",
+      "p2Name": "R'",
+      "dependencies": [
+        "j",
+        "r'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(S,l8,o7,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "S",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l8",
+      "obj2Name": "o7",
+      "sign": -1,
+      "dependencies": [
+        "l8",
+        "o7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(S',l8,o7,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "S'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l8",
+      "obj2Name": "o7",
+      "sign": 1,
+      "dependencies": [
+        "l8",
+        "o7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o14,S',Q)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o14",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "S'",
+      "pointOnCircleName": "Q",
+      "dependencies": [
+        "s'",
+        "q"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o15,Q,S')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o15",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "Q",
+      "pointOnCircleName": "S'",
+      "dependencies": [
+        "q",
+        "s'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(T,o14,o15,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "T",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o14",
+      "obj2Name": "o15",
+      "sign": -1,
+      "dependencies": [
+        "o14",
+        "o15"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(T',o14,o15,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "T'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o14",
+      "obj2Name": "o15",
+      "sign": 1,
+      "dependencies": [
+        "o14",
+        "o15"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l9,J,T')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l9",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "J",
+      "p2Name": "T'",
+      "dependencies": [
+        "j",
+        "t'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(U,l1,l9)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "U",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l1",
+      "obj2Name": "l9",
+      "sign": 1,
+      "dependencies": [
+        "l1",
+        "l9"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o16,u,d)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o16",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "u",
+      "pointOnCircleName": "d",
+      "dependencies": [
+        "u",
+        "d"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o17,d,u)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o17",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "d",
+      "pointOnCircleName": "u",
+      "dependencies": [
+        "d",
+        "u"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(v,o16,o17,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "v",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o16",
+      "obj2Name": "o17",
+      "sign": 1,
+      "dependencies": [
+        "o16",
+        "o17"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(v',o16,o17,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "v'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o16",
+      "obj2Name": "o17",
+      "sign": -1,
+      "dependencies": [
+        "o16",
+        "o17"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l10,v,v')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l10",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "v",
+      "p2Name": "v'",
+      "dependencies": [
+        "v",
+        "v'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(w,l1,l10)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "w",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l1",
+      "obj2Name": "l10",
+      "sign": 1,
+      "dependencies": [
+        "l1",
+        "l10"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o18,w,u)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o18",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "w",
+      "pointOnCircleName": "u",
+      "dependencies": [
+        "w",
+        "u"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(x,l1,l7)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "x",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l1",
+      "obj2Name": "l7",
+      "sign": 1,
+      "dependencies": [
+        "l1",
+        "l7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(Y,l2,O18,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "Y",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l2",
+      "obj2Name": "O18",
+      "sign": 1,
+      "dependencies": [
+        "l2",
+        "o18"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(Y',l2,o18,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "Y'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l2",
+      "obj2Name": "o18",
+      "sign": -1,
+      "dependencies": [
+        "l2",
+        "o18"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o19,x,y')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o19",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "x",
+      "pointOnCircleName": "y'",
+      "dependencies": [
+        "x",
+        "y'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(z,l1,o19,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "z",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l1",
+      "obj2Name": "o19",
+      "sign": 1,
+      "dependencies": [
+        "l1",
+        "o19"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(z',l1,o19,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "z'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l1",
+      "obj2Name": "o19",
+      "sign": -1,
+      "dependencies": [
+        "l1",
+        "o19"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o20,z,x)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o20",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "z",
+      "pointOnCircleName": "x",
+      "dependencies": [
+        "z",
+        "x"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A1,l1,o20,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A1",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l1",
+      "obj2Name": "o20",
+      "sign": 1,
+      "dependencies": [
+        "l1",
+        "o20"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A1',l1,o20,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A1'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l1",
+      "obj2Name": "o20",
+      "sign": -1,
+      "dependencies": [
+        "l1",
+        "o20"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o21,A1',A1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o21",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A1'",
+      "pointOnCircleName": "A1",
+      "dependencies": [
+        "a1'",
+        "a1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o22,A1,A1')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o22",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A1",
+      "pointOnCircleName": "A1'",
+      "dependencies": [
+        "a1",
+        "a1'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A2,o21,o22,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A2",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o21",
+      "obj2Name": "o22",
+      "sign": 1,
+      "dependencies": [
+        "o21",
+        "o22"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A2',o21,o22,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A2'",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o21",
+      "obj2Name": "o22",
+      "sign": -1,
+      "dependencies": [
+        "o21",
+        "o22"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l11,A2,A2')",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l11",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A2",
+      "p2Name": "A2'",
+      "dependencies": [
+        "a2",
+        "a2'"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A3,l11,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A3",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "l11",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "l11",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o23,A3,D)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o23",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A3",
+      "pointOnCircleName": "D",
+      "dependencies": [
+        "a3",
+        "d"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A4,o23,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A4",
+      "color": {
+        "h": 0,
+        "s": 99,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o23",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o23",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o24,A4,A3)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o24",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A4",
+      "pointOnCircleName": "A3",
+      "dependencies": [
+        "a4",
+        "a3"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A5,o24,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A5",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o24",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o24",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o25,A5,A4)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o25",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A5",
+      "pointOnCircleName": "A4",
+      "dependencies": [
+        "a5",
+        "a4"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A6,o25,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A6",
+      "color": {
+        "h": 0,
+        "s": 99,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o25",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o25",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o26,A6,A5)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o26",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A6",
+      "pointOnCircleName": "A5",
+      "dependencies": [
+        "a6",
+        "a5"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A7,o26,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A7",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o26",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o26",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o27,A7,A6)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o27",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A7",
+      "pointOnCircleName": "A6",
+      "dependencies": [
+        "a7",
+        "a6"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A8,o27,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A8",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o27",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o27",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o28,A8,A7)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o28",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A8",
+      "pointOnCircleName": "A7",
+      "dependencies": [
+        "a8",
+        "a7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A9,o28,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A9",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o28",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o28",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o29,A9,A8)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o29",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A9",
+      "pointOnCircleName": "A8",
+      "dependencies": [
+        "a9",
+        "a8"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A10,o29,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A10",
+      "color": {
+        "h": 0,
+        "s": 98,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o29",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o29",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o30,A10,A9)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o30",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A10",
+      "pointOnCircleName": "A9",
+      "dependencies": [
+        "a10",
+        "a9"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A11,o30,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A11",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o30",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o30",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o31,A11,A10)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o31",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A11",
+      "pointOnCircleName": "A10",
+      "dependencies": [
+        "a11",
+        "a10"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A12,o31,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A12",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o31",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o31",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o32,A12,A11)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o32",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A12",
+      "pointOnCircleName": "A11",
+      "dependencies": [
+        "a12",
+        "a11"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A13,o32,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A13",
+      "color": {
+        "h": 0,
+        "s": 99,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o32",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o32",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o34,A13,A12)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o34",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A13",
+      "pointOnCircleName": "A12",
+      "dependencies": [
+        "a13",
+        "a12"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A14,o34,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A14",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o34",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o34",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o35,A14,A13)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o35",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A14",
+      "pointOnCircleName": "A13",
+      "dependencies": [
+        "a14",
+        "a13"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A15,o35,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A15",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o35",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o35",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o36,A15,A14)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o36",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A15",
+      "pointOnCircleName": "A14",
+      "dependencies": [
+        "a15",
+        "a14"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A16,o36,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A16",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o36",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o36",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o37,A16,A15)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o37",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A16",
+      "pointOnCircleName": "A15",
+      "dependencies": [
+        "a16",
+        "a15"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A17,o37,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A17",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o37",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o37",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o38,A17,A16)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o38",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A17",
+      "pointOnCircleName": "A16",
+      "dependencies": [
+        "a17",
+        "a16"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A18,o38,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A18",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o38",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o38",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(o39,A18,A17)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "o39",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "centerName": "A18",
+      "pointOnCircleName": "A17",
+      "dependencies": [
+        "a18",
+        "a17"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intercept(A19,o39,o1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intercept",
+      "name": "A19",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "obj1Name": "o39",
+      "obj2Name": "o1",
+      "sign": 1,
+      "dependencies": [
+        "o39",
+        "o1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s1,A3,A9)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s1",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A3",
+      "p2Name": "A9",
+      "dependencies": [
+        "a3",
+        "a9"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s2,A9,A15)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s2",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A9",
+      "p2Name": "A15",
+      "dependencies": [
+        "a9",
+        "a15"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s3,A15,A4)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s3",
+      "color": {
+        "h": 99,
+        "s": 100,
+        "b": 99,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A15",
+      "p2Name": "A4",
+      "dependencies": [
+        "a15",
+        "a4"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s4,A4,A10)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s4",
+      "color": {
+        "h": 99,
+        "s": 99,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A4",
+      "p2Name": "A10",
+      "dependencies": [
+        "a4",
+        "a10"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s5,A10,A16)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s5",
+      "color": {
+        "h": 99,
+        "s": 99,
+        "b": 99,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A10",
+      "p2Name": "A16",
+      "dependencies": [
+        "a10",
+        "a16"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s6,A16,A5)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s6",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A16",
+      "p2Name": "A5",
+      "dependencies": [
+        "a16",
+        "a5"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s7,A5,A11)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s7",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A5",
+      "p2Name": "A11",
+      "dependencies": [
+        "a5",
+        "a11"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s8,A11,A17)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s8",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A11",
+      "p2Name": "A17",
+      "dependencies": [
+        "a11",
+        "a17"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s9,A17,A6)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s9",
+      "color": {
+        "h": 99,
+        "s": 97,
+        "b": 98,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A17",
+      "p2Name": "A6",
+      "dependencies": [
+        "a17",
+        "a6"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s10,A6,A12)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s10",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A6",
+      "p2Name": "A12",
+      "dependencies": [
+        "a6",
+        "a12"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s11,A12,A18)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s11",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A12",
+      "p2Name": "A18",
+      "dependencies": [
+        "a12",
+        "a18"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s12,A18,A7)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s12",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A18",
+      "p2Name": "A7",
+      "dependencies": [
+        "a18",
+        "a7"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s13,A7,A13)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s13",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A7",
+      "p2Name": "A13",
+      "dependencies": [
+        "a7",
+        "a13"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s14,A13,A19)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s14",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A13",
+      "p2Name": "A19",
+      "dependencies": [
+        "a13",
+        "a19"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s15,A19,A8)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s15",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A19",
+      "p2Name": "A8",
+      "dependencies": [
+        "a19",
+        "a8"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s16,A8,A14)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s16",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A8",
+      "p2Name": "A14",
+      "dependencies": [
+        "a8",
+        "a14"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(s17,A14,A3)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "s17",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A14",
+      "p2Name": "A3",
+      "dependencies": [
+        "a14",
+        "a3"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "polygon(p1,17,A3,A14,A8,D,A13,A7,A18,A12,A6,A17,A11,A5,A16,A10,A4,A15,A9)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "polygon",
+      "name": "p1",
+      "color": {
+        "h": 11,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointNames": [
+        "A3",
+        "A14",
+        "A8",
+        "D",
+        "A13",
+        "A7",
+        "A18",
+        "A12",
+        "A6",
+        "A17",
+        "A11",
+        "A5",
+        "A16",
+        "A10",
+        "A4",
+        "A15",
+        "A9"
+      ],
+      "dependencies": [
+        "a3",
+        "a14",
+        "a8",
+        "d",
+        "a13",
+        "a7",
+        "a18",
+        "a12",
+        "a6",
+        "a17",
+        "a11",
+        "a5",
+        "a16",
+        "a10",
+        "a4",
+        "a15",
+        "a9"
+      ]
+    }
+  ],
+  "name": "正17边形",
+  "version": 11900,
+  "calcJSCustomFunctions": {},
+  "calcJScalc3": [],
+  "customAdvancedFunctions": [],
+  "scale": 47.071038892611746,
+  "offsetX": 829.2804354378467,
+  "offsetY": 387.1758678815049,
+  "explicitPrecisionStep": 2,
+  "implicitPrecisionStep": 5,
+  "highPerformancePlottingEnabled": false,
+  "smoothPanningEnabled": true,
+  "tmin": -6.283185307179586,
+  "tmax": 6.283185307179586,
+  "blocks01": [
+    "-17.000000,-5.000000",
+    "-17.000000,-3.000000",
+    "-17.000000,-1.000000",
+    "-17.000000,1.000000",
+    "-17.000000,3.000000",
+    "-17.000000,5.000000",
+    "-17.000000,7.000000",
+    "-17.000000,9.000000",
+    "-15.000000,-5.000000",
+    "-15.000000,-3.000000",
+    "-15.000000,-1.000000",
+    "-15.000000,1.000000",
+    "-15.000000,3.000000",
+    "-15.000000,5.000000",
+    "-15.000000,7.000000",
+    "-15.000000,9.000000",
+    "-13.000000,-5.000000",
+    "-13.000000,-3.000000",
+    "-13.000000,-1.000000",
+    "-13.000000,1.000000",
+    "-13.000000,3.000000",
+    "-13.000000,5.000000",
+    "-13.000000,7.000000",
+    "-13.000000,9.000000",
+    "-11.000000,-5.000000",
+    "-11.000000,-3.000000",
+    "-11.000000,-1.000000",
+    "-11.000000,1.000000",
+    "-11.000000,3.000000",
+    "-11.000000,5.000000",
+    "-11.000000,7.000000",
+    "-11.000000,9.000000",
+    "-9.000000,-5.000000",
+    "-9.000000,-3.000000",
+    "-9.000000,-1.000000",
+    "-9.000000,1.000000",
+    "-9.000000,3.000000",
+    "-9.000000,5.000000",
+    "-9.000000,7.000000",
+    "-9.000000,9.000000",
+    "-7.000000,-5.000000",
+    "-7.000000,-3.000000",
+    "-7.000000,-1.000000",
+    "-7.000000,1.000000",
+    "-7.000000,3.000000",
+    "-7.000000,5.000000",
+    "-7.000000,7.000000",
+    "-7.000000,9.000000",
+    "-5.000000,-5.000000",
+    "-5.000000,-3.000000",
+    "-5.000000,-1.000000",
+    "-5.000000,1.000000",
+    "-5.000000,3.000000",
+    "-5.000000,5.000000",
+    "-5.000000,7.000000",
+    "-5.000000,9.000000",
+    "-3.000000,-5.000000",
+    "-3.000000,-3.000000",
+    "-3.000000,-1.000000",
+    "-3.000000,1.000000",
+    "-3.000000,3.000000",
+    "-3.000000,5.000000",
+    "-3.000000,7.000000",
+    "-3.000000,9.000000",
+    "-1.000000,-5.000000",
+    "-1.000000,-3.000000",
+    "-1.000000,-1.000000",
+    "-1.000000,1.000000",
+    "-1.000000,3.000000",
+    "-1.000000,5.000000",
+    "-1.000000,7.000000",
+    "-1.000000,9.000000",
+    "1.000000,-5.000000",
+    "1.000000,-3.000000",
+    "1.000000,-1.000000",
+    "1.000000,1.000000",
+    "1.000000,3.000000",
+    "1.000000,5.000000",
+    "1.000000,7.000000",
+    "1.000000,9.000000",
+    "3.000000,-5.000000",
+    "3.000000,-3.000000",
+    "3.000000,-1.000000",
+    "3.000000,1.000000",
+    "3.000000,3.000000",
+    "3.000000,5.000000",
+    "3.000000,7.000000",
+    "3.000000,9.000000",
+    "5.000000,-5.000000",
+    "5.000000,-3.000000",
+    "5.000000,-1.000000",
+    "5.000000,1.000000",
+    "5.000000,3.000000",
+    "5.000000,5.000000",
+    "5.000000,7.000000",
+    "5.000000,9.000000",
+    "7.000000,-5.000000",
+    "7.000000,-3.000000",
+    "7.000000,-1.000000",
+    "7.000000,1.000000",
+    "7.000000,3.000000",
+    "7.000000,5.000000",
+    "7.000000,7.000000",
+    "7.000000,9.000000"
+  ],
+  "geometrySnapEnabled": true,
+  "preferredColorValue": 0,
+  "originalExplicitPrecision": 2,
+  "originalImplicitPrecision": 5,
+  "autoBreakpointDetectionEnabled": false,
+  "annotations": [],
+  "globalScript": "",
+  "showPlaybackControls": false,
+  "currentFrame": 0,
+  "totalFrames": 100,
+  "playbackFPS": 10
+}

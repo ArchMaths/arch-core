@@ -1,0 +1,1331 @@
+{
+  "entries": [
+    {
+      "type": "geometry",
+      "expr": "point(O,0,0)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "O",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "0",
+      "y_expr": "0",
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "point(A,-2,0)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "A",
+      "color": {
+        "h": 90,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "-2",
+      "y_expr": "0",
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "line(Xaxis,O,A)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "Xaxis",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 4,
+      "visible": true,
+      "p1Name": "O",
+      "p2Name": "A",
+      "dependencies": [
+        "o",
+        "a"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "perpendicularline(Yaxis,Xaxis,O)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "perpendicularline",
+      "name": "Yaxis",
+      "color": {
+        "h": 58,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 4,
+      "visible": true,
+      "lineName": "Xaxis",
+      "pointName": "O",
+      "dependencies": [
+        "xaxis",
+        "o"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "point(F1,-1,0)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "F1",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "-1",
+      "y_expr": "0",
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "point(F2,1,0)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "F2",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "1",
+      "y_expr": "0",
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "ellipse(E,F1,F2,A)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "ellipse",
+      "name": "E",
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "f1Name": "F1",
+      "f2Name": "F2",
+      "pName": "A",
+      "dependencies": [
+        "f1",
+        "f2",
+        "a"
+      ]
+    },
+    {
+      "type": "variable",
+      "expr": "m=3.099",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "showOnPlot": true,
+      "cardX": -5.938431798266636,
+      "cardY": -1.2899783132712166,
+      "cardW": 220,
+      "cardH": 75,
+      "value": 3.099,
+      "min": -6.28,
+      "max": 6.29,
+      "step": 0.001,
+      "playState": 0,
+      "playDirection": 1,
+      "playMode": 0,
+      "name": "m",
+      "key": "m",
+      "isEditableIndependent": true,
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "point(P,(6*m*m-8)/(3*m*m+4),12*m/(3*m^2+4))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "P",
+      "color": {
+        "h": 0,
+        "s": 20,
+        "b": 30,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "(6*m*m-8)/(3*m*m+4)",
+      "y_expr": "12*m/(3*m^2+4)",
+      "dependencies": [
+        "m"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l,A,P)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l",
+      "color": {
+        "h": 0,
+        "s": 20,
+        "b": 30,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "p1Name": "A",
+      "p2Name": "P",
+      "dependencies": [
+        "a",
+        "p"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "point(M,0,2/m)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "M",
+      "color": {
+        "h": 0,
+        "s": 20,
+        "b": 30,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "0",
+      "y_expr": "2/m",
+      "dependencies": [
+        "m"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "perpendicularline(l2,l,P)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "perpendicularline",
+      "name": "l2",
+      "color": {
+        "h": 60,
+        "s": 80,
+        "b": 50,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineName": "l",
+      "pointName": "P",
+      "dependencies": [
+        "l",
+        "p"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "reflect(B,O,A)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "reflect",
+      "name": "B",
+      "color": {
+        "h": 60,
+        "s": 80,
+        "b": 50,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": false,
+      "axisName": "O",
+      "reflectedPointName": "A",
+      "dependencies": [
+        "o",
+        "a"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "perpendicularline(lx2,Xaxis,B)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "perpendicularline",
+      "name": "lx2",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineName": "Xaxis",
+      "pointName": "B",
+      "dependencies": [
+        "xaxis",
+        "b"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "point(N,2,-4m/(3m^2+4))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "N",
+      "color": {
+        "h": 60,
+        "s": 80,
+        "b": 50,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "2",
+      "y_expr": "-4m/(3m^2+4)",
+      "dependencies": [
+        "m"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "polygon(PMN,3,P,M,N)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "polygon",
+      "name": "PMN",
+      "color": {
+        "h": 60,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointNames": [
+        "P",
+        "M",
+        "N"
+      ],
+      "dependencies": [
+        "p",
+        "m",
+        "n"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "point(H1,0,12*m/(3*m^2+4))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "H1",
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "0",
+      "y_expr": "12*m/(3*m^2+4)",
+      "dependencies": [
+        "m"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "point(H2,2,12*m/(3*m^2+4))",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "H2",
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "2",
+      "y_expr": "12*m/(3*m^2+4)",
+      "dependencies": [
+        "m"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "polygon(PMH1,3,P,M,H1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "polygon",
+      "name": "PMH1",
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointNames": [
+        "P",
+        "M",
+        "H1"
+      ],
+      "dependencies": [
+        "p",
+        "m",
+        "h1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "polygon(PNH2,3,P,N,H2)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "polygon",
+      "name": "PNH2",
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointNames": [
+        "P",
+        "N",
+        "H2"
+      ],
+      "dependencies": [
+        "p",
+        "n",
+        "h2"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(MH1,M,H1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "MH1",
+      "color": {
+        "h": 10,
+        "s": 100,
+        "b": 80,
+        "a": 0
+      },
+      "thickness": 10,
+      "visible": true,
+      "p1Name": "M",
+      "p2Name": "H1",
+      "dependencies": [
+        "m",
+        "h1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "segment(PH2,P,H2)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "segment",
+      "name": "PH2",
+      "color": {
+        "h": 10,
+        "s": 100,
+        "b": 80,
+        "a": 0
+      },
+      "thickness": 10,
+      "visible": true,
+      "p1Name": "P",
+      "p2Name": "H2",
+      "dependencies": [
+        "p",
+        "h2"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "point(P1,1.512,1.134)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "P1",
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "1.512",
+      "y_expr": "1.134",
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "point(P2,-1.510,1.135)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "P2",
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "pointOnObject": false,
+      "x_expr": "-1.510",
+      "y_expr": "1.135",
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "reflect(P3,Xaxis,P1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "reflect",
+      "name": "P3",
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "axisName": "Xaxis",
+      "reflectedPointName": "P1",
+      "dependencies": [
+        "xaxis",
+        "p1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "reflect(P4,Xaxis,P2)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "reflect",
+      "name": "P4",
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "axisName": "Xaxis",
+      "reflectedPointName": "P2",
+      "dependencies": [
+        "xaxis",
+        "p2"
+      ]
+    }
+  ],
+  "name": "解析几何",
+  "version": 11900,
+  "calcJSCustomFunctions": {},
+  "calcJScalc3": [],
+  "customAdvancedFunctions": [],
+  "scale": 67.6680807984211,
+  "offsetX": 846.8065555553767,
+  "offsetY": 501.11549835893186,
+  "explicitPrecisionStep": 2,
+  "implicitPrecisionStep": 5,
+  "highPerformancePlottingEnabled": false,
+  "smoothPanningEnabled": true,
+  "tmin": -6.283185307179586,
+  "tmax": 6.283185307179586,
+  "blocks01": [
+    "-12.500000,-3.500000",
+    "-12.500000,-2.500000",
+    "-12.500000,-1.500000",
+    "-12.500000,-0.500000",
+    "-12.500000,0.500000",
+    "-12.500000,1.500000",
+    "-12.500000,2.500000",
+    "-12.500000,3.500000",
+    "-12.500000,4.500000",
+    "-12.500000,5.500000",
+    "-12.500000,6.500000",
+    "-12.500000,7.500000",
+    "-11.500000,-3.500000",
+    "-11.500000,-2.500000",
+    "-11.500000,-1.500000",
+    "-11.500000,-0.500000",
+    "-11.500000,0.500000",
+    "-11.500000,1.500000",
+    "-11.500000,2.500000",
+    "-11.500000,3.500000",
+    "-11.500000,4.500000",
+    "-11.500000,5.500000",
+    "-11.500000,6.500000",
+    "-11.500000,7.500000",
+    "-10.500000,-3.500000",
+    "-10.500000,-2.500000",
+    "-10.500000,-1.500000",
+    "-10.500000,-0.500000",
+    "-10.500000,0.500000",
+    "-10.500000,1.500000",
+    "-10.500000,2.500000",
+    "-10.500000,3.500000",
+    "-10.500000,4.500000",
+    "-10.500000,5.500000",
+    "-10.500000,6.500000",
+    "-10.500000,7.500000",
+    "-9.500000,-3.500000",
+    "-9.500000,-2.500000",
+    "-9.500000,-1.500000",
+    "-9.500000,-0.500000",
+    "-9.500000,0.500000",
+    "-9.500000,1.500000",
+    "-9.500000,2.500000",
+    "-9.500000,3.500000",
+    "-9.500000,4.500000",
+    "-9.500000,5.500000",
+    "-9.500000,6.500000",
+    "-9.500000,7.500000",
+    "-8.500000,-3.500000",
+    "-8.500000,-2.500000",
+    "-8.500000,-1.500000",
+    "-8.500000,-0.500000",
+    "-8.500000,0.500000",
+    "-8.500000,1.500000",
+    "-8.500000,2.500000",
+    "-8.500000,3.500000",
+    "-8.500000,4.500000",
+    "-8.500000,5.500000",
+    "-8.500000,6.500000",
+    "-8.500000,7.500000",
+    "-7.500000,-3.500000",
+    "-7.500000,-2.500000",
+    "-7.500000,-1.500000",
+    "-7.500000,-0.500000",
+    "-7.500000,0.500000",
+    "-7.500000,1.500000",
+    "-7.500000,2.500000",
+    "-7.500000,3.500000",
+    "-7.500000,4.500000",
+    "-7.500000,5.500000",
+    "-7.500000,6.500000",
+    "-7.500000,7.500000",
+    "-6.500000,-3.500000",
+    "-6.500000,-2.500000",
+    "-6.500000,-1.500000",
+    "-6.500000,-0.500000",
+    "-6.500000,0.500000",
+    "-6.500000,1.500000",
+    "-6.500000,2.500000",
+    "-6.500000,3.500000",
+    "-6.500000,4.500000",
+    "-6.500000,5.500000",
+    "-6.500000,6.500000",
+    "-6.500000,7.500000",
+    "-5.500000,-3.500000",
+    "-5.500000,-2.500000",
+    "-5.500000,-1.500000",
+    "-5.500000,-0.500000",
+    "-5.500000,0.500000",
+    "-5.500000,1.500000",
+    "-5.500000,2.500000",
+    "-5.500000,3.500000",
+    "-5.500000,4.500000",
+    "-5.500000,5.500000",
+    "-5.500000,6.500000",
+    "-5.500000,7.500000",
+    "-4.500000,-3.500000",
+    "-4.500000,-2.500000",
+    "-4.500000,-1.500000",
+    "-4.500000,-0.500000",
+    "-4.500000,0.500000",
+    "-4.500000,1.500000",
+    "-4.500000,2.500000",
+    "-4.500000,3.500000",
+    "-4.500000,4.500000",
+    "-4.500000,5.500000",
+    "-4.500000,6.500000",
+    "-4.500000,7.500000",
+    "-3.500000,-3.500000",
+    "-3.500000,-2.500000",
+    "-3.500000,-1.500000",
+    "-3.500000,-0.500000",
+    "-3.500000,0.500000",
+    "-3.500000,1.500000",
+    "-3.500000,2.500000",
+    "-3.500000,3.500000",
+    "-3.500000,4.500000",
+    "-3.500000,5.500000",
+    "-3.500000,6.500000",
+    "-3.500000,7.500000",
+    "-2.500000,-3.500000",
+    "-2.500000,-2.500000",
+    "-2.500000,-1.500000",
+    "-2.500000,-0.500000",
+    "-2.500000,0.500000",
+    "-2.500000,1.500000",
+    "-2.500000,2.500000",
+    "-2.500000,3.500000",
+    "-2.500000,4.500000",
+    "-2.500000,5.500000",
+    "-2.500000,6.500000",
+    "-2.500000,7.500000",
+    "-1.500000,-3.500000",
+    "-1.500000,-2.500000",
+    "-1.500000,-1.500000",
+    "-1.500000,-0.500000",
+    "-1.500000,0.500000",
+    "-1.500000,1.500000",
+    "-1.500000,2.500000",
+    "-1.500000,3.500000",
+    "-1.500000,4.500000",
+    "-1.500000,5.500000",
+    "-1.500000,6.500000",
+    "-1.500000,7.500000",
+    "-0.500000,-3.500000",
+    "-0.500000,-2.500000",
+    "-0.500000,-1.500000",
+    "-0.500000,-0.500000",
+    "-0.500000,0.500000",
+    "-0.500000,1.500000",
+    "-0.500000,2.500000",
+    "-0.500000,3.500000",
+    "-0.500000,4.500000",
+    "-0.500000,5.500000",
+    "-0.500000,6.500000",
+    "-0.500000,7.500000",
+    "0.500000,-3.500000",
+    "0.500000,-2.500000",
+    "0.500000,-1.500000",
+    "0.500000,-0.500000",
+    "0.500000,0.500000",
+    "0.500000,1.500000",
+    "0.500000,2.500000",
+    "0.500000,3.500000",
+    "0.500000,4.500000",
+    "0.500000,5.500000",
+    "0.500000,6.500000",
+    "0.500000,7.500000",
+    "1.500000,-3.500000",
+    "1.500000,-2.500000",
+    "1.500000,-1.500000",
+    "1.500000,-0.500000",
+    "1.500000,0.500000",
+    "1.500000,1.500000",
+    "1.500000,2.500000",
+    "1.500000,3.500000",
+    "1.500000,4.500000",
+    "1.500000,5.500000",
+    "1.500000,6.500000",
+    "1.500000,7.500000",
+    "2.500000,-3.500000",
+    "2.500000,-2.500000",
+    "2.500000,-1.500000",
+    "2.500000,-0.500000",
+    "2.500000,0.500000",
+    "2.500000,1.500000",
+    "2.500000,2.500000",
+    "2.500000,3.500000",
+    "2.500000,4.500000",
+    "2.500000,5.500000",
+    "2.500000,6.500000",
+    "2.500000,7.500000",
+    "3.500000,-3.500000",
+    "3.500000,-2.500000",
+    "3.500000,-1.500000",
+    "3.500000,-0.500000",
+    "3.500000,0.500000",
+    "3.500000,1.500000",
+    "3.500000,2.500000",
+    "3.500000,3.500000",
+    "3.500000,4.500000",
+    "3.500000,5.500000",
+    "3.500000,6.500000",
+    "3.500000,7.500000"
+  ],
+  "geometrySnapEnabled": true,
+  "preferredColorValue": 0,
+  "originalExplicitPrecision": 2,
+  "originalImplicitPrecision": 5,
+  "autoBreakpointDetectionEnabled": true,
+  "annotations": [
+    {
+      "type": "text",
+      "content": "下面让我们欣赏一道解析几何题",
+      "x": -6,
+      "y": 4,
+      "width": 8,
+      "height": 1,
+      "fontSize": 0.15,
+      "color": {
+        "h": 60,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "已知椭圆E：x²/a²+y²/b²=1(a>b>0)的左顶点为A，请从下面条件中任选两个作为已知",
+      "x": -6,
+      "y": 3.8,
+      "width": 8,
+      "height": 1.2999999999999998,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "条件①：椭圆E的离心率为1/2",
+      "x": -6,
+      "y": 3.6,
+      "width": 8,
+      "height": 1.1,
+      "fontSize": 0.16,
+      "color": {
+        "h": 56,
+        "s": 80,
+        "b": 100,
+        "a": 10
+      }
+    },
+    {
+      "type": "text",
+      "content": "条件②：椭圆E经过点(0,√3)",
+      "x": -6,
+      "y": 3.4,
+      "width": 8,
+      "height": 0.8999999999999999,
+      "fontSize": 0.16,
+      "color": {
+        "h": 56,
+        "s": 80,
+        "b": 100,
+        "a": 10
+      }
+    },
+    {
+      "type": "text",
+      "content": "条件③：点A到椭圆E的左焦点的距离为1",
+      "x": -6,
+      "y": 3.2,
+      "width": 8,
+      "height": 0.7000000000000002,
+      "fontSize": 0.16,
+      "color": {
+        "h": 56,
+        "s": 80,
+        "b": 100,
+        "a": 10
+      }
+    },
+    {
+      "type": "text",
+      "content": "i 求椭圆 E 的方程",
+      "x": -6,
+      "y": 4.0600000000000005,
+      "width": 6,
+      "height": 4.0600000000000005,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 101.4
+      }
+    },
+    {
+      "type": "text",
+      "content": "ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。若△PMN是等腰直角三角形，求l的斜率.",
+      "x": -6,
+      "y": 2.7,
+      "width": 6,
+      "height": 0.7000000000000002,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 80,
+        "b": 0,
+        "a": 60
+      }
+    },
+    {
+      "type": "text",
+      "content": "第一问解答：",
+      "x": -6,
+      "y": 4.0600000000000005,
+      "width": 6,
+      "height": 4.0600000000000005,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 101.4
+      }
+    },
+    {
+      "type": "text",
+      "content": "①→c/a=1/2→√(a²-b²)/a=1/2→4(a²-b²)=a²→b/a=√(3)/2",
+      "x": -6,
+      "y": 3.86,
+      "width": 6,
+      "height": 3.86,
+      "fontSize": 0.16,
+      "color": {
+        "h": 8,
+        "s": 100,
+        "b": 100,
+        "a": 101.4
+      }
+    },
+    {
+      "type": "text",
+      "content": "②→√(3)²/b²=1→b=√(3)",
+      "x": -6,
+      "y": 3.66,
+      "width": 6,
+      "height": 3.66,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 100,
+        "a": 101.4
+      }
+    },
+    {
+      "type": "text",
+      "content": "③→a-c=1→(a-1)²=a²-b²→a=(1+b²)/2",
+      "x": -6,
+      "y": 3.46,
+      "width": 6,
+      "height": 3.46,
+      "fontSize": 0.16,
+      "color": {
+        "h": 8,
+        "s": 100,
+        "b": 100,
+        "a": 101.4
+      }
+    },
+    {
+      "type": "text",
+      "content": "联立解得a=2,b=√(3)。从而A(-2,0)，E的方程为x²/4+y²/3=1",
+      "x": -6,
+      "y": 3.26,
+      "width": 6,
+      "height": 3.26,
+      "fontSize": 0.16,
+      "color": {
+        "h": 56,
+        "s": 100,
+        "b": 100,
+        "a": 101.4
+      }
+    },
+    {
+      "type": "text",
+      "content": "ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。若△PMN是等腰直角三角形，求l的斜率.",
+      "x": -6,
+      "y": 2.7,
+      "width": 6,
+      "height": 0.7000000000000002,
+      "fontSize": 0.16,
+      "color": {
+        "h": 60,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "依题意,l:x=my-2(m≠0)",
+      "x": -6,
+      "y": 2,
+      "width": 6,
+      "height": 3,
+      "fontSize": 0.16,
+      "color": {
+        "h": 45,
+        "s": 90,
+        "b": 85,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "解得y_P=12m/(3m²+4)(舍去y=0)",
+      "x": -6,
+      "y": 1.7879999999999998,
+      "width": 6,
+      "height": 2.788,
+      "fontSize": 0.16,
+      "color": {
+        "h": 8,
+        "s": 1.8000000000000016,
+        "b": 85,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "代入x=my-2,得x_P=m[12m/(3m²+4)]-2=(6m²-8)/(3m²+4)",
+      "x": -6,
+      "y": 1.588,
+      "width": 6,
+      "height": 2.588,
+      "fontSize": 0.16,
+      "color": {
+        "h": 8,
+        "s": 1.8000000000000016,
+        "b": 85,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "将x=0代入x=my-2,得y_M=2/m",
+      "x": -6,
+      "y": 1.2879999999999998,
+      "width": 6,
+      "height": 2.288,
+      "fontSize": 0.16,
+      "color": {
+        "h": 45,
+        "s": 1.8000000000000016,
+        "b": 85,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "<smart>m:{value(m)}, k:{value(1/m)}",
+      "x": 1,
+      "y": 3.8,
+      "width": 3,
+      "height": 0.7999999999999998,
+      "fontSize": 0.25,
+      "color": {
+        "h": 60,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "代入x=2,得y_N=-4m/(3m²+4)",
+      "x": -6,
+      "y": 1.0090000000000001,
+      "width": 6,
+      "height": 3.0090000000000003,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 5.000000000000004,
+        "b": 83.25,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "有的兄弟们！根据AAS判定，△PMH1和△PNH2全等，只需",
+      "x": -6,
+      "y": 0.7,
+      "width": 10,
+      "height": 2.7,
+      "fontSize": 0.16,
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "MH1=PH2",
+      "x": -6,
+      "y": 0.5,
+      "width": 10,
+      "height": 2.5,
+      "fontSize": 0.2,
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "即|x_P-x_N|=|y_M-y_P|",
+      "x": -6,
+      "y": 0.3,
+      "width": 10,
+      "height": 2.3,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "代入坐标得|(6m² - 8)/(3m² + 4) - 2| = |12m/(3m² + 4) - 2/m|",
+      "x": -6,
+      "y": 0.1,
+      "width": 10,
+      "height": 2.1,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "即|-16/(3m²+4)|=|(6m²-8-6m²-8)/[m(3m²+4)]|",
+      "x": -6,
+      "y": -0.1,
+      "width": 10,
+      "height": 1.9,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "即16=|6m-8/m|",
+      "x": -6,
+      "y": -0.3,
+      "width": 10,
+      "height": 1.7,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "化简得3m²-8m-4=0或者3m²+8m-4=0",
+      "x": -6,
+      "y": -0.5,
+      "width": 10,
+      "height": 1.5,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "解得:m=±(4±2√7)/3",
+      "x": -6,
+      "y": -0.7,
+      "width": 10,
+      "height": 1.3,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "求得斜率k：k=1/m=±(√7/2±1)",
+      "x": -6,
+      "y": -0.9,
+      "width": 10,
+      "height": 1.1,
+      "fontSize": 0.16,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "m1=(2√7+4)/3,k1=(√7)/2-1",
+      "x": 1,
+      "y": 3.5,
+      "width": 7,
+      "height": 2.5,
+      "fontSize": 0.25,
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "m2=(2√7-4)/3,k2=(√7)/2+1",
+      "x": 1,
+      "y": 3.2,
+      "width": 7,
+      "height": 2.2,
+      "fontSize": 0.25,
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "m3=-(2√7+4)/3,k3=-(√7)/2+1",
+      "x": 1,
+      "y": 2.9,
+      "width": 7,
+      "height": 1.9,
+      "fontSize": 0.25,
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "m4=-(2√7-4)/3,k4=-(√7)/2-1",
+      "x": 1,
+      "y": 2.6,
+      "width": 7,
+      "height": 1.6,
+      "fontSize": 0.25,
+      "color": {
+        "h": 87,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      }
+    },
+    {
+      "type": "text",
+      "content": "请点击代码-全局脚本-运行观看演示",
+      "x": -5.970524731092132,
+      "y": 4.402221593550018,
+      "width": 8,
+      "height": 3,
+      "fontSize": 0.30000000000000004,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      }
+    }
+  ],
+  "globalScript": "/*点击“运行”键欣赏讲解动画！*/\nconst sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));\n\nasync function main() {\nlet process = 0;\narch.clearall();\narch.txt(\"下\",60,100,100,0,0.15,-6,4,2,3);\nawait sleep(50); \nconst text1 = \"下面让我们欣赏一道解析几何题\";\nfor (let i = 1; i < text1.length; i++) {\n    arch.edittxt(text1.slice(0, i), text1.slice(0, i + 1), 60, 100, 100, 0, 0.15, -6, 4, 2, 3);\n    await sleep(50);\n}\nawait sleep(150); \narch.txt(\"已\",0,100,0,0,0.16,-6,3.8,2,2.5);\nconst text2 = \"已知椭圆E：x²/a²+y²/b²=1(a>b>0)的左顶点为A，请从下面条件中任选两个作为已知\";\nfor (let i = 1; i < text2.length; i++) {\n    arch.edittxt(text2.slice(0, i), text2.slice(0, i + 1), 0,100,0,0,0.16,-6,3.8,2,2.5);\n    await sleep(25);\n}\nconst text3 = \"条件①：椭圆E的离心率为1/2\";\narch.txt(\"条件①\",56,80,100,10,0.16,-6,3.6,2,2.5);\nfor (let i = 3; i < text3.length; i++) {\n    arch.edittxt(text3.slice(0, i), text3.slice(0, i + 1),56,80,100,10,0.16,-6,3.6,2,2.5);\n    await sleep(25);\n}\nconst text4 = \"条件②：椭圆E经过点(0,√3)\";\narch.txt(\"条件②\",56,80,100,10,0.16,-6,3.4,2,2.5);\nfor (let i = 3; i < text4.length; i++) {\n    arch.edittxt(text4.slice(0, i), text4.slice(0, i + 1),56,80,100,10,0.16,-6,3.4,2,2.5);\n    await sleep(25);\n}\nconst text5 = \"条件③：点A到椭圆E的左焦点的距离为1\";\narch.txt(\"条件③\",56,80,100,10,0.16,-6,3.2,2,2.5);\nfor (let i = 3; i < text5.length; i++) {\n    arch.edittxt(text5.slice(0, i), text5.slice(0, i + 1),56,80,100,10,0.16,-6,3.2,2,2.5);\n    await sleep(25);\n}\nawait sleep(200); \nconst text6 = \"i 求椭圆 E 的方程\";\narch.txt(\"i\",0,80,0,0,0.16,-6,2.9,2,2.5);\nfor (let i = 1; i < text6.length; i++) {\n    arch.edittxt(text6.slice(0, i), text6.slice(0, i + 1),0,80,0,0,0.16,-6,2.9,2,2.5);\n    await sleep(50);\n}\nawait sleep(50); \nconst text7 = \"ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。若△PMN是等腰直角三角形，求l的斜率.\";\narch.txt(\"ii\",0,80,0,0,0.16,-6,2.7,0,2);\nfor (let i = 2; i < text7.length; i++) {\n    arch.edittxt(text7.slice(0, i), text7.slice(0, i + 1),0,80,0,0,0.16,-6,2.7,0,2);\n    await sleep(50);\n}\nawait sleep(500); \nfor (let i = 1; i < 20; i++) {\nlet y001=2.7+0.02*i;\nlet y002=6*i;\n    arch.edittxt(\"ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。若△PMN是等腰直角三角形，求l的斜率.\", \"ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。若△PMN是等腰直角三角形，求l的斜率.\",0,80,0,y002,0.16,-6,y001,0,2);\n    await sleep(8);\n}\nawait sleep(500); \nconst text8 = \"第一问解答：\";\narch.txt(\"第一\",0,80,0,0,0.16,-6,2.5,0,1);\nfor (let i = 2; i < text8.length; i++) {\n    arch.edittxt(text8.slice(0, i), text8.slice(0, i + 1),0,80,0,0,0.16,-6,2.5,0,1);\n    await sleep(50);\n}\nawait sleep(150); \nconst text9 = \"①→c/a=1/2→√(a²-b²)/a=1/2→4(a²-b²)=a²→b/a=√(3)/2\";\narch.txt(\"①\",8,100,100,0,0.16,-6,2.3,0,1);\nfor (let i = 1; i < text9.length; i++) {\n    arch.edittxt(text9.slice(0, i), text9.slice(0, i + 1),8,100,100,0,0.16,-6,2.3,0,1);\n    await sleep(25);\n}\nawait sleep(50);\nconst text10 = \"②→√(3)²/b²=1→b=√(3)\";\narch.txt(\"②\",1,100,100,0,0.16,-6,2.1,0,1);\nfor (let i = 1; i < text10.length; i++) {\n    arch.edittxt(text10.slice(0, i), text10.slice(0, i + 1),1,100,100,0,0.16,-6,2.1,0,1);\n    await sleep(25);\n}\nawait sleep(50);\nconst text11 = \"③→a-c=1→(a-1)²=a²-b²→a=(1+b²)/2\";\narch.txt(\"③\",8,100,100,0,0.16,-6,1.9,0,0);\nfor (let i = 1; i < text11.length; i++) {\n    arch.edittxt(text11.slice(0, i), text11.slice(0, i + 1),8,100,100,0,0.16,-6,1.9,0,0);\n    await sleep(25);\n}\nawait sleep(50);\nconst text12 = \"联立解得a=2,b=√(3)。从而A(-2,0)，E的方程为x²/4+y²/3=1\";\narch.txt(\"联\",56,100,100,0,0.16,-6,1.7,0,0);\nfor (let i = 1; i < text12.length; i++) {\n    arch.edittxt(text12.slice(0, i), text12.slice(0, i + 1),56,100,100,0,0.16,-6,1.7,0,0);\n    await sleep(25);\n}\nawait sleep(150); \n\n/*第一问讲解完毕*/\narch.creategeo(\"point(O,0,0)\",0,0,0,0,1,3);\narch.creategeo(\"point(A,-2,0)\",90,100,100,0,1,3);\narch.creategeo(\"line(Xaxis,O,A)\",0,100,100,0,1,4);\narch.creategeo(\"perpendicularline(Yaxis,Xaxis,O)\",58,100,100,0,1,4);\narch.creategeo(\"point(F1,-1,0)\",0,100,0,0,1,3);\narch.creategeo(\"point(F2,1,0)\",0,100,0,0,1,3);\narch.creategeo(\"ellipse(E,F1,F2,A)\",0,100,0,0,1,3);\nawait sleep(2000);  \n/*第一问绘制完毕*/\nfor (let i = 1; i < 40; i++) {\narch.edittxt(text6,text6,0,0,0,2.6*i,0.16,-6,2.5+0.04*i,0,0);\narch.edittxt(text8,text8,0,0,0,2.6*i,0.16,-6,2.5+0.04*i,0,0);\narch.edittxt(text9,text9,8,100,100,2.6*i,0.16,-6,2.3+0.04*i,0,0);\narch.edittxt(text10,text10,0,100,100,2.6*i,0.16,-6,2.1+0.04*i,0,0);\narch.edittxt(text11,text11,8,100,100,2.6*i,0.16,-6,1.9+0.04*i,0,0);\narch.edittxt(text12,text12,56,100,100,2.6*i,0.16,-6,1.7+0.04*i,0,0);\nawait sleep(8);\n}\nfor (let i = 20; i > 0; i--) {\nlet y001=2.7+0.02*i;\nlet y002=60+2*i;\n    arch.edittxt(\"ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。若△PMN是等腰直角三角形，求l的斜率.\", \"ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。若△PMN是等腰直角三角形，求l的斜率.\",0,80,0,y002,0.16,-6,y001,0,2);\n    await sleep(8);\n}\narch.edittxt(\"ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。若△PMN是等腰直角三角形，求l的斜率.\", \"ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。若△PMN是等腰直角三角形，求l的斜率.\",0,80,0,60,0.16,-6,2.7,0,2);\narch.geosetting(\"F1\",0,100,0,0,0,3);\narch.geosetting(\"F2\",0,100,0,0,0,3);\nawait sleep(500);\n\n/*1-2过渡动画完毕*/\n\nconst text13 = \"ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。\";\narch.txt(\"ii\",8,100,100,0,0.16,-6,2.7,0,0);\nfor (let i = 2; i < text13.length; i++) {\n    arch.edittxt(text13.slice(0, i), text13.slice(0, i + 1),60,100,100,0,0.16,-6,2.7,0,2);\n    await sleep(25);\n}\nawait sleep(100);\nconst text21 = \"依题意,l:x=my-2(m≠0)\";\narch.txt(\"依\",45,90,85,0,0.16,-6,2,0,-1);\nfor (let i = 1; i < text21.length; i++) {\n    arch.edittxt(text21.slice(0, i), text21.slice(0, i + 1),45,90,85,0,0.16,-6,2,0,-1);\n    await sleep(25);\n}\nawait sleep(100);\nconst text22 = \"联立3x²+4y²-12=0\";\narch.txt(\"联\",58,90,85,0,0.16,-6,1.8,0,-1);\nfor (let i = 1; i < text22.length; i++) {\n    arch.edittxt(text22.slice(0, i), text22.slice(0, i + 1),58,90,85,0,0.16,-6,1.8,0,-1);\n    await sleep(25);\n}\nconst text23 = \"得3(my-2)²+4y²-12=0\";\narch.txt(\"得\",58,90,85,0,0.16,-6,1.6,0,-1);\nfor (let i = 1; i < text23.length; i++) {\n    arch.edittxt(text23.slice(0, i), text23.slice(0, i + 1),58,90,85,0,0.16,-6,1.6,0,-1);\n    await sleep(25);\n}\nconst text24 = \"即(3m²+4)y²-2my=0\";\narch.txt(\"即\",58,90,85,40,0.16,-6,1.4,0,-1);\nfor (let i = 1; i < text24.length; i++) {\n    arch.edittxt(text24.slice(0, i), text24.slice(0, i + 1),58,90,85,40,0.16,-6,1.4,0,-1);\n    await sleep(25);\n}\nconst text25 = \"解得y_P=12m/(3m²+4)(舍去y=0)\";\narch.txt(\"解\",8,90,85,0,0.16,-6,1.2,0,-1);\nfor (let i = 1; i < text25.length; i++) {\n    arch.edittxt(text25.slice(0, i), text25.slice(0, i + 1),8,90,85,0,0.16,-6,1.2,0,-1);\n    await sleep(25);\n}\nconst text26 = \"代入x=my-2,得x_P=m[12m/(3m²+4)]-2=(6m²-8)/(3m²+4)\";\narch.txt(\"代\",8,90,85,0,0.16,-6,1,0,-1);\nfor (let i = 1; i < text26.length; i++) {\n    arch.edittxt(text26.slice(0, i), text26.slice(0, i + 1),8,90,85,0,0.16,-6,1,0,-1);\n    await sleep(25);\n}\nconst text27 = \"将x=0代入x=my-2,得y_M=2/m\";\narch.txt(\"将\",45,90,85,0,0.16,-6,0.7,0,-1);\nfor (let i = 1; i < text27.length; i++) {\n    arch.edittxt(text27.slice(0, i), text27.slice(0, i + 1),45,90,85,0,0.16,-6,0.7,0,-1);\n    await sleep(25);\n}\nawait sleep(150);\n\nawait sleep(50);\narch.create(\"m=3.097\");\narch.txt(\"<smart>m:{value(m)}, k:{value(1/m)}\",60,100,100,0,0.25,1,3.8,4,3);\nawait sleep(200);\narch.creategeo(\"point(P,(6*m*m-8)/(3*m*m+4),12*m/(3*m^2+4))\",0,20,30,0,1,3);\narch.creategeo(\"line(l,A,P)\",0,20,30,0,1,3);\nawait sleep(200);\narch.creategeo(\"point(M,0,2/m)\",0,20,30,0,1,3);\n\nawait sleep(150);\narch.deletetxt(\"联立3x²+4y²-12=0\");\narch.deletetxt(\"得3(my-2)²+4y²-12=0\");\narch.deletetxt(\"即(3m²+4)y²-2my=0\");\n\nfor (let i = 1; i < 50; i++) {\n    arch.edittxt(text25, text25,8,90*(1-i/50),85,0,0.16,-6,1.2+0.6*i/50,0,-1);\narch.edittxt(text26, text26,8,90*(1-i/50),85,0,0.16,-6,1+0.6*i/50,0,-1);\narch.edittxt(text27, text27,45,90*(1-i/50),85,0,0.16,-6,0.7+0.6*i/50,0,-1);\n    await sleep(8);\n}\n\n/*ii审题步骤1-1*/\n\nconst text14 = \"ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。\";\nfor (let i = 31; i < text14.length; i++) {\n    arch.edittxt(text14.slice(0, i), text14.slice(0, i + 1),60,100,100,0,0.16,-6,2.7,0,2);\n    await sleep(25);\n}\nawait sleep(200);\nconst text28 = \"依题意l_PN:y=-m(x-x_P)+y_P\";\narch.txt(\"依\",0,100,50,0,0.16,-6,1,0,-2);\nfor (let i = 1; i < text28.length; i++) {\n    arch.edittxt(text28.slice(0, i), text28.slice(0, i + 1),0,100,50,0,0.16,-6,1,0,-2);\n    await sleep(25);\n}\nconst text29 = \"代入x=2,得y_N=-4m/(3m²+4)\";\narch.txt(\"代\",0,100,50,0,0.16,-6,0.8,0,-2);\nfor (let i = 1; i < text29.length; i++) {\n    arch.edittxt(text29.slice(0, i), text29.slice(0, i + 1),0,100,50,0,0.16,-6,0.8,0,-2);\n    await sleep(25);\n}\nawait sleep(200);\narch.creategeo(\"perpendicularline(l2,l,P)\",60,80,50,0,1,3);\nawait sleep(100);\narch.creategeo(\"reflect(B,O,A)\",60,80,50,0,0,3);\narch.creategeo(\"perpendicularline(lx2,Xaxis,B)\",0,0,0,0,1,3);\nawait sleep(200);\narch.creategeo(\"point(N,2,-4m/(3m^2+4))\",60,80,50,0,1,3);\n\nawait sleep(200);\narch.deletetxt(\"依题意l_PN:y=-m(x-x_P)+y_P\");\nfor (let i = 1; i < 20; i++) {\n    arch.edittxt(text29, text29,0,100*(1-i/20),50+(i/20)*35,0,0.16,-6,0.8+0.22*(i/20),0,-2);\n    await sleep(10);\n}\n\n\n/*ii审题步骤1-2*/\n\nconst text15 = \"ii过点A的直线l与椭圆E的另一个交点为P,l与y轴交于点M。过点P作l的垂线交直线x=2于点N。若△PMN是等腰直角三角形，求l的斜率.\";\nfor (let i = 49; i < text15.length; i++) {\n    arch.edittxt(text15.slice(0, i), text15.slice(0, i + 1),60,100,100,0,0.16,-6,2.7,0,2);\n    await sleep(25);\n}\narch.creategeo(\"polygon(PMN,3,P,M,N)\",60,100,100,0,1,3);\nfor (let i = 1; i < 80; i++) {\n    arch.geosetting(\"PMN\",60,100,100,i,1,3);\n    await sleep(10);\n}\nfor (let i = 80; i > 0; i--) {\n    arch.geosetting(\"PMN\",60,100,100,i,1,3);\n    await sleep(10);\n}\narch.geosetting(\"PMN\",60,100,100,0,1,3);\nawait sleep(500);\n/*ii审题步骤1-3*/\nconst text31 = \"若要判定等腰直角三角形，在已知垂直的情况下，只需证|PM|=|PN|\";\narch.txt(\"若\",0,0,0,0,0.16,-6,0.5,0,-2);\nfor (let i = 1; i < text31.length; i++) {\n    arch.edittxt(text31.slice(0, i), text31.slice(0, i + 1),0,0,0,0,0.16,-6,0.5,0,-2);\n    await sleep(25);\n}\nconst text32 = \"可是，若直接硬刚长度，√[[(x_P-x_M)²+(y_P-y_M)²]=√[(x_P-x_N)²+(y_P-y_N)²]，无论对算力还是心态都是极大的考验！\";\narch.txt(\"可\",0,100,100,0,0.16,-6,0.3,4,-2);\nfor (let i = 1; i < text32.length; i++) {\n    arch.edittxt(text32.slice(0, i), text32.slice(0, i + 1),0,100,100,0,0.16,-6,0.3,4,-2);\n    await sleep(25);\n}\nconst text33 = \"聪明的你有没有“巧解”破局呢？\";\narch.txt(\"聪\",0,0,0,0,0.16,-6,0.1,4,-2);\nfor (let i = 1; i < text33.length; i++) {\n    arch.edittxt(text33.slice(0, i), text33.slice(0, i + 1),0,0,0,0,0.16,-6,0.1,4,-2);\n    await sleep(25);\n}\nawait sleep(5000);\nfor (let i = 1; i < 50; i++) {\narch.edittxt(text31, text31,0,0,0,0+2.1*i,0.16,-6,0.5+0.01*i,0,-2);\narch.edittxt(text32, text32,0,100,100,0+2.1*i,0.16,-6,0.3+0.01*i,4,-2);\narch.edittxt(text33, text33,0,0,0,0+2.1*i,0.16,-6,0.1+0.01*i,4,-2);\n    await sleep(10);\n}\narch.deletetxt(\"若要判定等腰直角三角形，在已知垂直的情况下，只需证|PM|=|PN|\");\narch.deletetxt(\"可是，若直接硬刚长度，√[[(x_P-x_M)²+(y_P-y_M)²]=√[(x_P-x_N)²+(y_P-y_N)²]，无论对算力还是心态都是极大的考验！\");\narch.deletetxt(\"聪明的你有没有“巧解”破局呢？\");\narch.creategeo(\"point(H1,0,12*m/(3*m^2+4))\",87,100,100,0,1,3);\narch.creategeo(\"point(H2,2,12*m/(3*m^2+4))\",87,100,100,0,1,3);\narch.creategeo(\"polygon(PMH1,3,P,M,H1)\",87,100,100,0,1,3);\narch.creategeo(\"polygon(PNH2,3,P,N,H2)\",87,100,100,0,1,3);\nfor (let i = 1; i < 80; i++) {\narch.geosetting(\"PMH1\",87,100,100,i,1,3);\narch.geosetting(\"PNH2\",87,100,100,i,1,3);\n    await sleep(10);\n}\nfor (let i = 80; i > 0; i--) {\narch.geosetting(\"PMH1\",87,100,100,i,1,3);\narch.geosetting(\"PNH2\",87,100,100,i,1,3);\n    await sleep(10);\n}\narch.geosetting(\"PMH1\",87,100,100,0,1,3);\narch.geosetting(\"PNH2\",87,100,100,0,1,3);\n\nconst text34 = \"有的兄弟们！根据AAS判定，△PMH1和△PNH2全等，只需\";\narch.txt(\"有\",87,100,100,0,0.16,-6,0.7,4,-2);\nfor (let i = 1; i < text34.length; i++) {\n    arch.edittxt(text34.slice(0, i), text34.slice(0, i + 1),87,100,100,0,0.16,-6,0.7,4,-2);\n    await sleep(25);\n}\n\nconst text35 = \"MH1=PH2\";\narch.txt(\"M\",87,100,100,0,0.2,-6,0.5,4,-2);\nfor (let i = 1; i < text35.length; i++) {\n    arch.edittxt(text35.slice(0, i), text35.slice(0, i + 1),87,100,100,0,0.2,-6,0.5,4,-2);\n    await sleep(25);\n}\n\n\narch.creategeo(\"segment(MH1,M,H1)\",10,100,80,0,1,4);\narch.creategeo(\"segment(PH2,P,H2)\",10,100,80,0,1,4);\nfor (let i = 1; i < 40; i++) {\narch.geosetting(\"MH1\",10,100,90,0,1,4+i*0.15);\narch.geosetting(\"PH2\",10,100,90,0,1,4+i*0.15);\n    await sleep(10);\n}\nawait sleep(1500);\narch.geosetting(\"MH1\",10,100,80,0,0,10);\narch.geosetting(\"PH2\",10,100,80,0,0,10);\narch.geosetting(\"H1\",87,100,100,0,0,3);\narch.geosetting(\"H2\",87,100,100,0,0,3);\narch.geosetting(\"PMH1\",87,100,100,0,0,3);\narch.geosetting(\"PNH2\",87,100,100,0,0,3);\n\nconst text36 = \"即|x_P-x_N|=|y_M-y_P|\";\narch.txt(\"即\",0,100,0,0,0.16,-6,0.3,4,-2);\nfor (let i = 1; i < text36.length; i++) {\n    arch.edittxt(text36.slice(0, i), text36.slice(0, i + 1),0,100,0,0,0.16,-6,0.3,4,-2);\n    await sleep(25);\n}\nconst text37 = \"代入坐标得|(6m² - 8)/(3m² + 4) - 2| = |12m/(3m² + 4) - 2/m|\";\narch.txt(\"代\",0,100,0,0,0.16,-6,0.1,4,-2);\nfor (let i = 1; i < text37.length; i++) {\n    arch.edittxt(text37.slice(0, i), text37.slice(0, i + 1),0,100,0,0,0.16,-6,0.1,4,-2);\n    await sleep(25);\n}\nconst text38 = \"即|-16/(3m²+4)|=|(6m²-8-6m²-8)/[m(3m²+4)]|\";\narch.txt(\"即\",0,100,0,0,0.16,-6,-0.1,4,-2);\nfor (let i = 1; i < text38.length; i++) {\n    arch.edittxt(text38.slice(0, i), text38.slice(0, i + 1),0,100,0,0,0.16,-6,-0.1,4,-2);\n    await sleep(25);\n}\nconst text39 = \"即16=|6m-8/m|\";\narch.txt(\"即\",0,100,0,0,0.16,-6,-0.3,4,-2);\nfor (let i = 1; i < text39.length; i++) {\n    arch.edittxt(text39.slice(0, i), text39.slice(0, i + 1),0,100,0,0,0.16,-6,-0.3,4,-2);\n    await sleep(25);\n}\nconst text40 = \"化简得3m²-8m-4=0或者3m²+8m-4=0\";\narch.txt(\"化\",0,100,0,0,0.16,-6,-0.5,4,-2);\nfor (let i = 1; i < text40.length; i++) {\n    arch.edittxt(text40.slice(0, i), text40.slice(0, i + 1),0,100,0,0,0.16,-6,-0.5,4,-2);\n    await sleep(25);\n}\nconst text41 = \"解得:m=±(4±2√7)/3\";\narch.txt(\"解\",0,100,0,0,0.16,-6,-0.7,4,-2);\nfor (let i = 1; i < text41.length; i++) {\n    arch.edittxt(text41.slice(0, i), text41.slice(0, i + 1),0,100,0,0,0.16,-6,-0.7,4,-2);\n    await sleep(25);\n}\nconst text42 = \"求得斜率k：k=1/m=±(√7/2±1)\";\narch.txt(\"求\",0,100,0,0,0.16,-6,-0.9,4,-2);\nfor (let i = 1; i < text42.length; i++) {\n    arch.edittxt(text42.slice(0, i), text42.slice(0, i + 1),0,100,0,0,0.16,-6,-0.9,4,-2);\n    await sleep(25);\n}\n/*ii几何转化*/\nawait sleep(500);\narch.creategeo(\"point(P1,1.512,1.134)\",87,100,100,0,1,3);\narch.txt(\"m1=(2√7+4)/3,k1=(√7)/2-1\",87,100,100,0,0.25,1,3.5,8,1);\narch.valuesetting('m',3.097,6.29,0,0.001,0);\nfor (let i = 1; i < 266; i++) {\narch.valuesetting('m',3.097-0.01*i,6.29,0,0.001,0);\n    await sleep(10);\n}\narch.valuesetting('m',0.431,6.29,0,0.001,0);\narch.creategeo(\"point(P2,-1.510,1.135)\",87,100,100,0,1,3);\narch.txt(\"m2=(2√7-4)/3,k2=(√7)/2+1\",87,100,100,0,0.25,1,3.2,8,1);\nawait sleep(500);\narch.creategeo(\"reflect(P3,Xaxis,P1)\",87,100,100,0,1,3);\narch.creategeo(\"reflect(P4,Xaxis,P2)\",87,100,100,0,1,3);\narch.txt(\"m3=-(2√7+4)/3,k3=-(√7)/2+1\",87,100,100,0,0.25,1,2.9,8,1);\narch.txt(\"m4=-(2√7-4)/3,k4=-(√7)/2-1\",87,100,100,0,0.25,1,2.6,8,1);\narch.valuesetting('m',-3.097,6.29,-6.28,0.001,0);\nfor (let i = 1; i < 266; i++) {\narch.valuesetting('m',-3.097+0.01*i,6.29,-6.28,0.001,0);\n    await sleep(10);\n}\n}\nmain();\n/*今年海淀高三期末的破解几好难，炸崩了多少烤生的心态啊*/",
+  "showPlaybackControls": false,
+  "currentFrame": 0,
+  "totalFrames": 100,
+  "playbackFPS": 10
+}

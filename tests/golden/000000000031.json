@@ -1,0 +1,891 @@
+{
+ "title": "直尺作图—正17边形",
+ "count": 165,
+ "kinds": {
+  "geometry:point": 103,
+  "geometry:circle": 1,
+  "geometry:line": 60,
+  "geometry:polygon": 1
+ },
+ "is3D": false,
+ "annotations": 2,
+ "script": 15194,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "geometry:point",
+   "id": "ptO",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "circ",
+   "r": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptA",
+   "x": 0,
+   "y": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa1",
+   "x": 0,
+   "y": -4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb1",
+   "x": 0,
+   "y": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptAp",
+   "x": 0,
+   "y": -4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptC",
+   "x": -3.60131,
+   "y": -1.74085
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptS",
+   "x": -5.04183,
+   "y": -4.03719
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptT",
+   "x": -2.80102,
+   "y": -2.24289
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptQ",
+   "x": -3.60131,
+   "y": -4.02657
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa2",
+   "x": -3.60131,
+   "y": 1.74085
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb2",
+   "x": -3.60131,
+   "y": -1.74085
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptD",
+   "x": -3.60131,
+   "y": 1.74085
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptK",
+   "x": -2.50742,
+   "y": 0
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptB",
+   "x": 4,
+   "y": 0
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptBp",
+   "x": -4,
+   "y": 0
+  },
+  {
+   "kind": "geometry:point",
+   "id": "S2",
+   "x": 2,
+   "y": -2
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptT2",
+   "x": 1.33333,
+   "y": -1.33333
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptQ2",
+   "x": 4,
+   "y": -2.66667
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptG",
+   "x": 4,
+   "y": 8
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptH",
+   "x": 4,
+   "y": -8
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptJ",
+   "x": 2,
+   "y": 2
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptE",
+   "x": -0.66667,
+   "y": 1.33333
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptN",
+   "x": 0,
+   "y": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa3",
+   "x": 3.84,
+   "y": 1.12
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb3",
+   "x": 0,
+   "y": -4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptA2",
+   "x": 3.84,
+   "y": 1.12
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptK3",
+   "x": 0,
+   "y": 12
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line1"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line2"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line3"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line4"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line5"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line6"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line7"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line8"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line9"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line10"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line11"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line12"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line13"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line14"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line15"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line16"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line17"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line18"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line19"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line20"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line21"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line22"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line23"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX1",
+   "x": 0,
+   "y": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptF1",
+   "x": -8,
+   "y": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa4",
+   "x": -3.88235,
+   "y": -0.96
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb4",
+   "x": 0,
+   "y": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptW1",
+   "x": -3.88235,
+   "y": -0.96
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX2",
+   "x": 0,
+   "y": -4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa5",
+   "x": -3.88235,
+   "y": -0.96
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb5",
+   "x": 0,
+   "y": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptW2",
+   "x": -3.88235,
+   "y": -0.96
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptF2",
+   "x": 0,
+   "y": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa6",
+   "x": 2.72081,
+   "y": 2.93206
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb6",
+   "x": -3.58284,
+   "y": 1.77855
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptW3",
+   "x": 2.72081,
+   "y": 2.93206
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptW4",
+   "x": -3.58284,
+   "y": 1.77855
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line24"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line25"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line26"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line27"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line28"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptF3",
+   "x": -7.05067,
+   "y": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptFb1",
+   "x": -1.97022,
+   "y": -4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptFm1",
+   "x": -1.90562,
+   "y": 1.33333
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa7",
+   "x": -0.7303,
+   "y": 3.93277
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb7",
+   "x": -3.19315,
+   "y": -2.40911
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptY1",
+   "x": -0.7303,
+   "y": 3.93277
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptY4",
+   "x": -3.19315,
+   "y": -2.40911
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptF4",
+   "x": 2.76678,
+   "y": 4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptFb2",
+   "x": 3.59346,
+   "y": -4
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptFm2",
+   "x": 0.44185,
+   "y": 1.33333
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa8",
+   "x": 2.11029,
+   "y": 3.39803
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb8",
+   "x": 3.84666,
+   "y": -1.09691
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptY2",
+   "x": 2.11029,
+   "y": 3.39803
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptY8",
+   "x": 3.84666,
+   "y": -1.09691
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line29"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line30"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line31"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line32"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line33"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line34"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line35"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line36"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX42",
+   "x": -0.68656,
+   "y": 3.31344
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX43",
+   "x": -0.78912,
+   "y": 3.21088
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa56",
+   "x": 1.44497,
+   "y": 3.72989
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb56",
+   "x": -1.44497,
+   "y": 3.72989
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP1",
+   "x": 1.44497,
+   "y": 3.72989
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP16",
+   "x": -1.44497,
+   "y": 3.72989
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX45",
+   "x": 1.83446,
+   "y": 2.16554
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX46",
+   "x": -4.43983,
+   "y": -0.43983
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa57",
+   "x": 2.69478,
+   "y": 2.95604
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb57",
+   "x": -2.69478,
+   "y": 2.95604
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP2",
+   "x": 2.69478,
+   "y": 2.95604
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP15",
+   "x": -2.69478,
+   "y": 2.95604
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX48",
+   "x": 2.76678,
+   "y": 1.23322
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX49",
+   "x": -2.28589,
+   "y": 1.71411
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa58",
+   "x": 3.58065,
+   "y": 1.78295
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb58",
+   "x": -3.58065,
+   "y": 1.78295
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP3",
+   "x": 3.58065,
+   "y": 1.78295
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP14",
+   "x": -3.58065,
+   "y": 1.78295
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX51",
+   "x": 3.55742,
+   "y": 0.44258
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX52",
+   "x": -1.18956,
+   "y": 2.81044
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa59",
+   "x": 3.98294,
+   "y": 0.36907
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb59",
+   "x": -3.98294,
+   "y": 0.36907
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP4",
+   "x": 3.98294,
+   "y": 0.36907
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP13",
+   "x": -3.98294,
+   "y": 0.36907
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX54",
+   "x": 4.39169,
+   "y": -0.39169
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX55",
+   "x": -0.40488,
+   "y": 3.59512
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa60",
+   "x": 3.8473,
+   "y": -1.09465
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb60",
+   "x": -3.8473,
+   "y": -1.09465
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP5",
+   "x": 3.8473,
+   "y": -1.09465
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP12",
+   "x": -3.8473,
+   "y": -1.09465
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX57",
+   "x": 5.37038,
+   "y": -1.37038
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX58",
+   "x": 0.16913,
+   "y": 4.16913
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa61",
+   "x": 3.19207,
+   "y": -2.41054
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb61",
+   "x": -3.19207,
+   "y": -2.41054
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP6",
+   "x": 3.19207,
+   "y": -2.41054
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP11",
+   "x": -3.19207,
+   "y": -2.41054
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX60",
+   "x": 6.74415,
+   "y": -2.74415
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX61",
+   "x": 0.596,
+   "y": 4.596
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa62",
+   "x": 2.10573,
+   "y": -3.40087
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb62",
+   "x": -2.10573,
+   "y": -3.40087
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP7",
+   "x": 2.10573,
+   "y": -3.40087
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP10",
+   "x": -2.10573,
+   "y": -3.40087
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX63",
+   "x": 9.38797,
+   "y": -5.38797
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptX64",
+   "x": 0.96328,
+   "y": 4.96328
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIa65",
+   "x": 0.735,
+   "y": -3.93189
+  },
+  {
+   "kind": "geometry:point",
+   "id": "ptIb65",
+   "x": -0.735,
+   "y": -3.93189
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP8",
+   "x": 0.735,
+   "y": -3.93189
+  },
+  {
+   "kind": "geometry:point",
+   "id": "vP9",
+   "x": -0.735,
+   "y": -3.93189
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line54"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line55"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line56"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line57"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line58"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line59"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line60"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line61"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line62"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line63"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line64"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line65"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line66",
+   "meaningless": true
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line67",
+   "meaningless": true
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line68"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line69",
+   "meaningless": true
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line70",
+   "meaningless": true
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line71"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line72",
+   "meaningless": true
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line73",
+   "meaningless": true
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line74"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line75",
+   "meaningless": true
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line76",
+   "meaningless": true
+  },
+  {
+   "kind": "geometry:line",
+   "id": "line77"
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "poly17"
+  }
+ ]
+}

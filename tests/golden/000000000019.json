@@ -1,0 +1,74 @@
+{
+ "title": "基因的转录",
+ "count": 7,
+ "kinds": {
+  "variable": 1,
+  "function:y": 4,
+  "function:implicit": 1,
+  "function:x": 1
+ },
+ "is3D": false,
+ "annotations": 4,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "variable",
+   "id": "a",
+   "value": 0.95
+  },
+  {
+   "kind": "function:y",
+   "id": "func1",
+   "samples": [
+    0.6877661592,
+    0.2905273953,
+    0.2905273953
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func2",
+   "samples": [
+    -0.6877661592,
+    -0.2905273953,
+    -0.2905273953
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq1",
+   "samples": [
+    -0.8410416667,
+    -0.8310416667
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func3",
+   "samples": [
+    "NaN",
+    0.3631592442,
+    0.3631592442
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func4",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func5",
+   "samples": [
+    "NaN",
+    3.25,
+    "NaN"
+   ]
+  }
+ ]
+}

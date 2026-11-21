@@ -1,0 +1,77 @@
+{
+ "title": "电子云",
+ "count": 16,
+ "kinds": {
+  "function:implicit3d": 16
+ },
+ "is3D": true,
+ "annotations": 1,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "function:implicit3d",
+   "id": "eq1"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq2"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq3"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq4"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq5"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq6"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq7"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq8"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq9"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq10"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq11"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq12"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq13"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq14"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq15"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq16"
+  }
+ ]
+}
