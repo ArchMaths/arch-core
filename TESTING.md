@@ -74,6 +74,17 @@ git diff tests/golden               # 检查变化是否符合预期
 
 ## CI
 
-`.github/workflows/calculator-tests.yml`：push、PR、手动触发和每日定时运行，15 个 job（3 系统 × 5 浏览器）互相独立。失败时在 Actions 页面下载对应 job 的 `report-*` 产物，解压后 `npx playwright show-report playwright-report` 查看截图、录制的 trace 和控制台日志。
+`.github/workflows/calculator-tests.yml` 按触发事件分层运行：
+
+| 触发 | 范围 | 矩阵 |
+| --- | --- | --- |
+| push 到非 main 分支、来自 fork 的 PR | quick | Ubuntu × Chromium，跳过 9 个大型示例存档（约 10–15 分钟） |
+| push 到 main | main | Ubuntu × Chromium / Firefox / WebKit |
+| 每日定时（北京时间 02:00） | full | Windows 11 / macOS 26 / Ubuntu × Chromium / Chrome / Edge / Firefox / WebKit，共 15 个 job，含全部示例存档，用当天日期作模糊测试种子 |
+| 手动触发（Actions → Run workflow） | 可选 full / main / quick，默认 full | 同上 |
+
+同仓库分支的 PR 不会重复运行（push 事件已经测过）。想给某个分支跑完整矩阵，在 Actions 页面选中该分支手动运行即可。
+
+失败时在 Actions 页面下载对应 job 的 `report-*` 产物，解压后用 `npx playwright show-report playwright-report` 查看截图、录制的 trace 和控制台日志。
 
 Windows 11 使用 GitHub 托管的 `windows-11-arm` 运行器。如果你的仓库用不了它（例如私有仓库），在仓库 **Settings → Secrets and variables → Actions → Variables** 新建 `WINDOWS_RUNNER=windows-2025` 即可，不用改 workflow。
