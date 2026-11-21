@@ -1,0 +1,111 @@
+{
+ "title": "高考导数",
+ "count": 15,
+ "kinds": {
+  "custom_function_definition": 5,
+  "variable": 3,
+  "function:y": 5,
+  "function:implicit": 1,
+  "geometry:point": 1
+ },
+ "is3D": false,
+ "annotations": 1925,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "custom_function_definition",
+   "id": "f"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "g"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "h"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "J"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "L"
+  },
+  {
+   "kind": "variable",
+   "id": "m",
+   "value": 2
+  },
+  {
+   "kind": "variable",
+   "id": "n",
+   "value": 1
+  },
+  {
+   "kind": "function:y",
+   "id": "func1",
+   "samples": [
+    -1.311035375,
+    -1.073272883,
+    -3.406664096
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func2",
+   "samples": [
+    -1.001035375,
+    0.4367271172,
+    -5.816664096
+   ]
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq1",
+   "samples": [
+    19.54467854,
+    14.61671683
+   ]
+  },
+  {
+   "kind": "geometry:point",
+   "id": "A",
+   "x": -1,
+   "y": -1.541341133
+  },
+  {
+   "kind": "function:y",
+   "id": "func3",
+   "samples": [
+    1.598963739,
+    -0.9632722398,
+    -10.01665417
+   ]
+  },
+  {
+   "kind": "variable",
+   "id": "k",
+   "value": 0.7
+  },
+  {
+   "kind": "function:y",
+   "id": "func4",
+   "samples": [
+    0.5989646251,
+    -0.5632728827,
+    -3.876664096
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func5",
+   "samples": [
+    -1.701035375,
+    -0.2632728828,
+    -6.516664096
+   ]
+  }
+ ]
+}

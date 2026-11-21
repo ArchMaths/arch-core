@@ -1,0 +1,254 @@
+{
+  "source": "https://www.archmaths.cn/example_saves.php（公开示例存档快照，2026-11-21）",
+  "note": "测试只在本地加载这些文件，不访问服务器。更新示例：重新下载后运行 npm run test:update-golden。",
+  "examples": [
+    {
+      "serial": "000000000001",
+      "id": "sample-0",
+      "title": "新手教程",
+      "remark": "全面地展示了添加函数和几何对象的功能，带你玩转Arch",
+      "partition": "resources",
+      "bytes": 29221
+    },
+    {
+      "serial": "000000000005",
+      "id": "ex_9f554804bf5d5cd217fef6a1",
+      "title": "3D茉莉花",
+      "remark": "[3D Make]用3D参数方程展现了一朵茉莉花，超级仿真。加载本存档需要数秒钟。",
+      "partition": "3d-make",
+      "bytes": 1177832
+    },
+    {
+      "serial": "000000000006",
+      "id": "ex_c09d2f4535186a346cde59d4",
+      "title": "函数舞动",
+      "remark": "超好看的隐函数渐变和旋转动画",
+      "partition": "functions",
+      "bytes": 19415
+    },
+    {
+      "serial": "000000000007",
+      "id": "sample-3",
+      "title": "火焰",
+      "remark": "通过隐函数模拟火焰的形态",
+      "partition": "p-2395992c448f145e5bf7",
+      "bytes": 16389
+    },
+    {
+      "serial": "000000000008",
+      "id": "sample-2",
+      "title": "逐帧函数动画",
+      "remark": "通过播放控制和渐变函数实现丝滑的动画效果",
+      "partition": "p-2395992c448f145e5bf7",
+      "bytes": 20273
+    },
+    {
+      "serial": "000000000009",
+      "id": "sample-4",
+      "title": "复变函数",
+      "remark": "z^3的复变函数",
+      "partition": "functions",
+      "bytes": 27030
+    },
+    {
+      "serial": "000000000010",
+      "id": "sample-6",
+      "title": "傅里叶变换",
+      "remark": "通过自定义JS运算符演示傅里叶级数",
+      "partition": "functions",
+      "bytes": 7113
+    },
+    {
+      "serial": "000000000011",
+      "id": "sample-7",
+      "title": "正17边形",
+      "remark": "演示了正17变形的尺规作图方法",
+      "partition": "geometry",
+      "bytes": 65222
+    },
+    {
+      "serial": "000000000012",
+      "id": "sample-8",
+      "title": "解析几何",
+      "remark": "通过全局脚本演示了2025-2026海淀高三期末考试的解析几何题目",
+      "partition": "exam-solutions",
+      "bytes": 45728
+    },
+    {
+      "serial": "000000000013",
+      "id": "sample-9",
+      "title": "高考导数",
+      "remark": "通过函数和批注演示了2026北京高考导数大题的解法",
+      "partition": "exam-solutions",
+      "bytes": 3010899
+    },
+    {
+      "serial": "000000000014",
+      "id": "ex_4ba308fb05a02e20db59069a",
+      "title": "北京高考解析几何",
+      "remark": "展示了2026年北京卷解析几何的图形，可供上课演示",
+      "partition": "exam-solutions",
+      "bytes": 398382
+    },
+    {
+      "serial": "000000000015",
+      "id": "sample-10",
+      "title": "中考几综",
+      "remark": "展示了2025年北京中考几综题的图形",
+      "partition": "exam-solutions",
+      "bytes": 1116070
+    },
+    {
+      "serial": "000000000016",
+      "id": "sample-14",
+      "title": "凸透镜成像",
+      "remark": "演示了凸透镜成像实验，展示了智能文本的语法",
+      "partition": "resources",
+      "bytes": 14120
+    },
+    {
+      "serial": "000000000017",
+      "id": "sample-15",
+      "title": "电磁阻尼",
+      "remark": "展示了高中物理的电磁阻尼模型",
+      "partition": "exam-solutions",
+      "bytes": 16972
+    },
+    {
+      "serial": "000000000018",
+      "id": "sample-16",
+      "title": "隐函数偏导",
+      "remark": "介绍了求隐函数偏导数的一般方法，展示了如何在代数表达式中调用几何点坐标的方法",
+      "partition": "resources",
+      "bytes": 24892
+    },
+    {
+      "serial": "000000000019",
+      "id": "sample-17",
+      "title": "基因的转录",
+      "remark": "通过动画演示了基因的转录过程，展示了heaviside和定义域限制函数的用法",
+      "partition": "resources",
+      "bytes": 8963
+    },
+    {
+      "serial": "000000000020",
+      "id": "ex_bca7c84db4a0edad8a6220a6",
+      "title": "3D坦克",
+      "remark": "[3D Make]用3D函数复刻了一辆美式主战坦克。",
+      "partition": "3d-make",
+      "bytes": 393406
+    },
+    {
+      "serial": "000000000021",
+      "id": "ex_55ca1fecfc6144eed342c6f1",
+      "title": "电子云",
+      "remark": "通过3D方程展示了s，p，d，f轨道电子云的轮廓",
+      "partition": "resources",
+      "bytes": 10579
+    },
+    {
+      "serial": "000000000022",
+      "id": "ex_d782f2c19d8361f12d9a7c39",
+      "title": "DNA双螺旋",
+      "remark": "通过3D参数方程绘制了DNA双螺旋结构",
+      "partition": "resources",
+      "bytes": 19327
+    },
+    {
+      "serial": "000000000024",
+      "id": "ex_8902af0cfb2c7a67a724c60c",
+      "title": "荷花",
+      "remark": "3d荷花，由ArchAI Agent自主生成",
+      "partition": "ai-playground",
+      "bytes": 57536
+    },
+    {
+      "serial": "000000000025",
+      "id": "ex_2c9f5b363115bac18ed9d3aa",
+      "title": "雷霆大毛毛虫",
+      "remark": "超级可爱的3D毛毛虫动画",
+      "partition": "3d-make",
+      "bytes": 314869
+    },
+    {
+      "serial": "000000000027",
+      "id": "ex_69403e3051c0e2fc45afb99d",
+      "title": "鹈鹕",
+      "remark": "一只超级可爱的小鹈鹕，由Arch3D绘制。",
+      "partition": "3d-make",
+      "bytes": 1116696
+    },
+    {
+      "serial": "000000000028",
+      "id": "ex_fafae63a3b0a269db15848e0",
+      "title": "跳舞的Claude",
+      "remark": "一只会跳舞的Claude玩偶",
+      "partition": "3d-make",
+      "bytes": 18655
+    },
+    {
+      "serial": "000000000029",
+      "id": "ex_b8f1de07db4aba06a61e142a",
+      "title": "校园景观3d重建",
+      "remark": "用3d数学对象重建北大附中中心花园假山景观，由ArchAI Agent自主生成。",
+      "partition": "ai-playground",
+      "bytes": 302039
+    },
+    {
+      "serial": "000000000030",
+      "id": "ex_794dcf3947b8c45acf2ba45c",
+      "title": "黄昏下的灯塔",
+      "remark": "由SVg转换的Arch画作。",
+      "partition": "p-623f0f4041240cf7fd0c",
+      "bytes": 341975
+    },
+    {
+      "serial": "000000000031",
+      "id": "ex_89de9b20fa8524bc3cb6dac6",
+      "title": "直尺作图—正17边形",
+      "remark": "用直尺作图绘制正257边形",
+      "partition": "geometry",
+      "bytes": 73637
+    },
+    {
+      "serial": "000000000032",
+      "id": "ex_37e472cfdd35f6e13e2cb0b5",
+      "title": "正257边形",
+      "remark": "用尺规作图绘制正257边形",
+      "partition": "geometry",
+      "bytes": 290264
+    },
+    {
+      "serial": "000000000033",
+      "id": "ex_00554eb9cf89105198136301",
+      "title": "直尺作图—正257边形",
+      "remark": "用直尺作图绘制正257边形",
+      "partition": "geometry",
+      "bytes": 929318
+    },
+    {
+      "serial": "000000000034",
+      "id": "ex_f76e62c6b788a10e12f825bd",
+      "title": "可莉",
+      "remark": "用几十个函数绘制原神可莉形象",
+      "partition": "functions",
+      "bytes": 37281
+    },
+    {
+      "serial": "000000000035",
+      "id": "ex_79589cc1c068a2dcd60e724a",
+      "title": "呐喊",
+      "remark": "用函数复刻呐喊表情包",
+      "partition": "functions",
+      "bytes": 9330
+    },
+    {
+      "serial": "000000000036",
+      "id": "ex_ce3408c064b0511bab18c51a",
+      "title": "Apple Logo",
+      "remark": "用尺规作图绘制Apple徽标，附动画演示",
+      "partition": "geometry",
+      "bytes": 273898
+    }
+  ]
+}

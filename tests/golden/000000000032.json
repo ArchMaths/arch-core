@@ -1,0 +1,4694 @@
+{
+ "title": "正257边形",
+ "count": 933,
+ "kinds": {
+  "geometry:point": 2,
+  "geometry:circle": 261,
+  "geometry:line": 73,
+  "geometry:intersect": 340,
+  "geometry:segment": 257
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 5844,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "geometry:point",
+   "id": "A",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:point",
+   "id": "B",
+   "x": 0,
+   "y": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "c4",
+   "r": 1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "la"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C",
+   "x": 0,
+   "y": -1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "c5",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "K_",
+   "x": 0,
+   "y": -3
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "c6",
+   "r": 4
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "c7",
+   "r": 4
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "L_",
+   "x": 3.464101615,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l76"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "c8",
+   "r": 2
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "c9",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "M_",
+   "x": 1.732050808,
+   "y": 0
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l77"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "E",
+   "x": 1,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "D",
+   "x": -1,
+   "y": 0
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l78"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l79"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "G",
+   "x": 2,
+   "y": -1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F",
+   "x": -2,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l80"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H",
+   "x": -0.8,
+   "y": -0.6
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l81"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "I",
+   "x": -0.6666666667,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l82"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "J",
+   "x": 0,
+   "y": -0.6
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l83"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "K",
+   "x": -0.4705882353,
+   "y": -0.8823529412
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "L",
+   "x": 0.4705882353,
+   "y": -0.8823529412
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l84"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "M",
+   "x": 0,
+   "y": -0.8823529412
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "N",
+   "x": 1.882352941,
+   "y": -0.8823529412
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l85"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "O",
+   "x": 0,
+   "y": -0.9692307692
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l86"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "A0",
+   "x": 0.2614834998,
+   "y": -0.9652079462
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "A1",
+   "x": -0.2316680715,
+   "y": -0.9727948934
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l87"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l88"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "R",
+   "x": 0.2661128053,
+   "y": -1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "S",
+   "x": -0.2348628053,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l89"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "B0",
+   "x": 0.2138070617,
+   "y": -0.9768759084
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "B2",
+   "x": -0.8664220554,
+   "y": -0.4993123491
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l90"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "B1",
+   "x": 0.902760375,
+   "y": -0.4301438194
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "B3",
+   "x": -0.1961012814,
+   "y": -0.9805836463
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l91"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l93"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "T",
+   "x": 1.110223025e-16,
+   "y": -0.7898190396
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U",
+   "x": 0.1509881346,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l94"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Ca",
+   "x": 0.1435481907,
+   "y": -0.9896433282
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l95"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l96"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "V",
+   "x": 0,
+   "y": -1.306955154
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "W",
+   "x": 0.3581540125,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l97"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Cb",
+   "x": 0.5521056006,
+   "y": -0.8337741935
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l98"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "X",
+   "x": 0,
+   "y": -0.9788098543
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l99"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Cc",
+   "x": 0.1408744635,
+   "y": -0.9900274671
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l100"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Y",
+   "x": 0,
+   "y": -1.121378803
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l101"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Cd",
+   "x": -0.5346999659,
+   "y": -0.8450419791
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l102"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Z",
+   "x": 0.1686275858,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l103"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H1",
+   "x": 0,
+   "y": -0.9689642546
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l104"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "I1",
+   "x": 0.1273039076,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l105"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "J1",
+   "x": 0.1125688735,
+   "y": -0.9936439245
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l106"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "K1",
+   "x": 0.1129277622,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l107"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Da",
+   "x": 0.09609038613,
+   "y": -0.9953726125
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Db",
+   "x": -0.5912856028,
+   "y": -0.8064622347
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l108"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "L1",
+   "x": 0.1674373049,
+   "y": -0.9858827258
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l109"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "M1",
+   "x": 0,
+   "y": -0.8444845146
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l110"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "N1",
+   "x": -0.1674373049,
+   "y": -0.9858827258
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l111"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "O1",
+   "x": -0.130624466,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l112"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P1",
+   "x": 0,
+   "y": -0.7383171216
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l113"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Q1",
+   "x": -0.2944044039,
+   "y": -0.9556809337
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l114"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "R1",
+   "x": -0.7567620707,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l115"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "S1",
+   "x": -0.1188444578,
+   "y": -0.9929128838
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l116"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "T1",
+   "x": 0.3450975815,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l117"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U1",
+   "x": 0.08846087536,
+   "y": -0.9960796522
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l118"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "V1",
+   "x": 1.387778781e-17,
+   "y": -1.092744815
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l119"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Dc",
+   "x": -0.8860085099,
+   "y": -0.4636689772
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Dd",
+   "x": -0.1456420478,
+   "y": -0.9893373509
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l120"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "W1",
+   "x": 0.08221698577,
+   "y": -0.9966144527
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l121"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "X1",
+   "x": 0,
+   "y": -1.085893329
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l122"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "D0",
+   "x": 0.2141899746,
+   "y": -0.9767920223
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "D8",
+   "x": 0.6641555749,
+   "y": -0.7475943902
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l123"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Y1",
+   "x": 0.2167046126,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l124"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Z1",
+   "x": -0.1009276608,
+   "y": -0.9948937668
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l125"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H2",
+   "x": 0,
+   "y": -1.106578107
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l126"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "E0",
+   "x": 0.3321206517,
+   "y": -0.9432369123
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l127"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "I2",
+   "x": 0.3418220903,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l128"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "J2",
+   "x": 0.2639507137,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l129"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "K2",
+   "x": 0.2552101466,
+   "y": -0.9668856091
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l130"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "L2",
+   "x": 0,
+   "y": -1.298199223
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l131"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F0",
+   "x": 0.4868333753,
+   "y": -0.8734948567
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l132"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "M2",
+   "x": 0.7600797744,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l133"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "N2",
+   "x": 0.4649277466,
+   "y": -0.8853486265
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l134"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "O2",
+   "x": -1.110223025e-16,
+   "y": -0.6043633405
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l135"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "E24",
+   "x": 0.5012759719,
+   "y": -0.8652874667
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l136"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P2",
+   "x": 0.5374785182,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l137"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Q2",
+   "x": -0.1813601008,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l138"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "R2",
+   "x": 0.1784491155,
+   "y": 0.9839491416
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l139"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "S2",
+   "x": 0,
+   "y": 1.197672792
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l140"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F56",
+   "x": 0.5041268116,
+   "y": -0.8636296416
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l141"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "T2",
+   "x": 0.5197061242,
+   "y": -1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l142"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U2",
+   "x": 0,
+   "y": -1.741634075
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l143"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "G0",
+   "x": 0.8001434557,
+   "y": -0.5998086781
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l144"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "V2",
+   "x": 0,
+   "y": -0.3332004881
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l145"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "W2",
+   "x": 0.9998505566,
+   "y": 0.0001494434091
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l146"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "X2",
+   "x": 0.9997011578,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Y2",
+   "x": 0.9999999553,
+   "y": 0.0002988868115
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l147"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Z2",
+   "x": 0.9997011578,
+   "y": 0.0002988421582
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l148"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H3",
+   "x": 0.9997011578,
+   "y": 0.02444575648
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo1",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H4",
+   "x": 0.99880481,
+   "y": 0.04887690211
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo2",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H5",
+   "x": 0.9973114921,
+   "y": 0.07327883478
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo3",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H6",
+   "x": 0.9952220969,
+   "y": 0.09763696985
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo4",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H7",
+   "x": 0.992537873,
+   "y": 0.1219367488
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo5",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H8",
+   "x": 0.9892604247,
+   "y": 0.1461636481
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo6",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H9",
+   "x": 0.9853917111,
+   "y": 0.1703031877
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo7",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H10",
+   "x": 0.9809340442,
+   "y": 0.1943409397
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo8",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H11",
+   "x": 0.9758900885,
+   "y": 0.2182625372
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo9",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H12",
+   "x": 0.9702628586,
+   "y": 0.2420536826
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo10",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H13",
+   "x": 0.9640557177,
+   "y": 0.2657001563
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo11",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H14",
+   "x": 0.9572723759,
+   "y": 0.2891878252
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo12",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H15",
+   "x": 0.9499168874,
+   "y": 0.3125026511
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo13",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H16",
+   "x": 0.9419936485,
+   "y": 0.3356306991
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo14",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H17",
+   "x": 0.9335073948,
+   "y": 0.3585581458
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo15",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H18",
+   "x": 0.9244631983,
+   "y": 0.3812712879
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo16",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H19",
+   "x": 0.9148664647,
+   "y": 0.4037565502
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo17",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H20",
+   "x": 0.9047229297,
+   "y": 0.4260004935
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo18",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H21",
+   "x": 0.894038656,
+   "y": 0.4479898231
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo19",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H22",
+   "x": 0.8828200294,
+   "y": 0.4697113961
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo20",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H23",
+   "x": 0.8710737552,
+   "y": 0.49115223
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo21",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H24",
+   "x": 0.8588068538,
+   "y": 0.5122995099
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo22",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H25",
+   "x": 0.8460266571,
+   "y": 0.5331405964
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo23",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H26",
+   "x": 0.8327408035,
+   "y": 0.5536630331
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo24",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H27",
+   "x": 0.8189572337,
+   "y": 0.5738545542
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo25",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H28",
+   "x": 0.8046841861,
+   "y": 0.5937030913
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo26",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H29",
+   "x": 0.7899301913,
+   "y": 0.6131967815
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo27",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H30",
+   "x": 0.7747040677,
+   "y": 0.6323239735
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo28",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H31",
+   "x": 0.7590149156,
+   "y": 0.6510732354
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo29",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H32",
+   "x": 0.7428721122,
+   "y": 0.6694333611
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo30",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H33",
+   "x": 0.7262853058,
+   "y": 0.6873933769
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo31",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H34",
+   "x": 0.70926441,
+   "y": 0.7049425485
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo32",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H35",
+   "x": 0.691819598,
+   "y": 0.722070387
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo33",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H36",
+   "x": 0.6739612963,
+   "y": 0.7387666554
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo34",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H37",
+   "x": 0.6557001785,
+   "y": 0.7550213745
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo35",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H38",
+   "x": 0.637047159,
+   "y": 0.7708248291
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo36",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H39",
+   "x": 0.6180133864,
+   "y": 0.7861675739
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo37",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H40",
+   "x": 0.5986102369,
+   "y": 0.8010404386
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo38",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H41",
+   "x": 0.5788493074,
+   "y": 0.815434534
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo39",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H42",
+   "x": 0.5587424088,
+   "y": 0.829341257
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo40",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H43",
+   "x": 0.5383015586,
+   "y": 0.8427522958
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo41",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H44",
+   "x": 0.517538974,
+   "y": 0.8556596347
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo42",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H45",
+   "x": 0.4964670645,
+   "y": 0.8680555592
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo43",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H46",
+   "x": 0.4750984244,
+   "y": 0.8799326606
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo44",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H47",
+   "x": 0.4534458254,
+   "y": 0.89128384
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo45",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H48",
+   "x": 0.431522209,
+   "y": 0.902102313
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo46",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H49",
+   "x": 0.4093406785,
+   "y": 0.9123816137
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo47",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H50",
+   "x": 0.3869144915,
+   "y": 0.9221155981
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo48",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H51",
+   "x": 0.3642570518,
+   "y": 0.9312984485
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo49",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H52",
+   "x": 0.3413819013,
+   "y": 0.9399246765
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo50",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H53",
+   "x": 0.3183027123,
+   "y": 0.9479891262
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo51",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H54",
+   "x": 0.2950332787,
+   "y": 0.9554869777
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo52",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H55",
+   "x": 0.2715875083,
+   "y": 0.9624137495
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo53",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H56",
+   "x": 0.2479794144,
+   "y": 0.9687653018
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo54",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H57",
+   "x": 0.224223107,
+   "y": 0.9745378383
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo55",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H58",
+   "x": 0.200332785,
+   "y": 0.9797279088
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo56",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H59",
+   "x": 0.1763227273,
+   "y": 0.9843324113
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo57",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H60",
+   "x": 0.1522072842,
+   "y": 0.9883485937
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo58",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H61",
+   "x": 0.1280008692,
+   "y": 0.9917740557
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo59",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H62",
+   "x": 0.1037179501,
+   "y": 0.9946067498
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo60",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H63",
+   "x": 0.07937304041,
+   "y": 0.9968449832
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo61",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H64",
+   "x": 0.0549806907,
+   "y": 0.9984874179
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo62",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H65",
+   "x": 0.03055547989,
+   "y": 0.9995330723
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo63",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H66",
+   "x": 0.006112006543,
+   "y": 0.9999813215
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo64",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H67",
+   "x": -0.01833511985,
+   "y": 0.9998318976
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo65",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H68",
+   "x": -0.04277128763,
+   "y": 0.9990848898
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo66",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H69",
+   "x": -0.06718189168,
+   "y": 0.9977407446
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo67",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H70",
+   "x": -0.09155234217,
+   "y": 0.9958002654
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo68",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H71",
+   "x": -0.1158680733,
+   "y": 0.9932646121
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo69",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H72",
+   "x": -0.1401145518,
+   "y": 0.9901353
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo70",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H73",
+   "x": -0.1642772861,
+   "y": 0.9864141996
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo71",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H74",
+   "x": -0.1883418344,
+   "y": 0.982103535
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo72",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H75",
+   "x": -0.2122938138,
+   "y": 0.9772058824
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo73",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H76",
+   "x": -0.2361189085,
+   "y": 0.9717241692
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo74",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H77",
+   "x": -0.2598028786,
+   "y": 0.9656616717
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo75",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H78",
+   "x": -0.2833315686,
+   "y": 0.9590220134
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo76",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H79",
+   "x": -0.3066909158,
+   "y": 0.9518091627
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo77",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H80",
+   "x": -0.3298669586,
+   "y": 0.9440274305
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo78",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H81",
+   "x": -0.3528458452,
+   "y": 0.935681468
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo79",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H82",
+   "x": -0.3756138413,
+   "y": 0.9267762633
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo80",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H83",
+   "x": -0.3981573388,
+   "y": 0.917317139
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo81",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H84",
+   "x": -0.420462864,
+   "y": 0.9073097486
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo82",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H85",
+   "x": -0.4425170852,
+   "y": 0.8967600734
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo83",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H86",
+   "x": -0.4643068208,
+   "y": 0.8856744188
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo84",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H87",
+   "x": -0.4858190475,
+   "y": 0.8740594105
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo85",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H88",
+   "x": -0.5070409078,
+   "y": 0.8619219906
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo86",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H89",
+   "x": -0.5279597177,
+   "y": 0.8492694134
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo87",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H90",
+   "x": -0.5485629743,
+   "y": 0.8361092412
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo88",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H91",
+   "x": -0.5688383635,
+   "y": 0.8224493396
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo89",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H92",
+   "x": -0.5887737668,
+   "y": 0.808297873
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo90",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H93",
+   "x": -0.6083572694,
+   "y": 0.7936632994
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo91",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H94",
+   "x": -0.6275771663,
+   "y": 0.7785543657
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo92",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H95",
+   "x": -0.6464219702,
+   "y": 0.7629801022
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo93",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H96",
+   "x": -0.6648804179,
+   "y": 0.7469498175
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo94",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H97",
+   "x": -0.6829414769,
+   "y": 0.7304730927
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo95",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H98",
+   "x": -0.7005943526,
+   "y": 0.7135597755
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo96",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H99",
+   "x": -0.7178284939,
+   "y": 0.6962199748
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo97",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H100",
+   "x": -0.7346336005,
+   "y": 0.6784640544
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo98",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H101",
+   "x": -0.750999628,
+   "y": 0.6603026266
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo99",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H102",
+   "x": -0.7669167949,
+   "y": 0.6417465463
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo100",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H103",
+   "x": -0.7823755876,
+   "y": 0.6228069042
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo101",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H104",
+   "x": -0.7973667667,
+   "y": 0.6034950201
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo102",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H105",
+   "x": -0.8118813722,
+   "y": 0.5838224366
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo103",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H106",
+   "x": -0.8259107289,
+   "y": 0.5638009115
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo104",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H107",
+   "x": -0.8394464518,
+   "y": 0.5434424115
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo105",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H108",
+   "x": -0.8524804506,
+   "y": 0.5227591044
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo106",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H109",
+   "x": -0.8650049353,
+   "y": 0.5017633525
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo107",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H110",
+   "x": -0.8770124201,
+   "y": 0.4804677044
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo108",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H111",
+   "x": -0.8884957283,
+   "y": 0.4588848884
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo109",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H112",
+   "x": -0.8994479966,
+   "y": 0.437027804
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo110",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H113",
+   "x": -0.9098626788,
+   "y": 0.414909515
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo111",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H114",
+   "x": -0.9197335505,
+   "y": 0.3925432411
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo112",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H115",
+   "x": -0.9290547118,
+   "y": 0.3699423502
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo113",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H116",
+   "x": -0.9378205917,
+   "y": 0.3471203506
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo114",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H117",
+   "x": -0.9460259509,
+   "y": 0.3240908826
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo115",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H118",
+   "x": -0.9536658853,
+   "y": 0.3008677106
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo116",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H119",
+   "x": -0.9607358285,
+   "y": 0.2774647146
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo117",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H120",
+   "x": -0.967231555,
+   "y": 0.2538958824
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo118",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H121",
+   "x": -0.9731491823,
+   "y": 0.2301753005
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo119",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H122",
+   "x": -0.9784851737,
+   "y": 0.2063171465
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo120",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H123",
+   "x": -0.9832363398,
+   "y": 0.18233568
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo121",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H124",
+   "x": -0.9873998409,
+   "y": 0.1582452343
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo122",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H125",
+   "x": -0.9909731887,
+   "y": 0.1340602079
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo123",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H126",
+   "x": -0.9939542473,
+   "y": 0.1097950558
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo124",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H127",
+   "x": -0.9963412351,
+   "y": 0.0854642809
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo125",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H128",
+   "x": -0.9981327253,
+   "y": 0.06108242537
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo126",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H129",
+   "x": -0.9993276473,
+   "y": 0.03666406183
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo127",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H130",
+   "x": -0.9999252868,
+   "y": 0.01222378476
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo128",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H131",
+   "x": -0.9999252866,
+   "y": -0.01222379828
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo129",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H132",
+   "x": -0.9993276468,
+   "y": -0.03666407534
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo130",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H133",
+   "x": -0.9981327245,
+   "y": -0.06108243886
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo131",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H134",
+   "x": -0.9963412339,
+   "y": -0.08546429437
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo132",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H135",
+   "x": -0.9939542458,
+   "y": -0.1097950692
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo133",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H136",
+   "x": -0.9909731869,
+   "y": -0.1340602213
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo134",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H137",
+   "x": -0.9873998388,
+   "y": -0.1582452476
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo135",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H138",
+   "x": -0.9832363373,
+   "y": -0.1823356933
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo136",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H139",
+   "x": -0.9784851709,
+   "y": -0.2063171597
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo137",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H140",
+   "x": -0.9731491792,
+   "y": -0.2301753137
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo138",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H141",
+   "x": -0.9672315515,
+   "y": -0.2538958954
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo139",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H142",
+   "x": -0.9607358247,
+   "y": -0.2774647276
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo140",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H143",
+   "x": -0.9536658812,
+   "y": -0.3008677235
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo141",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H144",
+   "x": -0.9460259465,
+   "y": -0.3240908954
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo142",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H145",
+   "x": -0.937820587,
+   "y": -0.3471203633
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo143",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H146",
+   "x": -0.9290547068,
+   "y": -0.3699423628
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo144",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H147",
+   "x": -0.9197335452,
+   "y": -0.3925432535
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo145",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H148",
+   "x": -0.9098626732,
+   "y": -0.4149095273
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo146",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H149",
+   "x": -0.8994479906,
+   "y": -0.4370278162
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo147",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H150",
+   "x": -0.8884957221,
+   "y": -0.4588849004
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo148",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H151",
+   "x": -0.8770124136,
+   "y": -0.4804677163
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo149",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H152",
+   "x": -0.8650049285,
+   "y": -0.5017633642
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo150",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H153",
+   "x": -0.8524804436,
+   "y": -0.522759116
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo151",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H154",
+   "x": -0.8394464444,
+   "y": -0.5434424228
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo152",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H155",
+   "x": -0.8259107213,
+   "y": -0.5638009227
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo153",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H156",
+   "x": -0.8118813643,
+   "y": -0.5838224476
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo154",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H157",
+   "x": -0.7973667586,
+   "y": -0.6034950309
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo155",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H158",
+   "x": -0.7823755792,
+   "y": -0.6228069148
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo156",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H159",
+   "x": -0.7669167862,
+   "y": -0.6417465567
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo157",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H160",
+   "x": -0.7509996191,
+   "y": -0.6603026368
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo158",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H161",
+   "x": -0.7346335913,
+   "y": -0.6784640643
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo159",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H162",
+   "x": -0.7178284845,
+   "y": -0.6962199845
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo160",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H163",
+   "x": -0.7005943429,
+   "y": -0.7135597849
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo161",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H164",
+   "x": -0.6829414671,
+   "y": -0.7304731019
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo162",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H165",
+   "x": -0.6648804078,
+   "y": -0.7469498265
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo163",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H166",
+   "x": -0.6464219599,
+   "y": -0.762980111
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo164",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H167",
+   "x": -0.6275771558,
+   "y": -0.7785543742
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo165",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H168",
+   "x": -0.6083572587,
+   "y": -0.7936633076
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo166",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H169",
+   "x": -0.5887737559,
+   "y": -0.8082978809
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo167",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H170",
+   "x": -0.5688383523,
+   "y": -0.8224493473
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo168",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H171",
+   "x": -0.548562963,
+   "y": -0.8361092486
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo169",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H172",
+   "x": -0.5279597062,
+   "y": -0.8492694205
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo170",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H173",
+   "x": -0.5070408961,
+   "y": -0.8619219974
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo171",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H174",
+   "x": -0.4858190357,
+   "y": -0.8740594171
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo172",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H175",
+   "x": -0.4643068088,
+   "y": -0.8856744251
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo173",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H176",
+   "x": -0.4425170731,
+   "y": -0.8967600794
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo174",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H177",
+   "x": -0.4204628518,
+   "y": -0.9073097543
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo175",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H178",
+   "x": -0.3981573264,
+   "y": -0.9173171444
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo176",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H179",
+   "x": -0.3756138287,
+   "y": -0.9267762684
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo177",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H180",
+   "x": -0.3528458325,
+   "y": -0.9356814728
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo178",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H181",
+   "x": -0.3298669459,
+   "y": -0.944027435
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo179",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H182",
+   "x": -0.3066909029,
+   "y": -0.9518091668
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo180",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H183",
+   "x": -0.2833315557,
+   "y": -0.9590220172
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo181",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H184",
+   "x": -0.2598028656,
+   "y": -0.9656616752
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo182",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H185",
+   "x": -0.2361188954,
+   "y": -0.9717241724
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo183",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H186",
+   "x": -0.2122938006,
+   "y": -0.9772058853
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo184",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H187",
+   "x": -0.1883418212,
+   "y": -0.9821035375
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo185",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H188",
+   "x": -0.1642772728,
+   "y": -0.9864142019
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo186",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H189",
+   "x": -0.1401145384,
+   "y": -0.9901353019
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo187",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H190",
+   "x": -0.1158680598,
+   "y": -0.9932646136
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo188",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H191",
+   "x": -0.09155232871,
+   "y": -0.9958002667
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo189",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H192",
+   "x": -0.06718187819,
+   "y": -0.9977407455
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo190",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H193",
+   "x": -0.04277127412,
+   "y": -0.9990848903
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo191",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H194",
+   "x": -0.01833510633,
+   "y": -0.9998318978
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo192",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H195",
+   "x": 0.00611202006,
+   "y": -0.9999813214
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo193",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H196",
+   "x": 0.0305554934,
+   "y": -0.9995330719
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo194",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H197",
+   "x": 0.05498070419,
+   "y": -0.9984874171
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo195",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H198",
+   "x": 0.07937305389,
+   "y": -0.9968449821
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo196",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H199",
+   "x": 0.1037179635,
+   "y": -0.9946067484
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo197",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H200",
+   "x": 0.1280008826,
+   "y": -0.9917740539
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo198",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H201",
+   "x": 0.1522072976,
+   "y": -0.9883485916
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo199",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H202",
+   "x": 0.1763227406,
+   "y": -0.9843324089
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo200",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H203",
+   "x": 0.2003327983,
+   "y": -0.9797279061
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo201",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H204",
+   "x": 0.2242231202,
+   "y": -0.9745378353
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo202",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H205",
+   "x": 0.2479794275,
+   "y": -0.9687652985
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo203",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H206",
+   "x": 0.2715875213,
+   "y": -0.9624137459
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo204",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H207",
+   "x": 0.2950332916,
+   "y": -0.9554869737
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo205",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H208",
+   "x": 0.3183027251,
+   "y": -0.9479891219
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo206",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H209",
+   "x": 0.341381914,
+   "y": -0.9399246719
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo207",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H210",
+   "x": 0.3642570644,
+   "y": -0.9312984436
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo208",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H211",
+   "x": 0.386914504,
+   "y": -0.9221155929
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo209",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H212",
+   "x": 0.4093406908,
+   "y": -0.9123816081
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo210",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H213",
+   "x": 0.4315222212,
+   "y": -0.9021023072
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo211",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H214",
+   "x": 0.4534458375,
+   "y": -0.8912838339
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo212",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H215",
+   "x": 0.4750984363,
+   "y": -0.8799326542
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo213",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H216",
+   "x": 0.4964670762,
+   "y": -0.8680555525
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo214",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H217",
+   "x": 0.5175389856,
+   "y": -0.8556596277
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo215",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H218",
+   "x": 0.53830157,
+   "y": -0.8427522885
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo216",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H219",
+   "x": 0.55874242,
+   "y": -0.8293412495
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo217",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H220",
+   "x": 0.5788493184,
+   "y": -0.8154345262
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo218",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H221",
+   "x": 0.5986102477,
+   "y": -0.8010404305
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo219",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H222",
+   "x": 0.618013397,
+   "y": -0.7861675655
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo220",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H223",
+   "x": 0.6370471694,
+   "y": -0.7708248205
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo221",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H224",
+   "x": 0.6557001887,
+   "y": -0.7550213656
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo222",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H225",
+   "x": 0.6739613063,
+   "y": -0.7387666463
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo223",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H226",
+   "x": 0.6918196078,
+   "y": -0.7220703777
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo224",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H227",
+   "x": 0.7092644195,
+   "y": -0.7049425389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo225",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H228",
+   "x": 0.726285315,
+   "y": -0.6873933671
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo226",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H229",
+   "x": 0.7428721212,
+   "y": -0.6694333511
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo227",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H230",
+   "x": 0.7590149244,
+   "y": -0.6510732252
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo228",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H231",
+   "x": 0.7747040763,
+   "y": -0.632323963
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo229",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H232",
+   "x": 0.7899301996,
+   "y": -0.6131967708
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo230",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H233",
+   "x": 0.8046841941,
+   "y": -0.5937030805
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo231",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H234",
+   "x": 0.8189572415,
+   "y": -0.5738545431
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo232",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H235",
+   "x": 0.8327408109,
+   "y": -0.5536630219
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo233",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H236",
+   "x": 0.8460266643,
+   "y": -0.533140585
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo234",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H237",
+   "x": 0.8588068608,
+   "y": -0.5122994983
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo235",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H238",
+   "x": 0.8710737618,
+   "y": -0.4911522182
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo236",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H239",
+   "x": 0.8828200358,
+   "y": -0.4697113841
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo237",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H240",
+   "x": 0.8940386621,
+   "y": -0.447989811
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo238",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H241",
+   "x": 0.9047229354,
+   "y": -0.4260004813
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo239",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H242",
+   "x": 0.9148664701,
+   "y": -0.4037565379
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo240",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H243",
+   "x": 0.9244632034,
+   "y": -0.3812712754
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo241",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H244",
+   "x": 0.9335073996,
+   "y": -0.3585581332
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo242",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H245",
+   "x": 0.9419936531,
+   "y": -0.3356306863
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo243",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H246",
+   "x": 0.9499168917,
+   "y": -0.3125026383
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo244",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H247",
+   "x": 0.9572723798,
+   "y": -0.2891878123
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo245",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H248",
+   "x": 0.9640557213,
+   "y": -0.2657001433
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo246",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H249",
+   "x": 0.9702628618,
+   "y": -0.2420536695
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo247",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H250",
+   "x": 0.9758900915,
+   "y": -0.218262524
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo248",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H251",
+   "x": 0.9809340469,
+   "y": -0.1943409265
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo249",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H252",
+   "x": 0.9853917134,
+   "y": -0.1703031744
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo250",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H253",
+   "x": 0.9892604267,
+   "y": -0.1461636348
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo251",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H254",
+   "x": 0.9925378746,
+   "y": -0.1219367354
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo252",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H255",
+   "x": 0.9952220982,
+   "y": -0.0976369564
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo253",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H256",
+   "x": 0.9973114931,
+   "y": -0.0732788213
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo254",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H257",
+   "x": 0.9988048106,
+   "y": -0.04887688861
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "oo255",
+   "r": 0.02444758304
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "H258",
+   "x": 0.9997011582,
+   "y": -0.02444574296
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd1"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd2"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd3"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd4"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd5"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd6"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd7"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd8"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd9"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd10"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd11"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd12"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd13"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd14"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd15"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd16"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd17"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd18"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd19"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd20"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd21"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd22"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd23"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd24"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd25"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd26"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd27"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd28"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd29"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd30"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd31"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd32"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd33"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd34"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd35"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd36"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd37"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd38"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd39"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd40"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd41"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd42"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd43"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd44"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd45"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd46"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd47"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd48"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd49"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd50"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd51"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd52"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd53"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd54"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd55"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd56"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd57"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd58"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd59"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd60"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd61"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd62"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd63"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd64"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd65"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd66"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd67"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd68"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd69"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd70"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd71"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd72"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd73"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd74"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd75"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd76"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd77"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd78"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd79"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd80"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd81"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd82"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd83"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd84"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd85"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd86"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd87"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd88"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd89"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd90"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd91"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd92"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd93"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd94"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd95"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd96"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd97"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd98"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd99"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd100"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd101"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd102"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd103"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd104"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd105"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd106"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd107"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd108"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd109"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd110"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd111"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd112"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd113"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd114"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd115"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd116"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd117"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd118"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd119"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd120"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd121"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd122"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd123"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd124"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd125"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd126"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd127"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd128"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd129"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd130"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd131"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd132"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd133"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd134"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd135"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd136"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd137"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd138"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd139"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd140"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd141"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd142"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd143"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd144"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd145"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd146"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd147"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd148"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd149"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd150"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd151"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd152"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd153"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd154"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd155"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd156"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd157"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd158"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd159"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd160"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd161"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd162"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd163"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd164"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd165"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd166"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd167"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd168"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd169"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd170"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd171"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd172"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd173"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd174"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd175"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd176"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd177"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd178"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd179"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd180"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd181"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd182"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd183"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd184"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd185"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd186"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd187"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd188"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd189"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd190"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd191"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd192"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd193"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd194"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd195"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd196"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd197"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd198"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd199"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd200"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd201"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd202"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd203"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd204"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd205"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd206"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd207"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd208"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd209"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd210"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd211"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd212"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd213"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd214"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd215"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd216"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd217"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd218"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd219"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd220"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd221"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd222"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd223"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd224"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd225"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd226"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd227"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd228"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd229"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd230"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd231"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd232"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd233"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd234"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd235"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd236"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd237"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd238"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd239"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd240"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd241"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd242"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd243"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd244"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd245"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd246"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd247"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd248"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd249"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd250"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd251"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd252"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd253"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd254"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd255"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd256"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "sd257"
+  }
+ ]
+}

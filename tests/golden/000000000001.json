@@ -1,0 +1,277 @@
+{
+ "title": "新手教程",
+ "count": 52,
+ "kinds": {
+  "text": 32,
+  "function:y": 3,
+  "variable": 2,
+  "function:x": 1,
+  "custom_function_definition": 1,
+  "function:implicit": 1,
+  "function:parametric": 1,
+  "point_list": 1,
+  "geometry:point": 3,
+  "geometry:line": 1,
+  "geometry:circle": 1,
+  "geometry:perpendicularline": 1,
+  "geometry:intersect": 2,
+  "geometry:polygon": 1,
+  "geometry:isperpendicular": 1
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "text",
+   "id": "text1"
+  },
+  {
+   "kind": "text",
+   "id": "text2"
+  },
+  {
+   "kind": "function:y",
+   "id": "func1",
+   "samples": [
+    -0.9635581854,
+    0.6442176872,
+    0.8632093666
+   ]
+  },
+  {
+   "kind": "text",
+   "id": "text3"
+  },
+  {
+   "kind": "variable",
+   "id": "a",
+   "value": 2
+  },
+  {
+   "kind": "function:y",
+   "id": "func2",
+   "samples": [
+    -0.5155013718,
+    0.98544973,
+    -0.8715757724
+   ]
+  },
+  {
+   "kind": "text",
+   "id": "text4"
+  },
+  {
+   "kind": "text",
+   "id": "text5"
+  },
+  {
+   "kind": "text",
+   "id": "text6"
+  },
+  {
+   "kind": "text",
+   "id": "text7"
+  },
+  {
+   "kind": "function:x",
+   "id": "func3",
+   "samples": [
+    "NaN",
+    0.7648421873,
+    -0.5048461046
+   ]
+  },
+  {
+   "kind": "text",
+   "id": "text8"
+  },
+  {
+   "kind": "text",
+   "id": "text9"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "f1"
+  },
+  {
+   "kind": "text",
+   "id": "text10"
+  },
+  {
+   "kind": "variable",
+   "id": "value1",
+   "value": 6
+  },
+  {
+   "kind": "text",
+   "id": "text11"
+  },
+  {
+   "kind": "function:implicit",
+   "id": "eq1",
+   "samples": [
+    -0.9241666667,
+    -0.5341666667
+   ]
+  },
+  {
+   "kind": "text",
+   "id": "text12"
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para1",
+   "samples": [
+    0.4387912809,
+    0.2397127693
+   ]
+  },
+  {
+   "kind": "text",
+   "id": "text13"
+  },
+  {
+   "kind": "text",
+   "id": "text14"
+  },
+  {
+   "kind": "point_list",
+   "id": "array1"
+  },
+  {
+   "kind": "text",
+   "id": "text15"
+  },
+  {
+   "kind": "text",
+   "id": "text16"
+  },
+  {
+   "kind": "text",
+   "id": "text17"
+  },
+  {
+   "kind": "text",
+   "id": "text18"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "B",
+   "x": 1.0117885,
+   "y": 2.0012024
+  },
+  {
+   "kind": "text",
+   "id": "text19"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "C",
+   "x": 6,
+   "y": 4
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l1"
+  },
+  {
+   "kind": "text",
+   "id": "text20"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "D",
+   "x": 8.55456836,
+   "y": 5.023626426
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "c1",
+   "r": 8.125796885
+  },
+  {
+   "kind": "text",
+   "id": "text21"
+  },
+  {
+   "kind": "text",
+   "id": "text22"
+  },
+  {
+   "kind": "text",
+   "id": "text23"
+  },
+  {
+   "kind": "geometry:perpendicularline",
+   "id": "p1"
+  },
+  {
+   "kind": "text",
+   "id": "text24"
+  },
+  {
+   "kind": "text",
+   "id": "text25"
+  },
+  {
+   "kind": "text",
+   "id": "text26"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "E",
+   "x": 3.732875137,
+   "y": 9.657850657
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F",
+   "x": 8.267124863,
+   "y": -1.657850657
+  },
+  {
+   "kind": "text",
+   "id": "text27"
+  },
+  {
+   "kind": "text",
+   "id": "text28"
+  },
+  {
+   "kind": "text",
+   "id": "text29"
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "p2"
+  },
+  {
+   "kind": "text",
+   "id": "text30"
+  },
+  {
+   "kind": "geometry:isperpendicular",
+   "id": "isperpendicular1",
+   "value": 1
+  },
+  {
+   "kind": "text",
+   "id": "text31"
+  },
+  {
+   "kind": "text",
+   "id": "text32"
+  },
+  {
+   "kind": "function:y",
+   "id": "func4",
+   "samples": [
+    7.345568469,
+    2.098414469,
+    3.185406669
+   ]
+  }
+ ]
+}

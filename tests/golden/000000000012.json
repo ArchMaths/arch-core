@@ -1,0 +1,153 @@
+{
+ "title": "解析几何",
+ "count": 26,
+ "kinds": {
+  "geometry:point": 11,
+  "geometry:line": 2,
+  "geometry:perpendicularline": 3,
+  "geometry:ellipse": 1,
+  "variable": 1,
+  "geometry:reflect": 3,
+  "geometry:polygon": 3,
+  "geometry:segment": 2
+ },
+ "is3D": false,
+ "annotations": 33,
+ "script": 14996,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "geometry:point",
+   "id": "O",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:point",
+   "id": "A",
+   "x": -2,
+   "y": 0
+  },
+  {
+   "kind": "geometry:line",
+   "id": "Xaxis"
+  },
+  {
+   "kind": "geometry:perpendicularline",
+   "id": "Yaxis"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "F1",
+   "x": -1,
+   "y": 0
+  },
+  {
+   "kind": "geometry:point",
+   "id": "F2",
+   "x": 1,
+   "y": 0
+  },
+  {
+   "kind": "geometry:ellipse",
+   "id": "E"
+  },
+  {
+   "kind": "variable",
+   "id": "m",
+   "value": 3.099
+  },
+  {
+   "kind": "geometry:point",
+   "id": "P",
+   "x": 1.51236465,
+   "y": 1.133386463
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "M",
+   "x": 0,
+   "y": 0.645369474
+  },
+  {
+   "kind": "geometry:perpendicularline",
+   "id": "l2"
+  },
+  {
+   "kind": "geometry:reflect",
+   "id": "B",
+   "x": 2,
+   "y": 0
+  },
+  {
+   "kind": "geometry:perpendicularline",
+   "id": "lx2"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "N",
+   "x": 2,
+   "y": -0.3777954877
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "PMN"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "H1",
+   "x": 0,
+   "y": 1.133386463
+  },
+  {
+   "kind": "geometry:point",
+   "id": "H2",
+   "x": 2,
+   "y": 1.133386463
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "PMH1"
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "PNH2"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "MH1"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "PH2"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "P1",
+   "x": 1.512,
+   "y": 1.134
+  },
+  {
+   "kind": "geometry:point",
+   "id": "P2",
+   "x": -1.51,
+   "y": 1.135
+  },
+  {
+   "kind": "geometry:reflect",
+   "id": "P3",
+   "x": 1.512,
+   "y": -1.134
+  },
+  {
+   "kind": "geometry:reflect",
+   "id": "P4",
+   "x": -1.51,
+   "y": -1.135
+  }
+ ]
+}

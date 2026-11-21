@@ -1,0 +1,215 @@
+{
+ "title": "复变函数",
+ "count": 29,
+ "kinds": {
+  "custom_function_definition": 5,
+  "variable": 4,
+  "function:parametric": 20
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "custom_function_definition",
+   "id": "func"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "re"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "im"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "re2"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "im2"
+  },
+  {
+   "kind": "variable",
+   "id": "r",
+   "value": 8
+  },
+  {
+   "kind": "variable",
+   "id": "m",
+   "value": 0
+  },
+  {
+   "kind": "variable",
+   "id": "n",
+   "value": 0
+  },
+  {
+   "kind": "variable",
+   "id": "k",
+   "value": 5
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para1",
+   "samples": [
+    1,
+    0
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para2",
+   "samples": [
+    2,
+    0
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para3",
+   "samples": [
+    3,
+    0
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para4",
+   "samples": [
+    4,
+    0
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para5",
+   "samples": [
+    5,
+    0
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para6",
+   "samples": [
+    -1,
+    0
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para7",
+   "samples": [
+    -2,
+    0
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para8",
+   "samples": [
+    -3,
+    0
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para9",
+   "samples": [
+    -4,
+    0
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para10",
+   "samples": [
+    -5,
+    0
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para11",
+   "samples": [
+    0,
+    1
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para12",
+   "samples": [
+    0,
+    2
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para13",
+   "samples": [
+    0,
+    3
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para14",
+   "samples": [
+    0,
+    4
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para15",
+   "samples": [
+    0,
+    5
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para16",
+   "samples": [
+    0,
+    -1
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para17",
+   "samples": [
+    0,
+    -2
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para18",
+   "samples": [
+    0,
+    -3
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para19",
+   "samples": [
+    0,
+    -4
+   ]
+  },
+  {
+   "kind": "function:parametric",
+   "id": "para20",
+   "samples": [
+    0,
+    -5
+   ]
+  }
+ ]
+}

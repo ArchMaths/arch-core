@@ -1,0 +1,703 @@
+{
+  "entries": [
+    {
+      "type": "variable",
+      "expr": "r=1",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "showOnPlot": false,
+      "cardX": 2,
+      "cardY": 2,
+      "cardW": 220,
+      "cardH": 110,
+      "value": 1,
+      "min": -2,
+      "max": 2,
+      "step": 0.02,
+      "playState": 0,
+      "playDirection": 1,
+      "playMode": 0,
+      "name": "r",
+      "key": "r",
+      "isEditableIndependent": true,
+      "dependencies": []
+    },
+    {
+      "type": "variable",
+      "expr": "d=3.4",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "showOnPlot": false,
+      "cardX": 2,
+      "cardY": 2,
+      "cardW": 220,
+      "cardH": 110,
+      "value": 3.4,
+      "min": -6.8,
+      "max": 6.8,
+      "step": 0.02,
+      "playState": 0,
+      "playDirection": 1,
+      "playMode": 0,
+      "name": "d",
+      "key": "d",
+      "isEditableIndependent": true,
+      "dependencies": []
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(t)*r,y=sin(t)*r,z=t*d/2/pi",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 5,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(t)*r",
+      "processedExprY": "Math.sin(t)*r",
+      "processedExprZ": "t*d/2/3.141592653589793",
+      "exprX_raw": "cos(t)*r",
+      "exprY_raw": "sin(t)*r",
+      "exprZ_raw": "t*d/2/pi",
+      "dependencies": [
+        "r",
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=-cos(t)*r,y=-sin(t)*r,z=t*d/2/pi",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 5,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "-Math.cos(t)*r",
+      "processedExprY": "-Math.sin(t)*r",
+      "processedExprZ": "t*d/2/3.141592653589793",
+      "exprX_raw": "-cos(t)*r",
+      "exprY_raw": "-sin(t)*r",
+      "exprZ_raw": "t*d/2/pi",
+      "dependencies": [
+        "r",
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(0*0.2*pi)*t/2/pi,y=sin(0*0.2*pi)*t/2/pi,z=0*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 8,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(0*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(0*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "0*0.1*d",
+      "exprX_raw": "cos(0*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(0*0.2*pi)*t/2/pi",
+      "exprZ_raw": "0*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(1*0.2*pi)*t/2/pi,y=sin(1*0.2*pi)*t/2/pi,z=1*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 35,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(1*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(1*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "1*0.1*d",
+      "exprX_raw": "cos(1*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(1*0.2*pi)*t/2/pi",
+      "exprZ_raw": "1*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(2*0.2*pi)*t/2/pi,y=sin(2*0.2*pi)*t/2/pi,z=2*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 60,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(2*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(2*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "2*0.1*d",
+      "exprX_raw": "cos(2*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(2*0.2*pi)*t/2/pi",
+      "exprZ_raw": "2*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(3*0.2*pi)*t/2/pi,y=sin(3*0.2*pi)*t/2/pi,z=3*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 78,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(3*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(3*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "3*0.1*d",
+      "exprX_raw": "cos(3*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(3*0.2*pi)*t/2/pi",
+      "exprZ_raw": "3*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(4*0.2*pi)*t/2/pi,y=sin(4*0.2*pi)*t/2/pi,z=4*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 10,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(4*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(4*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "4*0.1*d",
+      "exprX_raw": "cos(4*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(4*0.2*pi)*t/2/pi",
+      "exprZ_raw": "4*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(5*0.2*pi)*t/2/pi,y=sin(5*0.2*pi)*t/2/pi,z=5*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 80,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(5*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(5*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "5*0.1*d",
+      "exprX_raw": "cos(5*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(5*0.2*pi)*t/2/pi",
+      "exprZ_raw": "5*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(6*0.2*pi)*t/2/pi,y=sin(6*0.2*pi)*t/2/pi,z=6*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 39,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(6*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(6*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "6*0.1*d",
+      "exprX_raw": "cos(6*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(6*0.2*pi)*t/2/pi",
+      "exprZ_raw": "6*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(7*0.2*pi)*t/2/pi,y=sin(7*0.2*pi)*t/2/pi,z=7*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 63,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(7*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(7*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "7*0.1*d",
+      "exprX_raw": "cos(7*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(7*0.2*pi)*t/2/pi",
+      "exprZ_raw": "7*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(8*0.2*pi)*t/2/pi,y=sin(8*0.2*pi)*t/2/pi,z=8*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 11,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(8*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(8*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "8*0.1*d",
+      "exprX_raw": "cos(8*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(8*0.2*pi)*t/2/pi",
+      "exprZ_raw": "8*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(9*0.2*pi)*t/2/pi,y=sin(9*0.2*pi)*t/2/pi,z=9*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 83,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(9*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(9*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "9*0.1*d",
+      "exprX_raw": "cos(9*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(9*0.2*pi)*t/2/pi",
+      "exprZ_raw": "9*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(-1*0.2*pi)*t/2/pi,y=sin(-1*0.2*pi)*t/2/pi,z=-1*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 10,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(-1*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(-1*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "-1*0.1*d",
+      "exprX_raw": "cos(-1*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(-1*0.2*pi)*t/2/pi",
+      "exprZ_raw": "-1*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(-2*0.2*pi)*t/2/pi,y=sin(-2*0.2*pi)*t/2/pi,z=-2*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 65,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(-2*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(-2*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "-2*0.1*d",
+      "exprX_raw": "cos(-2*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(-2*0.2*pi)*t/2/pi",
+      "exprZ_raw": "-2*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(-3*0.2*pi)*t/2/pi,y=sin(-3*0.2*pi)*t/2/pi,z=-3*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 42,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(-3*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(-3*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "-3*0.1*d",
+      "exprX_raw": "cos(-3*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(-3*0.2*pi)*t/2/pi",
+      "exprZ_raw": "-3*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(-4*0.2*pi)*t/2/pi,y=sin(-4*0.2*pi)*t/2/pi,z=-4*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 81,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(-4*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(-4*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "-4*0.1*d",
+      "exprX_raw": "cos(-4*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(-4*0.2*pi)*t/2/pi",
+      "exprZ_raw": "-4*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(-5*0.2*pi)*t/2/pi,y=sin(-5*0.2*pi)*t/2/pi,z=-5*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 11,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(-5*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(-5*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "-5*0.1*d",
+      "exprX_raw": "cos(-5*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(-5*0.2*pi)*t/2/pi",
+      "exprZ_raw": "-5*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(-6*0.2*pi)*t/2/pi,y=sin(-6*0.2*pi)*t/2/pi,z=-6*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 37,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(-6*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(-6*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "-6*0.1*d",
+      "exprX_raw": "cos(-6*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(-6*0.2*pi)*t/2/pi",
+      "exprZ_raw": "-6*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(-7*0.2*pi)*t/2/pi,y=sin(-7*0.2*pi)*t/2/pi,z=-7*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 79,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(-7*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(-7*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "-7*0.1*d",
+      "exprX_raw": "cos(-7*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(-7*0.2*pi)*t/2/pi",
+      "exprZ_raw": "-7*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(-8*0.2*pi)*t/2/pi,y=sin(-8*0.2*pi)*t/2/pi,z=-8*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 69,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(-8*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(-8*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "-8*0.1*d",
+      "exprX_raw": "cos(-8*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(-8*0.2*pi)*t/2/pi",
+      "exprZ_raw": "-8*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(-9*0.2*pi)*t/2/pi,y=sin(-9*0.2*pi)*t/2/pi,z=-9*0.1d",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 82,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric3d",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "Math.cos(-9*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprY": "Math.sin(-9*0.2*3.141592653589793)*t/2/3.141592653589793",
+      "processedExprZ": "-9*0.1*d",
+      "exprX_raw": "cos(-9*0.2*pi)*t/2/pi",
+      "exprY_raw": "sin(-9*0.2*pi)*t/2/pi",
+      "exprZ_raw": "-9*0.1d",
+      "dependencies": [
+        "d"
+      ]
+    }
+  ],
+  "name": "双螺旋",
+  "version": 12114,
+  "calcJSCustomFunctions": {},
+  "calcJScalc3": [],
+  "customAdvancedFunctions": [],
+  "scale": 61.40865941417815,
+  "offsetX": 716.5994072637341,
+  "offsetY": 424.06530215887824,
+  "scale3D": 0.5312624543399691,
+  "offset3DX": 0,
+  "offset3DY": 0,
+  "is3DMode": true,
+  "camera3DRho": 40,
+  "camera3DTheta": 0.7853981633974483,
+  "camera3DPhi": 1.0471975511965976,
+  "explicitPrecisionStep": 2,
+  "implicitPrecisionStep": 5,
+  "highPerformancePlottingEnabled": false,
+  "performanceModeEnabled": true,
+  "lowPrecisionBufferEnabled": true,
+  "smoothPanningEnabled": false,
+  "stylusModeEnabled": false,
+  "zoomInertiaScale": 0.15,
+  "panInertiaScale": 0.12,
+  "tmin": -6.283185307179586,
+  "tmax": 6.283185307179586,
+  "blocks01": [],
+  "geometrySnapEnabled": true,
+  "showAxes": true,
+  "showAxisNumbers": true,
+  "gridStyle": "grid",
+  "showPointLabels": true,
+  "showHiddenMath": false,
+  "showHiddenGeo": false,
+  "geometryMeasurementDisplayEnabled": true,
+  "preferredColorValue": 0,
+  "originalExplicitPrecision": 2,
+  "originalImplicitPrecision": 5,
+  "autoBreakpointDetectionEnabled": true,
+  "annotations": [
+    {
+      "type": "text",
+      "content": "进入3D模式查看",
+      "x": -1.7684706,
+      "y": 1.4015174,
+      "width": 8,
+      "height": 3,
+      "fontSize": 0.5,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 0,
+        "a": 0
+      }
+    }
+  ],
+  "globalScript": "",
+  "showPlaybackControls": false,
+  "currentFrame": 0,
+  "totalFrames": 100,
+  "frameExpr": "",
+  "isVarLocked": false,
+  "playbackFPS": 10
+}

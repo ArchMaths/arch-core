@@ -1,0 +1,1165 @@
+{
+  "entries": [
+    {
+      "type": "text",
+      "expr": "//点击\"Arch图标\"，进入\"用户手册\"查看详细说明",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text1",
+      "content": "点击\"Arch图标\"，进入\"用户手册\"查看详细说明",
+      "color": {
+        "h": 100,
+        "s": 100,
+        "b": 100,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//让我们从画函数开始",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text2",
+      "content": "让我们从画函数开始",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "function",
+      "expr": "y=sin(x)",
+      "originalExprWithPoints": null,
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 76,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "Math.sin(x)",
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//然后，让我们对函数进行伸缩变换",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text3",
+      "content": "然后，让我们对函数进行伸缩变换",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "variable",
+      "expr": "a=2",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "showOnPlot": false,
+      "cardX": 2,
+      "cardY": 2,
+      "cardW": 220,
+      "cardH": 110,
+      "value": 2,
+      "min": -2,
+      "max": 2,
+      "step": 0.05,
+      "playState": 0,
+      "playDirection": 1,
+      "playMode": 0,
+      "name": "a",
+      "key": "a",
+      "isEditableIndependent": true,
+      "dependencies": []
+    },
+    {
+      "type": "function",
+      "expr": "y=sin(ax)",
+      "originalExprWithPoints": null,
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 0,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "Math.sin(a*x)",
+      "dependencies": [
+        "a"
+      ]
+    },
+    {
+      "type": "text",
+      "expr": "//点击变量a的卡片，可以调整变量参数",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text4",
+      "content": "点击变量a的卡片，可以调整变量参数",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//点击卡片上的▶键，观赏变量动画",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text5",
+      "content": "点击卡片上的▶键，观赏变量动画",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//不仅可以沿着x方向画，还可以沿着y方向画图",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text6",
+      "content": "不仅可以沿着x方向画，还可以沿着y方向画图",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//让我们在y轴正半轴区域画一个余弦函数",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text7",
+      "content": "让我们在y轴正半轴区域画一个余弦函数",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "function",
+      "expr": "x=cos(y)+llim(y,0)",
+      "originalExprWithPoints": null,
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 24,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "x",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "Math.cos(y)+__advanced__.llim(y,0)",
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//这里的llim限制y的取值范围，详见《用户手册》p26",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text8",
+      "content": "这里的llim限制y的取值范围，详见《用户手册》p26",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//Arch支持定义函数，让我们定义一个二次函数",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text9",
+      "content": "Arch支持定义函数，让我们定义一个二次函数",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "custom_function_definition",
+      "expr": "f1(a,b,m)=(m-a)^2+b",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "f1",
+      "params": [
+        "a",
+        "b",
+        "m"
+      ],
+      "body": "(m-a)^2+b",
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//代入一组数值检验一下",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text10",
+      "content": "代入一组数值检验一下",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "variable",
+      "expr": "value1=f1(1,2,3)",
+      "originalExprWithPoints": null,
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "value": 6,
+      "processedExpr": "(__advanced__.pow(((3)-(1)),2)+(2))",
+      "name": "value1",
+      "key": "value1",
+      "isEditableIndependent": false,
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//Arch可以绘制同时包含x和y的方程和不等式，例如",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text11",
+      "content": "Arch可以绘制同时包含x和y的方程和不等式，例如",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "function",
+      "expr": "xx/4+yy/3<=1",
+      "originalExprWithPoints": null,
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 7,
+        "s": 100,
+        "b": 85,
+        "a": 50
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "implicit",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "sign": "<=",
+      "processedExpr": "(x*x/4+y*y/3)-(1)",
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//还可以绘制参数方程，让我绘制一段螺旋线（去设置把参数区间下界改为0)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text12",
+      "content": "还可以绘制参数方程，让我绘制一段螺旋线（去设置把参数区间下界改为0)",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "function",
+      "expr": "x=tcos(t),y=tsin(t)",
+      "originalExprWithPoints": null,
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 55,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "parametric",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExprX": "t*Math.cos(t)",
+      "processedExprY": "t*Math.sin(t)",
+      "exprX_raw": "tcos(t)",
+      "exprY_raw": "tsin(t)",
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//当然，Arch还有一类特殊的数学对象--点列",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text13",
+      "content": "当然，Arch还有一类特殊的数学对象--点列",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//点列前缀为/-/，用/表示断点。让我们试着画两个正方形",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text14",
+      "content": "点列前缀为/-/，用/表示断点。让我们试着画两个正方形",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "point_list",
+      "expr": "/-/(3,3)(4,3)(4,4)(3,4)(3,3)/(a,a)(a,a+1)(a+1,a+1)(a+1,a)(a,a)",
+      "originalExprWithPoints": null,
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 74,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "dependencies": [
+        "a"
+      ]
+    },
+    {
+      "type": "text",
+      "expr": "//此时，拉动变量a卡片上的滑动条，可以看到左下的正方形斜向平移",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text15",
+      "content": "此时，拉动变量a卡片上的滑动条，可以看到左下的正方形斜向平移",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//2D代数区大体功能如上，下面来试试几何功能",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text16",
+      "content": "2D代数区大体功能如上，下面来试试几何功能",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//首先，点击导航栏进入几何模式",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text17",
+      "content": "首先，点击导航栏进入几何模式",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//然后，点击\"点\"卡片，在绘图区点一下，随后再次点击\"点\"卡片，使其取消激活。（或者输入几何指令如下）",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text18",
+      "content": "然后，点击\"点\"卡片，在绘图区点一下，随后再次点击\"点\"卡片，使其取消激活。（或者输入几何指令如下）",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "point(B,1.0117885,2.0012024)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "B",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineDash": "solid",
+      "pointOnObject": false,
+      "x_expr": "1.0117885",
+      "y_expr": "2.0012024",
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//点击“直线”卡片，先点击一下点B，然后点击空白区域，最后再次点击\"直线\"卡片，我们就创建了一条直线",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text19",
+      "content": "点击“直线”卡片，先点击一下点B，然后点击空白区域，最后再次点击\"直线\"卡片，我们就创建了一条直线",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "point(C,6.0000000,4.0000000)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "C",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineDash": "solid",
+      "pointOnObject": false,
+      "x_expr": "6.0000000",
+      "y_expr": "4.0000000",
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "line(l1,B,C)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "line",
+      "name": "l1",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineDash": "solid",
+      "p1Name": "B",
+      "p2Name": "C",
+      "dependencies": [
+        "b",
+        "c"
+      ]
+    },
+    {
+      "type": "text",
+      "expr": "//点击\"圆心和半径\"卡片，点击一下点B，然后在直线BC上，C的右侧点击一下，最后再次点击\"圆心和半径\"卡片，我们创建了一个圆",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text20",
+      "content": "点击\"圆心和半径\"卡片，点击一下点B，然后在直线BC上，C的右侧点击一下，最后再次点击\"圆心和半径\"卡片，我们创建了一个圆",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "point(D,l1,1.5121211)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "point",
+      "name": "D",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineDash": "solid",
+      "pointOnObject": true,
+      "onObjectName": "l1",
+      "parameter_expr": "1.5121211",
+      "dependencies": [
+        "l1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "circle(c1,B,D)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "circle",
+      "name": "c1",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineDash": "solid",
+      "centerName": "B",
+      "pointOnCircleName": "D",
+      "dependencies": [
+        "b",
+        "d"
+      ]
+    },
+    {
+      "type": "text",
+      "expr": "//拖动点D，你会发现D只能在直线BC上移动。这便是通过\"几何智能吸附\"功能创建了线上点。",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text21",
+      "content": "拖动点D，你会发现D只能在直线BC上移动。这便是通过\"几何智能吸附\"功能创建了线上点。",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//然后让我们创建一条垂线",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text22",
+      "content": "然后让我们创建一条垂线",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//点击“垂线”卡片，点击直线BC，然后点击点C，再次点击“垂线卡片”。我们得到了直线BC过点C的垂线",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text23",
+      "content": "点击“垂线”卡片，点击直线BC，然后点击点C，再次点击“垂线卡片”。我们得到了直线BC过点C的垂线",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "perpendicularline(p1,l1,C)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "perpendicularline",
+      "name": "p1",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineDash": "solid",
+      "lineName": "l1",
+      "pointName": "C",
+      "dependencies": [
+        "l1",
+        "c"
+      ]
+    },
+    {
+      "type": "text",
+      "expr": "//接着，让我们尝试创建垂线和圆的交点",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text24",
+      "content": "接着，让我们尝试创建垂线和圆的交点",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//点击\"交点\"卡片，依次点击直线BC和圆BD，然后再次点击该卡片。我们创建了两个交点",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text25",
+      "content": "点击\"交点\"卡片，依次点击直线BC和圆BD，然后再次点击该卡片。我们创建了两个交点",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//注意，为了区分圆和圆，线和圆锥曲线的两个交点，几何指令中具有1和-1的参数",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text26",
+      "content": "注意，为了区分圆和圆，线和圆锥曲线的两个交点，几何指令中具有1和-1的参数",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "intersect(E,p1,c1,1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intersect",
+      "name": "E",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineDash": "solid",
+      "obj1Name": "p1",
+      "obj2Name": "c1",
+      "sign": 1,
+      "dependencies": [
+        "p1",
+        "c1"
+      ]
+    },
+    {
+      "type": "geometry",
+      "expr": "intersect(F,p1,c1,-1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "intersect",
+      "name": "F",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineDash": "solid",
+      "obj1Name": "p1",
+      "obj2Name": "c1",
+      "sign": -1,
+      "dependencies": [
+        "p1",
+        "c1"
+      ]
+    },
+    {
+      "type": "text",
+      "expr": "//把D拖动到C的左侧，会发现E和F消失了。这是因为Arch可以实时判断几何对象是否有意义",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text27",
+      "content": "把D拖动到C的左侧，会发现E和F消失了。这是因为Arch可以实时判断几何对象是否有意义",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//然后，让我们通过绘制多边形，标记一下三角形BCE",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text28",
+      "content": "然后，让我们通过绘制多边形，标记一下三角形BCE",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//点击\"多边形\"，依次点击BCEB，然后再次点击\"多边形\"",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text29",
+      "content": "点击\"多边形\"，依次点击BCEB，然后再次点击\"多边形\"",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "polygon(p2,3,B,C,E)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "polygon",
+      "name": "p2",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineDash": "solid",
+      "pointNames": [
+        "B",
+        "C",
+        "E"
+      ],
+      "dependencies": [
+        "b",
+        "c",
+        "e"
+      ]
+    },
+    {
+      "type": "text",
+      "expr": "//点击\"垂直\"，随后点击直线BC和EF，再次点击\"垂直\"，将显示BC⊥EF",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text30",
+      "content": "点击\"垂直\"，随后点击直线BC和EF，再次点击\"垂直\"，将显示BC⊥EF",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "geometry",
+      "expr": "isperpendicular(isperpendicular1,l1,p1)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "geometryType": "isperpendicular",
+      "name": "isperpendicular1",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 0,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "lineDash": "solid",
+      "l1Name": "l1",
+      "l2Name": "p1",
+      "dependencies": [
+        "l1",
+        "p1"
+      ]
+    },
+    {
+      "type": "text",
+      "expr": "//当然，几何和代数功能从不分家。代数式中可以直接调用几何点坐标",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text31",
+      "content": "当然，几何和代数功能从不分家。代数式中可以直接调用几何点坐标",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      },
+      "dependencies": []
+    },
+    {
+      "type": "text",
+      "expr": "//输入f1([B,x],[B,y],x)，然后移动点B试试",
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "name": "text32",
+      "content": "输入f1([B,x],[B,y],x)，然后移动点B试试",
+      "color": {
+        "h": 0,
+        "s": 0,
+        "b": 60,
+        "a": 0
+      }
+    },
+    {
+      "type": "function",
+      "expr": "y=f1([B,x],[B,y],x)",
+      "originalExprWithPoints": "f1([B,x],[B,y],x)",
+      "hasLargeOps": false,
+      "integralNumSteps": 100,
+      "displayFrame": 0,
+      "color": {
+        "h": 98,
+        "s": 100,
+        "b": 85,
+        "a": 0
+      },
+      "thickness": 3,
+      "visible": true,
+      "plotType": "y",
+      "extendTo3D": false,
+      "sliceAxis": "none",
+      "sliceVal": 0,
+      "processedExpr": "(__advanced__.pow(((x)-((1.0117885))),2)+((2.0012024)))",
+      "dependencies": [
+        "b"
+      ]
+    }
+  ],
+  "name": "Arch Graph 1",
+  "version": 12000,
+  "calcJSCustomFunctions": {
+    "f1": {
+      "params": [
+        "a",
+        "b",
+        "m"
+      ],
+      "bodyTokens": [
+        "(",
+        "m",
+        "-",
+        "a",
+        ")",
+        "^",
+        "2",
+        "+",
+        "b"
+      ],
+      "rawBodyString": "(m-a)^2+b"
+    }
+  },
+  "calcJScalc3": [
+    "f1"
+  ],
+  "customAdvancedFunctions": [],
+  "scale": 41.24107162001313,
+  "offsetX": 648.7681929638073,
+  "offsetY": 515.3420404818017,
+  "explicitPrecisionStep": 2,
+  "implicitPrecisionStep": 5,
+  "highPerformancePlottingEnabled": false,
+  "smoothPanningEnabled": true,
+  "stylusModeEnabled": false,
+  "zoomInertiaScale": 0.15000000000000002,
+  "panInertiaScale": 0.15000000000000002,
+  "tmin": 0,
+  "tmax": 6.283185307179586,
+  "blocks01": [
+    "-15.000000,-3.000000",
+    "-15.000000,-1.000000",
+    "-15.000000,1.000000",
+    "-15.000000,3.000000",
+    "-15.000000,5.000000",
+    "-15.000000,7.000000",
+    "-15.000000,9.000000",
+    "-15.000000,11.000000",
+    "-15.000000,13.000000",
+    "-13.000000,-3.000000",
+    "-13.000000,-1.000000",
+    "-13.000000,1.000000",
+    "-13.000000,3.000000",
+    "-13.000000,5.000000",
+    "-13.000000,7.000000",
+    "-13.000000,9.000000",
+    "-13.000000,11.000000",
+    "-13.000000,13.000000",
+    "-11.000000,-3.000000",
+    "-11.000000,-1.000000",
+    "-11.000000,1.000000",
+    "-11.000000,3.000000",
+    "-11.000000,5.000000",
+    "-11.000000,7.000000",
+    "-11.000000,9.000000",
+    "-11.000000,11.000000",
+    "-11.000000,13.000000",
+    "-9.000000,-3.000000",
+    "-9.000000,-1.000000",
+    "-9.000000,1.000000",
+    "-9.000000,3.000000",
+    "-9.000000,5.000000",
+    "-9.000000,7.000000",
+    "-9.000000,9.000000",
+    "-9.000000,11.000000",
+    "-9.000000,13.000000",
+    "-7.000000,-3.000000",
+    "-7.000000,-1.000000",
+    "-7.000000,1.000000",
+    "-7.000000,3.000000",
+    "-7.000000,5.000000",
+    "-7.000000,7.000000",
+    "-7.000000,9.000000",
+    "-7.000000,11.000000",
+    "-7.000000,13.000000",
+    "-5.000000,-3.000000",
+    "-5.000000,-1.000000",
+    "-5.000000,1.000000",
+    "-5.000000,3.000000",
+    "-5.000000,5.000000",
+    "-5.000000,7.000000",
+    "-5.000000,9.000000",
+    "-5.000000,11.000000",
+    "-5.000000,13.000000",
+    "-3.000000,-3.000000",
+    "-3.000000,-1.000000",
+    "-3.000000,1.000000",
+    "-3.000000,3.000000",
+    "-3.000000,5.000000",
+    "-3.000000,7.000000",
+    "-3.000000,9.000000",
+    "-3.000000,11.000000",
+    "-3.000000,13.000000",
+    "-1.000000,-3.000000",
+    "-1.000000,-1.000000",
+    "-1.000000,1.000000",
+    "-1.000000,3.000000",
+    "-1.000000,5.000000",
+    "-1.000000,7.000000",
+    "-1.000000,9.000000",
+    "-1.000000,11.000000",
+    "-1.000000,13.000000",
+    "1.000000,-3.000000",
+    "1.000000,-1.000000",
+    "1.000000,1.000000",
+    "1.000000,3.000000",
+    "1.000000,5.000000",
+    "1.000000,7.000000",
+    "1.000000,9.000000",
+    "1.000000,11.000000",
+    "1.000000,13.000000",
+    "3.000000,-3.000000",
+    "3.000000,-1.000000",
+    "3.000000,1.000000",
+    "3.000000,3.000000",
+    "3.000000,5.000000",
+    "3.000000,7.000000",
+    "3.000000,9.000000",
+    "3.000000,11.000000",
+    "3.000000,13.000000",
+    "5.000000,-3.000000",
+    "5.000000,-1.000000",
+    "5.000000,1.000000",
+    "5.000000,3.000000",
+    "5.000000,5.000000",
+    "5.000000,7.000000",
+    "5.000000,9.000000",
+    "5.000000,11.000000",
+    "5.000000,13.000000",
+    "7.000000,-3.000000",
+    "7.000000,-1.000000",
+    "7.000000,1.000000",
+    "7.000000,3.000000",
+    "7.000000,5.000000",
+    "7.000000,7.000000",
+    "7.000000,9.000000",
+    "7.000000,11.000000",
+    "7.000000,13.000000",
+    "9.000000,-3.000000",
+    "9.000000,-1.000000",
+    "9.000000,1.000000",
+    "9.000000,3.000000",
+    "9.000000,5.000000",
+    "9.000000,7.000000",
+    "9.000000,9.000000",
+    "9.000000,11.000000",
+    "9.000000,13.000000",
+    "11.000000,-3.000000",
+    "11.000000,-1.000000",
+    "11.000000,1.000000",
+    "11.000000,3.000000",
+    "11.000000,5.000000",
+    "11.000000,7.000000",
+    "11.000000,9.000000",
+    "11.000000,11.000000",
+    "11.000000,13.000000",
+    "13.000000,-3.000000",
+    "13.000000,-1.000000",
+    "13.000000,1.000000",
+    "13.000000,3.000000",
+    "13.000000,5.000000",
+    "13.000000,7.000000",
+    "13.000000,9.000000",
+    "13.000000,11.000000",
+    "13.000000,13.000000",
+    "15.000000,-3.000000",
+    "15.000000,-1.000000",
+    "15.000000,1.000000",
+    "15.000000,3.000000",
+    "15.000000,5.000000",
+    "15.000000,7.000000",
+    "15.000000,9.000000",
+    "15.000000,11.000000",
+    "15.000000,13.000000"
+  ],
+  "geometrySnapEnabled": true,
+  "preferredColorValue": 0,
+  "originalExplicitPrecision": 2,
+  "originalImplicitPrecision": 5,
+  "autoBreakpointDetectionEnabled": true,
+  "annotations": [],
+  "globalScript": "",
+  "showPlaybackControls": false,
+  "currentFrame": 0,
+  "totalFrames": 100,
+  "frameExpr": "",
+  "isVarLocked": false,
+  "playbackFPS": 10
+}

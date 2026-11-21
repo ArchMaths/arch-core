@@ -1,0 +1,169 @@
+{
+ "title": "中考几综",
+ "count": 31,
+ "kinds": {
+  "geometry:point": 3,
+  "geometry:segment": 11,
+  "variable": 1,
+  "geometry:rotate": 2,
+  "geometry:perpendicularline": 1,
+  "geometry:ray": 1,
+  "geometry:intersect": 2,
+  "geometry:angle": 1,
+  "geometry:line": 1,
+  "geometry:parallelline": 1,
+  "geometry:length": 2,
+  "geometry:reflect": 1,
+  "geometry:polygon": 4
+ },
+ "is3D": false,
+ "annotations": 6,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "geometry:point",
+   "id": "A",
+   "x": 0,
+   "y": 2
+  },
+  {
+   "kind": "geometry:point",
+   "id": "C",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s1"
+  },
+  {
+   "kind": "variable",
+   "id": "alpha",
+   "value": 45
+  },
+  {
+   "kind": "geometry:rotate",
+   "id": "AB线上点",
+   "x": 1.414213562,
+   "y": 0.5857864376
+  },
+  {
+   "kind": "geometry:perpendicularline",
+   "id": "p1"
+  },
+  {
+   "kind": "geometry:ray",
+   "id": "r1"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "B",
+   "x": 2,
+   "y": 0
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s2"
+  },
+  {
+   "kind": "geometry:angle",
+   "id": "a1",
+   "value": 45
+  },
+  {
+   "kind": "geometry:point",
+   "id": "D",
+   "x": -5,
+   "y": 0
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s3"
+  },
+  {
+   "kind": "geometry:rotate",
+   "id": "E",
+   "x": 2,
+   "y": -3
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s4"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l1"
+  },
+  {
+   "kind": "geometry:parallelline",
+   "id": "p2"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F",
+   "x": -1,
+   "y": 0
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s5"
+  },
+  {
+   "kind": "geometry:length",
+   "id": "l2",
+   "value": 4
+  },
+  {
+   "kind": "geometry:length",
+   "id": "l3",
+   "value": 2
+  },
+  {
+   "kind": "geometry:reflect",
+   "id": "G",
+   "x": -2,
+   "y": 0
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s6"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s7"
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "p3"
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "p4"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s8"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s9"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s10"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s11"
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "p5"
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "p6"
+  }
+ ]
+}

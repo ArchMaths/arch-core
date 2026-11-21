@@ -1,0 +1,203 @@
+{
+ "title": "跳舞的Claude",
+ "count": 39,
+ "kinds": {
+  "advanced_custom_function_definition": 1,
+  "variable": 32,
+  "function:implicit3d": 6
+ },
+ "is3D": true,
+ "annotations": 0,
+ "script": 203,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "advanced_custom_function_definition",
+   "id": "dance"
+  },
+  {
+   "kind": "variable",
+   "id": "a",
+   "value": 0.075
+  },
+  {
+   "kind": "variable",
+   "id": "turn",
+   "value": 0.2377641291
+  },
+  {
+   "kind": "variable",
+   "id": "sway",
+   "value": -0.2057248383
+  },
+  {
+   "kind": "variable",
+   "id": "hop",
+   "value": 0.07343085659
+  },
+  {
+   "kind": "variable",
+   "id": "roll",
+   "value": 0.05877852523
+  },
+  {
+   "kind": "variable",
+   "id": "squash",
+   "value": 0.009549150281
+  },
+  {
+   "kind": "variable",
+   "id": "armone",
+   "value": 1.046162168
+  },
+  {
+   "kind": "variable",
+   "id": "armtwo",
+   "value": 0
+  },
+  {
+   "kind": "variable",
+   "id": "legup",
+   "value": 0.114126782
+  },
+  {
+   "kind": "variable",
+   "id": "legsw",
+   "value": 0.114126782
+  },
+  {
+   "kind": "variable",
+   "id": "blink",
+   "value": 0.9999999995
+  },
+  {
+   "kind": "variable",
+   "id": "rc",
+   "value": 0.9718670189
+  },
+  {
+   "kind": "variable",
+   "id": "rs",
+   "value": 0.2355302477
+  },
+  {
+   "kind": "variable",
+   "id": "fc",
+   "value": 0.9982730398
+  },
+  {
+   "kind": "variable",
+   "id": "fs",
+   "value": 0.05874468527
+  },
+  {
+   "kind": "variable",
+   "id": "kw",
+   "value": 1.004774575
+  },
+  {
+   "kind": "variable",
+   "id": "kh",
+   "value": 0.9904508497
+  },
+  {
+   "kind": "variable",
+   "id": "u1",
+   "value": 0.9655784165
+  },
+  {
+   "kind": "variable",
+   "id": "u2",
+   "value": 0.2340062161
+  },
+  {
+   "kind": "variable",
+   "id": "u3",
+   "value": 0.05846553717
+  },
+  {
+   "kind": "variable",
+   "id": "u0",
+   "value": 0.3112813635
+  },
+  {
+   "kind": "variable",
+   "id": "v1",
+   "value": -0.2344110346
+  },
+  {
+   "kind": "variable",
+   "id": "v2",
+   "value": 0.9672488167
+  },
+  {
+   "kind": "variable",
+   "id": "v0",
+   "value": -0.0482241722
+  },
+  {
+   "kind": "variable",
+   "id": "w1",
+   "value": -0.05764245865
+  },
+  {
+   "kind": "variable",
+   "id": "w2",
+   "value": -0.01396954759
+  },
+  {
+   "kind": "variable",
+   "id": "w3",
+   "value": 1.007897605
+  },
+  {
+   "kind": "variable",
+   "id": "w0",
+   "value": 1.929925941
+  },
+  {
+   "kind": "variable",
+   "id": "cm",
+   "value": 0.7504482
+  },
+  {
+   "kind": "variable",
+   "id": "cd",
+   "value": 0.2495518
+  },
+  {
+   "kind": "variable",
+   "id": "sm",
+   "value": 0.432753624
+  },
+  {
+   "kind": "variable",
+   "id": "sd",
+   "value": -0.432753624
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq1"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq2"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq3"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq4"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq5"
+  },
+  {
+   "kind": "function:implicit3d",
+   "id": "eq6"
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "title": "凸透镜成像",
+ "count": 16,
+ "kinds": {
+  "custom_function_definition": 1,
+  "geometry:ellipse_ab": 1,
+  "variable": 1,
+  "text": 1,
+  "point_list": 1,
+  "function:y": 2,
+  "geometry:point": 6,
+  "geometry:vector": 2,
+  "geometry:segment": 1
+ },
+ "is3D": false,
+ "annotations": 2,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "custom_function_definition",
+   "id": "f1"
+  },
+  {
+   "kind": "geometry:ellipse_ab",
+   "id": "凸透镜"
+  },
+  {
+   "kind": "variable",
+   "id": "u",
+   "value": 2.05
+  },
+  {
+   "kind": "text",
+   "id": "text1"
+  },
+  {
+   "kind": "point_list",
+   "id": "array1"
+  },
+  {
+   "kind": "function:y",
+   "id": "func1",
+   "samples": [
+    0.6341463415,
+    -0.3414634146,
+    -1.024390244
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func2",
+   "samples": [
+    2.3,
+    0.3,
+    -1.1
+   ]
+  },
+  {
+   "kind": "geometry:point",
+   "id": "..",
+   "x": 0,
+   "y": 1
+  },
+  {
+   "kind": "geometry:point",
+   "id": "...",
+   "x": 0,
+   "y": -1
+  },
+  {
+   "kind": "geometry:point",
+   "id": "物体",
+   "x": -2.04,
+   "y": 0
+  },
+  {
+   "kind": "geometry:point",
+   "id": "+",
+   "x": -2.04,
+   "y": 1
+  },
+  {
+   "kind": "geometry:vector",
+   "id": "v1"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "--",
+   "x": 1.982380952,
+   "y": -0.9523809524
+  },
+  {
+   "kind": "geometry:point",
+   "id": "像",
+   "x": 1.982380952,
+   "y": 0
+  },
+  {
+   "kind": "geometry:vector",
+   "id": "v2"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "s1"
+  }
+ ]
+}

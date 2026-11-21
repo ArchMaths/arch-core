@@ -1,0 +1,108 @@
+{
+ "title": "DNA双螺旋",
+ "count": 23,
+ "kinds": {
+  "variable": 2,
+  "function:parametric3d": 21
+ },
+ "is3D": true,
+ "annotations": 1,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "variable",
+   "id": "r",
+   "value": 1
+  },
+  {
+   "kind": "variable",
+   "id": "d",
+   "value": 3.4
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para1"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para2"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para3"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para4"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para5"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para6"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para7"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para8"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para9"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para10"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para11"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para12"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para13"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para14"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para15"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para16"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para17"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para18"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para19"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para20"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para21"
+  }
+ ]
+}

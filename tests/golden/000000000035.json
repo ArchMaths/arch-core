@@ -1,0 +1,178 @@
+{
+ "title": "呐喊",
+ "count": 19,
+ "kinds": {
+  "variable": 1,
+  "function:y": 7,
+  "function:x": 10,
+  "custom_function_definition": 1
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "variable",
+   "id": "a",
+   "value": -0.0672
+  },
+  {
+   "kind": "function:y",
+   "id": "func1",
+   "samples": [
+    "NaN",
+    -1.445,
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func2",
+   "samples": [
+    -0.4204166667,
+    -0.3704166667,
+    -0.53375
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func3",
+   "samples": [
+    1.533333333,
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func4",
+   "samples": [
+    "NaN",
+    1.213333333,
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func5",
+   "samples": [
+    1.048333333,
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func6",
+   "samples": [
+    "NaN",
+    1.128333333,
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func7",
+   "samples": [
+    2.703701167,
+    2.917190429,
+    2.142428529
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func8",
+   "samples": [
+    -2.703701167,
+    -2.917190429,
+    -2.142428529
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func9",
+   "samples": [
+    -2.703701167,
+    -2.917190429,
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func10",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func11",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func12",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func13",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "rp"
+  },
+  {
+   "kind": "function:x",
+   "id": "func14",
+   "samples": [
+    1.998605568,
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func15",
+   "samples": [
+    -1.998605568,
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func16",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func17",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  }
+ ]
+}

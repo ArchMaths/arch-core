@@ -1,0 +1,163 @@
+# Arch 图形计算器 —— 分层回归测试
+#
+# 被测对象：仓库根目录的 index.html（单文件应用）。只测试计算器本身，所有后端请求（登录、云存档、通知、更新、AI）
+# 在测试中都会被拦截。
+#
+# 分层（由 plan job 按触发事件决定矩阵）：
+#   quick —— push 到非 main 分支、来自 fork 的 PR：Ubuntu × Chromium，跳过 9 个大型示例存档（约 10–15 分钟）
+#   main  —— push 到 main：Ubuntu × Chromium / Firefox / WebKit 三个内核
+#   full  —— 每日定时任务、手动触发：Windows 11 / macOS 26 / Ubuntu × Chromium / Chrome / Edge / Firefox / WebKit
+#            共 15 个 job，含全部示例存档，定时任务用当天日期作模糊测试种子
+# 手动触发时可以选择 quick / main / full，想给某个分支跑全矩阵就在 Actions 页面手动运行。
+#
+# Windows 11 使用 GitHub 托管的 windows-11-arm 运行器。若不可用（例如私有仓库），在仓库
+# Settings → Secrets and variables → Actions → Variables 中设置 WINDOWS_RUNNER=windows-2025 即可，无需改本文件。
+name: Arch 计算器回归测试
+
+on:
+  push:
+    branches: ['**']
+    paths-ignore: ['**.md']
+  pull_request:
+    paths-ignore: ['**.md']
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: '测试范围'
+        type: choice
+        options: [full, main, quick]
+        default: full
+      fuzz_seed:
+        description: '模糊测试随机种子（留空使用默认值）'
+        required: false
+  schedule:
+    - cron: '0 18 * * *' # 每天北京时间 02:00
+
+concurrency:
+  group: arch-tests-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    name: 确定测试范围
+    # 同仓库分支的 PR 已经由 push 事件测试过，只对来自 fork 的 PR 再跑一次
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    outputs:
+      scope: ${{ steps.plan.outputs.scope }}
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - id: plan
+        shell: bash
+        env:
+          EVENT: ${{ github.event_name }}
+          REF: ${{ github.ref }}
+          INPUT_SCOPE: ${{ github.event.inputs.scope }}
+          WINDOWS_RUNNER: ${{ vars.WINDOWS_RUNNER || 'windows-11-arm' }}
+        run: |
+          if [ "$EVENT" = "schedule" ]; then scope=full
+          elif [ "$EVENT" = "workflow_dispatch" ]; then scope="${INPUT_SCOPE:-full}"
+          elif [ "$EVENT" = "push" ] && [ "$REF" = "refs/heads/main" ]; then scope=main
+          else scope=quick
+          fi
+          case "$scope" in
+            quick) matrix='{"include":[{"os":"ubuntu-latest","os_label":"Ubuntu","browser":"chromium"}]}' ;;
+            main)  matrix='{"include":[
+                     {"os":"ubuntu-latest","os_label":"Ubuntu","browser":"chromium"},
+                     {"os":"ubuntu-latest","os_label":"Ubuntu","browser":"firefox"},
+                     {"os":"ubuntu-latest","os_label":"Ubuntu","browser":"webkit"}]}' ;;
+            full)
+              items=()
+              for pair in "$WINDOWS_RUNNER|Windows 11" "macos-26|macOS 26" "ubuntu-latest|Ubuntu"; do
+                for b in chromium chrome msedge firefox webkit; do
+                  items+=("{\"os\":\"${pair%%|*}\",\"os_label\":\"${pair#*|}\",\"browser\":\"$b\"}")
+                done
+              done
+              matrix="{\"include\":[$(IFS=,; echo "${items[*]}")]}" ;;
+          esac
+          matrix=$(echo "$matrix" | tr -d '\n' | tr -s ' ')
+          echo "scope=$scope" >> "$GITHUB_OUTPUT"
+          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
+          echo "### 测试范围：$scope" >> "$GITHUB_STEP_SUMMARY"
+          echo "$matrix" | python3 -c 'import json,sys; print("\n".join("- %s / %s" % (m["os_label"], m["browser"]) for m in json.load(sys.stdin)["include"]))' >> "$GITHUB_STEP_SUMMARY"
+
+  test:
+    name: ${{ matrix.os_label }} / ${{ matrix.browser }}
+    needs: plan
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    env:
+      CI: 'true'
+      FUZZ_SEED: ${{ github.event.inputs.fuzz_seed }}
+      # full 范围跑全部示例存档（含 9 个大型 3D 存档）
+      ARCH_FULL: ${{ needs.plan.outputs.scope == 'full' && '1' || '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 检查被测文件
+        shell: bash
+        run: |
+          test -f index.html || { echo "::error::仓库根目录没有 index.html"; exit 1; }
+          ls -l index.html
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: 安装测试依赖
+        run: npm ci
+
+      - name: 每日定时任务使用日期作为模糊测试种子
+        if: github.event_name == 'schedule'
+        shell: bash
+        run: echo "FUZZ_SEED=$(date -u +%Y%m%d)" >> "$GITHUB_ENV"
+
+      - name: 读取 Playwright 版本
+        id: pw
+        shell: bash
+        run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: 缓存 Playwright 浏览器
+        if: matrix.browser == 'chromium' || matrix.browser == 'firefox' || matrix.browser == 'webkit'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/ms-playwright
+            ~/Library/Caches/ms-playwright
+            ~/AppData/Local/ms-playwright
+          key: pw-${{ runner.os }}-${{ runner.arch }}-${{ matrix.browser }}-${{ steps.pw.outputs.version }}
+
+      - name: 安装浏览器
+        shell: bash
+        run: |
+          case "${{ matrix.browser }}" in
+            chrome|msedge)
+              # 运行器镜像通常预装了正式版 Chrome / Edge；没有或无法启动时再安装。
+              node tests/support/ensure-browser.mjs "${{ matrix.browser }}"
+              ;;
+            *)
+              npx playwright install --with-deps "${{ matrix.browser }}"
+              ;;
+          esac
+
+      - name: 运行测试
+        shell: bash
+        run: npx playwright test --project="${{ matrix.browser }}"
+
+      - name: 上传测试报告
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-${{ runner.os }}-${{ runner.arch }}-${{ matrix.browser }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+          if-no-files-found: ignore

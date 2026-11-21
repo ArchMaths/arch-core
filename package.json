@@ -1,0 +1,15 @@
+{
+  "name": "arch-calculator-tests",
+  "private": true,
+  "description": "Arch 图形计算器（单文件 index.html）跨平台、跨浏览器自动化回归测试",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:update-golden": "node tests/support/update-golden.mjs",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1"
+  }
+}

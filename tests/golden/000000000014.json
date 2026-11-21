@@ -1,0 +1,109 @@
+{
+ "title": "北京高考解析几何",
+ "count": 18,
+ "kinds": {
+  "geometry:ellipse_ab": 1,
+  "geometry:point": 4,
+  "geometry:line": 4,
+  "geometry:perpendicularline": 1,
+  "geometry:intersect": 3,
+  "geometry:reflect": 1,
+  "geometry:polygon": 3,
+  "geometry:area": 1
+ },
+ "is3D": false,
+ "annotations": 2,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "geometry:ellipse_ab",
+   "id": "E"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "顶点",
+   "x": 2,
+   "y": 0
+  },
+  {
+   "kind": "geometry:point",
+   "id": "A",
+   "x": 1,
+   "y": 1
+  },
+  {
+   "kind": "geometry:point",
+   "id": "O",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:line",
+   "id": "X_axis"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "y_x"
+  },
+  {
+   "kind": "geometry:perpendicularline",
+   "id": "p1"
+  },
+  {
+   "kind": "geometry:point",
+   "id": "上下拖动我",
+   "x": 2,
+   "y": 0.91219271
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l1"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "B",
+   "x": 1.679597699,
+   "y": 0.9403263678
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C",
+   "x": -1.427476452,
+   "y": 1.213150129
+  },
+  {
+   "kind": "geometry:reflect",
+   "id": "D",
+   "x": 0.9403263678,
+   "y": 1.679597699
+  },
+  {
+   "kind": "geometry:line",
+   "id": "l2"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Q",
+   "x": 1.860958502,
+   "y": 1.860958502
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "p2"
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "p3"
+  },
+  {
+   "kind": "geometry:polygon",
+   "id": "p4"
+  },
+  {
+   "kind": "geometry:area",
+   "id": "s1",
+   "value": 0.8184939839
+  }
+ ]
+}

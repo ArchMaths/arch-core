@@ -1,0 +1,3820 @@
+{
+ "title": "Apple Logo",
+ "count": 728,
+ "kinds": {
+  "geometry:point": 4,
+  "geometry:line": 77,
+  "geometry:circle": 277,
+  "geometry:intersect": 283,
+  "geometry:segment": 48,
+  "geometry:circulararc": 39
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "geometry:point",
+   "id": "BaseA",
+   "x": -4,
+   "y": 0
+  },
+  {
+   "kind": "geometry:point",
+   "id": "BaseB",
+   "x": 4,
+   "y": 0
+  },
+  {
+   "kind": "geometry:line",
+   "id": "BaseX"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "AxisCa",
+   "r": 6
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "AxisCb",
+   "r": 6
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "AxisU",
+   "x": 0,
+   "y": 4.472135955
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "AxisD",
+   "x": 0,
+   "y": -4.472135955
+  },
+  {
+   "kind": "geometry:line",
+   "id": "BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:point",
+   "id": "U1",
+   "x": 1,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit2",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U2",
+   "x": 2,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit3",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U3",
+   "x": 3,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit4",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U4",
+   "x": 4,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit5",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U5",
+   "x": 5,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit6",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U6",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit7",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U7",
+   "x": 7,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit8",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U8",
+   "x": 8,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit9",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U9",
+   "x": 9,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit10",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U10",
+   "x": 10,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit11",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U11",
+   "x": 11,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit12",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U12",
+   "x": 12,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit13",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U13",
+   "x": 13,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit14",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U14",
+   "x": 14,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit15",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U15",
+   "x": 15,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit16",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U16",
+   "x": 16,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit17",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U17",
+   "x": 17,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit18",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U18",
+   "x": 18,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit19",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U19",
+   "x": 19,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit20",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U20",
+   "x": 20,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit21",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U21",
+   "x": 21,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit22",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U22",
+   "x": 22,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit23",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U23",
+   "x": 23,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Unit24",
+   "r": 1
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "U24",
+   "x": 24,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Locate5",
+   "r": 6
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Bottom13L",
+   "r": 13
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Bottom13R",
+   "r": 13
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "BottomTop",
+   "x": 0,
+   "y": -3.532562595
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Locate13",
+   "r": 13
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:line",
+   "id": "TouchLineL"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "TouchLineR"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "TouchBottomL",
+   "x": -3.692307692,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "TouchBottomR",
+   "x": 3.692307692,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:line",
+   "id": "SquareBase"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareM",
+   "x": 0,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "SquareHalf",
+   "r": 13.9030384
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareBL",
+   "x": -13.9030384,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareBR",
+   "x": 13.9030384,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "SquareCircum",
+   "r": 19.66186547
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "SquareRaiseL",
+   "r": 27.80607681
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "SquareRaiseR",
+   "r": 27.80607681
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareApex",
+   "x": -1.776356839e-15,
+   "y": 19.6451679
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "SquareLeftLineCut",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareLeftLineA",
+   "x": -11.9030384,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareLeftLineB",
+   "x": -15.9030384,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "SquareLeftLineCa",
+   "r": 4
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "SquareLeftLineCb",
+   "r": 4
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareLeftLineU",
+   "x": -13.9030384,
+   "y": -7.899702613
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareLeftLineD",
+   "x": -13.9030384,
+   "y": -0.9714993828
+  },
+  {
+   "kind": "geometry:line",
+   "id": "SquareLeftLine"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "SquareRightLineCut",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareRightLineA",
+   "x": 15.9030384,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareRightLineB",
+   "x": 11.9030384,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "SquareRightLineCa",
+   "r": 4
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "SquareRightLineCb",
+   "r": 4
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareRightLineU",
+   "x": 13.9030384,
+   "y": -7.899702613
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareRightLineD",
+   "x": 13.9030384,
+   "y": -0.9714993828
+  },
+  {
+   "kind": "geometry:line",
+   "id": "SquareRightLine"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareTL",
+   "x": -13.9030384,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareTR",
+   "x": 13.9030384,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "SquareSideB"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "SquareTop"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "SquareTM",
+   "x": 0,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "QuarterLineLCa",
+   "r": 13.9030384
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "QuarterLineLCb",
+   "r": 13.9030384
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "QuarterLineLU",
+   "x": -6.951519202,
+   "y": 35.41086026
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "QuarterLineLD",
+   "x": -6.951519202,
+   "y": 11.33009136
+  },
+  {
+   "kind": "geometry:line",
+   "id": "QuarterLineL"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "QuarterLineRCa",
+   "r": 13.9030384
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "QuarterLineRCb",
+   "r": 13.9030384
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "QuarterLineRU",
+   "x": 6.951519202,
+   "y": 35.41086026
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "QuarterLineRD",
+   "x": 6.951519202,
+   "y": 11.33009136
+  },
+  {
+   "kind": "geometry:line",
+   "id": "QuarterLineR"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "QuarterL",
+   "x": -6.951519202,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "QuarterR",
+   "x": 6.951519202,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "UpperDropL",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "UpperDropR",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Side8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Side11L",
+   "r": 11
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C3L",
+   "x": -11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle3L",
+   "r": 3
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Large21L",
+   "r": 21
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Large19L",
+   "r": 19
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C24R",
+   "x": 7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle24R",
+   "r": 24
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Mid12L",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Mid4L",
+   "r": 4
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C12L",
+   "x": -4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle12L",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Side8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Side11R",
+   "r": 11
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C3R",
+   "x": 11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle3R",
+   "r": 3
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Large21R",
+   "r": 21
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Large19R",
+   "r": 19
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C24L",
+   "x": -7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle24L",
+   "r": 24
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Mid12R",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Mid4R",
+   "r": 4
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C12R",
+   "x": 4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle12R",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "BiteLow",
+   "x": 13.9030384,
+   "y": 5.381740776
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "BiteHigh",
+   "x": 13.9030384,
+   "y": 19.53230572
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "BiteAuxLow",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "BiteAuxHigh",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C8Bite",
+   "x": 17.63671996,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle8Bite",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Top16L",
+   "r": 16
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Top16R",
+   "r": 16
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "C8U",
+   "x": -8.881784197e-16,
+   "y": 29.78145707
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Circle8U",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "Centers12"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "LeafMeasure12",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "LeafMeasureRight",
+   "x": -1.903038403,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "LeafMeasureDown",
+   "x": -13.9030384,
+   "y": 11.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Outer12L",
+   "x": -16.21075395,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Outer12R",
+   "x": 16.21075395,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Vertical12LCut",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Vertical12LA",
+   "x": -2.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Vertical12LB",
+   "x": -6.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Vertical12LCa",
+   "r": 4
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Vertical12LCb",
+   "r": 4
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Vertical12LU",
+   "x": -4.210753949,
+   "y": 8.992921632
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Vertical12LD",
+   "x": -4.210753949,
+   "y": 15.92112486
+  },
+  {
+   "kind": "geometry:line",
+   "id": "Vertical12L"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Vertical12RCut",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Vertical12RA",
+   "x": 6.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Vertical12RB",
+   "x": 2.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Vertical12RCa",
+   "r": 4
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "Vertical12RCb",
+   "r": 4
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Vertical12RU",
+   "x": 4.210753949,
+   "y": 8.992921632
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "Vertical12RD",
+   "x": 4.210753949,
+   "y": 15.92112486
+  },
+  {
+   "kind": "geometry:line",
+   "id": "Vertical12R"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "LeafDiagonalL",
+   "r": 16.97056275
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "LeafDiagonalR",
+   "r": 16.97056275
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "LeafLevelL",
+   "x": -4.210753949,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "LeafLevelR",
+   "x": 4.210753949,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:line",
+   "id": "LeafLevel"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "LeafSlant"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "LeafH",
+   "x": 7.22439082,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "LeafCircleH",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "LeafW",
+   "x": -0.7756091798,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "LeafEquilateral",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "LeafEqTop",
+   "x": 3.22439082,
+   "y": 31.38522648
+  },
+  {
+   "kind": "geometry:line",
+   "id": "Leaf120"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "VerticalHCut",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "VerticalHA",
+   "x": 9.22439082,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "VerticalHB",
+   "x": 5.22439082,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "VerticalHCa",
+   "r": 4
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "VerticalHCb",
+   "r": 4
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "VerticalHU",
+   "x": 7.22439082,
+   "y": 20.99292163
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "VerticalHD",
+   "x": 7.22439082,
+   "y": 27.92112486
+  },
+  {
+   "kind": "geometry:line",
+   "id": "VerticalH"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "AngleAtH",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "AngleHDown",
+   "x": 7.22439082,
+   "y": 22.45702325
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "AngleHSlant",
+   "x": 8.22439082,
+   "y": 22.72497244
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "AngleAtU",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "AngleUDown",
+   "x": 0,
+   "y": 27.78145707
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "AngleChord",
+   "r": 1.03527618
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "AngleUSlant",
+   "x": 1,
+   "y": 28.04940626
+  },
+  {
+   "kind": "geometry:line",
+   "id": "Leaf120Copy"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "ALeaf",
+   "x": -0.7014791424,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "LeafLocateJ",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "LeafJ",
+   "x": -0.9157631911,
+   "y": 31.36760544
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "LeafCircleJ",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "BLeaf",
+   "x": 7.010106771,
+   "y": 32.45415288
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P0",
+   "x": 13.9030384,
+   "y": 19.53230572
+  },
+  {
+   "kind": "geometry:line",
+   "id": "P1Centers"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P1",
+   "x": 12.43304971,
+   "y": 21.19738093
+  },
+  {
+   "kind": "geometry:line",
+   "id": "P2Centers"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P2",
+   "x": 3.475759601,
+   "y": 22.57596644
+  },
+  {
+   "kind": "geometry:line",
+   "id": "P3Centers"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P3",
+   "x": -3.475759601,
+   "y": 22.57596644
+  },
+  {
+   "kind": "geometry:line",
+   "id": "P4Centers"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P4",
+   "x": -12.43304971,
+   "y": 21.19738093
+  },
+  {
+   "kind": "geometry:line",
+   "id": "P5Centers"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P5",
+   "x": -16.19411426,
+   "y": 11.82529888
+  },
+  {
+   "kind": "geometry:line",
+   "id": "P6Centers"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P6",
+   "x": -9.624370095,
+   "y": -3.444407266
+  },
+  {
+   "kind": "geometry:line",
+   "id": "P7Centers"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P7",
+   "x": -3.692307692,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:line",
+   "id": "P8Centers"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P8",
+   "x": 3.692307692,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:line",
+   "id": "P9Centers"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P9",
+   "x": 9.624370095,
+   "y": -3.444407266
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "P10",
+   "x": 14.8131496,
+   "y": 4.971874589
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline01",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline02",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline03",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline04",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline05",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline06",
+   "r": 24
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline07",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline08",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline09",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline10",
+   "r": 24
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "Outline11",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "LeafOutlineH",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "LeafOutlineJ",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F01_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F01_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F01_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F01_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F01_AxisCa",
+   "r": 6
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F01_AxisCb",
+   "r": 6
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F01_AxisU",
+   "x": 0,
+   "y": 4.472135955
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F01_AxisD",
+   "x": 0,
+   "y": -4.472135955
+  },
+  {
+   "kind": "geometry:point",
+   "id": "F01_U1",
+   "x": 1,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F01_Unit2",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F01_Unit3",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F01_Unit4",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F01_Unit5",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F01_Unit6",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F01_Unit7",
+   "r": 1
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F02_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F02_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F02_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F02_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F02_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F02_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F02_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F02_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F02_Locate5",
+   "r": 6
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F03_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F03_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F03_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F03_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F03_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F03_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F03_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F03_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F03_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F03_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F03_Bottom13L",
+   "r": 13
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F03_Bottom13R",
+   "r": 13
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F04_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F04_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F04_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F04_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F04_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F04_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F04_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F04_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F04_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F04_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F04_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F04_BottomTop",
+   "x": 0,
+   "y": -3.532562595
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F04_Locate13",
+   "r": 13
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F05_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F05_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F05_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F05_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F05_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F05_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F05_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F05_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F05_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F05_SquareSideB"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F05_SquareBase"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F05_SquareHalf",
+   "r": 13.9030384
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F05_SquareCircum",
+   "r": 19.66186547
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F05_SquareRaiseL",
+   "r": 27.80607681
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F05_SquareRaiseR",
+   "r": 27.80607681
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_SquareApex",
+   "x": -1.776356839e-15,
+   "y": 19.6451679
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_SquareM",
+   "x": 0,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_SquareBL",
+   "x": -13.9030384,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_SquareBR",
+   "x": 13.9030384,
+   "y": -4.435600998
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_SquareTL",
+   "x": -13.9030384,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F05_SquareTR",
+   "x": 13.9030384,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F06_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F06_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F06_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F06_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F06_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F06_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F06_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F06_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F06_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F06_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F06_SquareSideB"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F06_C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F06_C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_QuarterLineLCa",
+   "r": 13.9030384
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_QuarterLineLCb",
+   "r": 13.9030384
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_QuarterLineRCa",
+   "r": 13.9030384
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_QuarterLineRCb",
+   "r": 13.9030384
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F06_QuarterLineL"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F06_QuarterLineR"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F06_QuarterL",
+   "x": -6.951519202,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F06_QuarterR",
+   "x": 6.951519202,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_UpperDropL",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F06_UpperDropR",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F07_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F07_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F07_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F07_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F07_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F07_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F07_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F07_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F07_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F07_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F07_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F07_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F07_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F07_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F07_SquareSideB"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F07_C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F07_C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F07_Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F07_Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F07_C3L",
+   "x": -11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F07_Circle3L",
+   "r": 3
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F07_Side8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F07_Side11L",
+   "r": 11
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F08_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F08_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F08_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F08_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F08_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F08_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F08_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F08_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F08_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F08_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F08_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F08_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F08_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F08_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F08_SquareSideB"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F08_C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F08_C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F08_Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F08_Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F08_C3L",
+   "x": -11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F08_Circle3L",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F08_C24R",
+   "x": 7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F08_Circle24R",
+   "r": 24
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F08_Large21L",
+   "r": 21
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F08_Large19L",
+   "r": 19
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F09_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F09_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F09_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F09_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F09_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F09_SquareSideB"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C3L",
+   "x": -11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle3L",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C24R",
+   "x": 7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle24R",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C12L",
+   "x": -4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle12L",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C3R",
+   "x": 11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle3R",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C24L",
+   "x": -7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle24L",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F09_C12R",
+   "x": 4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Circle12R",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Mid12L",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Mid4L",
+   "r": 4
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Side8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Side11R",
+   "r": 11
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Large21R",
+   "r": 21
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Large19R",
+   "r": 19
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Mid12R",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F09_Mid4R",
+   "r": 4
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F10_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F10_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F10_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F10_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F10_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F10_SquareSideB"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C3L",
+   "x": -11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle3L",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C24R",
+   "x": 7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle24R",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C12L",
+   "x": -4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle12L",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C3R",
+   "x": 11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle3R",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C24L",
+   "x": -7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle24L",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C12R",
+   "x": 4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle12R",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_C8Bite",
+   "x": 17.63671996,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_Circle8Bite",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_BiteLow",
+   "x": 13.9030384,
+   "y": 5.381740776
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F10_BiteHigh",
+   "x": 13.9030384,
+   "y": 19.53230572
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_BiteAuxLow",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F10_BiteAuxHigh",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F11_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F11_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F11_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F11_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F11_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F11_SquareSideB"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C3L",
+   "x": -11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle3L",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C24R",
+   "x": 7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle24R",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C12L",
+   "x": -4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle12L",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C3R",
+   "x": 11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle3R",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C24L",
+   "x": -7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle24L",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C12R",
+   "x": 4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle12R",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C8Bite",
+   "x": 17.63671996,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle8Bite",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F11_C8U",
+   "x": -8.881784197e-16,
+   "y": 29.78145707
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Circle8U",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Top16L",
+   "r": 16
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F11_Top16R",
+   "r": 16
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F12_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F12_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F12_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F12_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F12_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F12_SquareSideB"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C3L",
+   "x": -11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle3L",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C24R",
+   "x": 7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle24R",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C12L",
+   "x": -4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle12L",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C3R",
+   "x": 11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle3R",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C24L",
+   "x": -7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle24L",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C12R",
+   "x": 4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle12R",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C8Bite",
+   "x": 17.63671996,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle8Bite",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_C8U",
+   "x": -8.881784197e-16,
+   "y": 29.78145707
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_Circle8U",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F12_Centers12"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F12_LeafLevel"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_LeafMeasure12",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_LeafMeasureRight",
+   "x": -1.903038403,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_LeafMeasureDown",
+   "x": -13.9030384,
+   "y": 11.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_Outer12L",
+   "x": -16.21075395,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_Outer12R",
+   "x": 16.21075395,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_LeafDiagonalL",
+   "r": 16.97056275
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F12_LeafDiagonalR",
+   "r": 16.97056275
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F12_Vertical12L"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F12_Vertical12R"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_LeafLevelL",
+   "x": -4.210753949,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F12_LeafLevelR",
+   "x": 4.210753949,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F13_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F13_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F13_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F13_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F13_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F13_SquareSideB"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C3L",
+   "x": -11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle3L",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C24R",
+   "x": 7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle24R",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C12L",
+   "x": -4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle12L",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C3R",
+   "x": 11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle3R",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C24L",
+   "x": -7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle24L",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C12R",
+   "x": 4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle12R",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C8Bite",
+   "x": 17.63671996,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle8Bite",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_C8U",
+   "x": -8.881784197e-16,
+   "y": 29.78145707
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_Circle8U",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F13_Centers12"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F13_LeafLevel"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F13_LeafSlant"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_LeafH",
+   "x": 7.22439082,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_LeafCircleH",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_LeafW",
+   "x": -0.7756091798,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F13_LeafEquilateral",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F13_LeafEqTop",
+   "x": 3.22439082,
+   "y": 31.38522648
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F13_Leaf120"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F14_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F14_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F14_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F14_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F14_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F14_SquareSideB"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C3L",
+   "x": -11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle3L",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C24R",
+   "x": 7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle24R",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C12L",
+   "x": -4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle12L",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C3R",
+   "x": 11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle3R",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C24L",
+   "x": -7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle24L",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C12R",
+   "x": 4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle12R",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C8Bite",
+   "x": 17.63671996,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle8Bite",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_C8U",
+   "x": -8.881784197e-16,
+   "y": 29.78145707
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_Circle8U",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F14_Centers12"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F14_LeafLevel"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F14_LeafSlant"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_LeafH",
+   "x": 7.22439082,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_LeafCircleH",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F14_Leaf120Copy"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_LeafJ",
+   "x": -0.9157631911,
+   "y": 31.36760544
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_LeafCircleJ",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_ALeaf",
+   "x": -0.7014791424,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_BLeaf",
+   "x": 7.010106771,
+   "y": 32.45415288
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F14_Leaf120"
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_AngleAtH",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_AngleHDown",
+   "x": 7.22439082,
+   "y": 22.45702325
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_AngleHSlant",
+   "x": 8.22439082,
+   "y": 22.72497244
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_AngleAtU",
+   "r": 2
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_AngleUDown",
+   "x": 0,
+   "y": 27.78145707
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_AngleChord",
+   "r": 1.03527618
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F14_AngleUSlant",
+   "x": 1,
+   "y": 28.04940626
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F14_LeafLocateJ",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F15_BaseX"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F15_BaseY"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_Origin",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_C1",
+   "r": 1
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle5L",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle5R",
+   "r": 5
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C5L",
+   "x": -6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C5R",
+   "x": 6,
+   "y": 0
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C8D",
+   "x": 0,
+   "y": -11.53256259
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle8D",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C13",
+   "x": 0,
+   "y": 9.467437405
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F15_SquareSideL"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F15_SquareSideR"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F15_SquareSideT"
+  },
+  {
+   "kind": "geometry:segment",
+   "id": "F15_SquareSideB"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C8L",
+   "x": -6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C8R",
+   "x": 6.951519202,
+   "y": 15.37047581
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle8L",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle8R",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C3L",
+   "x": -11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle3L",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C24R",
+   "x": 7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle24R",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C12L",
+   "x": -4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle12L",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C3R",
+   "x": 11.80862341,
+   "y": 5.500899389
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle3R",
+   "r": 3
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C24L",
+   "x": -7.772606362,
+   "y": 13.08874761
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle24L",
+   "r": 24
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C12R",
+   "x": 4.210753949,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle12R",
+   "r": 12
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C8Bite",
+   "x": 17.63671996,
+   "y": 12.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle8Bite",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_C8U",
+   "x": -8.881784197e-16,
+   "y": 29.78145707
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_Circle8U",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F15_Centers12"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F15_LeafLevel"
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F15_LeafSlant"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_LeafH",
+   "x": 7.22439082,
+   "y": 24.45702325
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_LeafCircleH",
+   "r": 8
+  },
+  {
+   "kind": "geometry:line",
+   "id": "F15_Leaf120Copy"
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_LeafJ",
+   "x": -0.9157631911,
+   "y": 31.36760544
+  },
+  {
+   "kind": "geometry:circle",
+   "id": "F15_LeafCircleJ",
+   "r": 8
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_ALeaf",
+   "x": -0.7014791424,
+   "y": 23.37047581
+  },
+  {
+   "kind": "geometry:intersect",
+   "id": "F15_BLeaf",
+   "x": 7.010106771,
+   "y": 32.45415288
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline01",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline02",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline03",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline04",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline05",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline06",
+   "r": 24
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline07",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline08",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline09",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline10",
+   "r": 24
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_Outline11",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_LeafOutlineH",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F15_LeafOutlineJ",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline01",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline02",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline03",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline04",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline05",
+   "r": 12
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline06",
+   "r": 24
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline07",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline08",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline09",
+   "r": 5
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline10",
+   "r": 24
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_Outline11",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_LeafOutlineH",
+   "r": 8
+  },
+  {
+   "kind": "geometry:circulararc",
+   "id": "F16_LeafOutlineJ",
+   "r": 8
+  }
+ ]
+}

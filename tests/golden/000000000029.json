@@ -1,0 +1,1019 @@
+{
+ "title": "校园景观3d重建",
+ "count": 251,
+ "kinds": {
+  "function:parametricSurface": 58,
+  "function:parametric3d": 187,
+  "custom_function_definition": 6
+ },
+ "is3D": true,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "function:parametricSurface",
+   "id": "para1"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para2"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para3"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para4"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para5"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para6"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para7"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para8"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para9"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para10"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para11"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para12"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para13"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para14"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para15"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para19"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para20"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para21"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para22"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para23"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para24"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para25"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para26"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para27"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para28"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para29"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para30"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para31"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para32"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para33"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para34"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para35"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para36"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para37"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para38"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para39"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para40"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para41"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para42"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para43"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para44"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para45"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para46"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para47"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para48"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para49"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para50"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para51"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para52"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para53"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para54"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para55"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para56"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para57"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para58"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para59"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para60"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para61"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para62"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para63"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para64"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para65"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para66"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para67"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para68"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para69"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para70"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para71"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para72"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para73"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para74"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para75"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para76"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para77"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para78"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para79"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para80"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para81"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para82"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para83"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para84"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para85"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para86"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para87"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para88"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para89"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para90"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para91"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para92"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para93"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para94"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para95"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para96"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para97"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para98"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para99"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para100"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para101"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para102"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para103"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para104"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para105"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para106"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para107"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para108"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para109"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para110"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para111"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para112"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para113"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para114"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para115"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para116"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para117"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para118"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para119"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para120"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para121"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para122"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para123"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para124"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para125"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para126"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para127"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para128"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para129"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para130"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para131"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para132"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para133"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para134"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para135"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para136"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para137"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para138"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para139"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para140"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para141"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para142"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para143"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para144"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para145"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para146"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para147"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para148"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para149"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para150"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para151"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para152"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para153"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para154"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para155"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para156"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para157"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para158"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para159"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para160"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para161"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para162"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para163"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para164"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para165"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para166"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para167"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para168"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para169"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para170"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para171"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para172"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para179"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para180"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para181"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para182"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para183"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para184"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para185"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para186"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para187"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para188"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para189"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para190"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para191"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para192"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para193"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para194"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para195"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para196"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para197"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para198"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para199"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para200"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para201"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para202"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para203"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para204"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para205"
+  },
+  {
+   "kind": "function:parametricSurface",
+   "id": "para206"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para207"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para208"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para209"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para210"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para211"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para212"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para213"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para214"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para215"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para216"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para217"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para218"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para219"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para220"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para221"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para222"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para223"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para224"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para225"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para226"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para227"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para228"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para229"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "grassposx"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "grassposy"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "grassground"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para230"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para231"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para232"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para233"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para234"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para235"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para236"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para237"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lawnbladex"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lawnbladey"
+  },
+  {
+   "kind": "custom_function_definition",
+   "id": "lawnbladez"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para238"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para239"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para240"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para241"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para242"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para243"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para244"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para245"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para246"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para247"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para248"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para249"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para250"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para251"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para252"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para253"
+  },
+  {
+   "kind": "function:parametric3d",
+   "id": "para254"
+  }
+ ]
+}

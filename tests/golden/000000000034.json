@@ -1,0 +1,815 @@
+{
+ "title": "可莉",
+ "count": 89,
+ "kinds": {
+  "function:y": 54,
+  "function:x": 35
+ },
+ "is3D": false,
+ "annotations": 0,
+ "script": 0,
+ "regressions": [],
+ "entries": [
+  {
+   "kind": "function:y",
+   "id": "func1",
+   "samples": [
+    11.955216,
+    12.592016,
+    13.228176
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func2",
+   "samples": [
+    "NaN",
+    "NaN",
+    15.64796
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func3",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func4",
+   "samples": [
+    -39.2,
+    -39.2,
+    -39.2
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func5",
+   "samples": [
+    39.2,
+    39.2,
+    39.2
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func6",
+   "samples": [
+    -20,
+    -20,
+    -20
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func7",
+   "samples": [
+    60,
+    60,
+    60
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func8",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func9",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func10",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func11",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func12",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func13",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func14",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func15",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func16",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func17",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func18",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func19",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func20",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func21",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func22",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func23",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func24",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func25",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func26",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func27",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func28",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func29",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func30",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func31",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func32",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func33",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func34",
+   "samples": [
+    "NaN",
+    "NaN",
+    -7.3098
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func35",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func36",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func37",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func38",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func39",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func40",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func41",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func42",
+   "samples": [
+    44.110875,
+    44.892875,
+    45.278435
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func43",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func44",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func45",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func46",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func47",
+   "samples": [
+    29.16955,
+    29.67755,
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func48",
+   "samples": [
+    3.451024,
+    3.740624,
+    3.895744
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func49",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func50",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func51",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func52",
+   "samples": [
+    27.90388,
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func53",
+   "samples": [
+    26.2681,
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func54",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func55",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func56",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func57",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func58",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func59",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func60",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func61",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func62",
+   "samples": [
+    -33.68432,
+    -33.60752,
+    -33.51568
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func63",
+   "samples": [
+    -35.2956672,
+    -35.6463872,
+    -35.8538112
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func64",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func65",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func66",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func67",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func68",
+   "samples": [
+    "NaN",
+    12.612248,
+    14.276568
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func69",
+   "samples": [
+    "NaN",
+    13.875,
+    16.619
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func70",
+   "samples": [
+    14.279,
+    15.439,
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func71",
+   "samples": [
+    25.761712,
+    27.518512,
+    28.605472
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func72",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func73",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func74",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func75",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func76",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func77",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func78",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func79",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func80",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func81",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func82",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func83",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func84",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func85",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:x",
+   "id": "func86",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func87",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func88",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  },
+  {
+   "kind": "function:y",
+   "id": "func89",
+   "samples": [
+    "NaN",
+    "NaN",
+    "NaN"
+   ]
+  }
+ ]
+}
